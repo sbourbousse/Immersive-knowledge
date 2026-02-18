@@ -3,15 +3,11 @@
   "timestamp": 1199145600,
   "dateLabel": "Juin 2008",
   "title": "Accord de non-poursuite controversé",
-  "content": "Jeffrey Epstein signe un accord de non-poursuite avec le procureur fédéral Alexander Acosta. Il plaide coupable de deux accusations d'activité sexuelle avec une mineure au niveau de l'État, évitant les charges fédérales.\n\n**Points clés :**
-- 13 mois de prison (avec permissions de sortie)
-- Enregistrement comme délinquant sexuel
-- Immunité pour co-conspirateurs
-- Accosta deviendra Secrétaire au Travail de Trump",
-  "tags": ["category:justice", "source:official", "category:elite", "coverage:suppressed"],
+  "content": "Le procureur fédéral Alexander Acosta signe un accord de non-poursuite secret avec Epstein. Les charges fédérales sont abandonnées en échange d'une condamnation d'État minimale. L'accord immunise également les complices d'Epstein et viole la loi sur les droits des victimes en ne les informant pas.",
+  "tags": ["category:coverup", "source:official", "coverage:suppressed", "category:elite"],
   "source": {
     "name": "Department of Justice",
-    "url": "https://www.justice.gov/",
+    "url": "https://www.justice.gov/opa/pr/statement-department-justice-epstein-case",
     "reliabilityScore": 0.98,
     "accessedAt": "2026-02-18T10:00:00Z"
   },
@@ -19,7 +15,6 @@
     "importance": "high",
     "threadId": "main",
     "verificationStatus": "confirmed",
-    "crossReferences": ["ep001-2005-accusation", "ep003-2019-arrest"],
-    "mediaCoverageDate": 1562025600
+    "mediaCoverageDate": 1543622400
   }
 }

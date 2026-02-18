@@ -34,6 +34,7 @@ export const timelines = {
     id: 'ai-evolution',
     name: 'Évolution de l\'IA Générative',
     description: 'De GPT-1 (2018) aux agents autonomes (2025)',
+    color: '#6366f1',
     facts: [
       ai001, ai002, ai003, ai004, ai005, ai006, ai007, ai008, ai009, ai010,
       ai011, ai012, ai013, ai014, ai015,
@@ -49,6 +50,7 @@ export const timelines = {
     id: 'epstein',
     name: 'Affaire Epstein',
     description: 'La timeline de l\'affaire Epstein: 13 ans de silence médiatique',
+    color: '#ef4444',
     facts: [
       ep001, ep002, ep003, ep004, ep005, ep006, ep007,
     ] as Fact[],

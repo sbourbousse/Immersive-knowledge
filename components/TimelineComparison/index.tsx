@@ -6,7 +6,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Fact, TimelineLane, FactCorrelation, TimelineDirection, getTagInfo } from '@/types';
 import { TagBadge } from '../TagFilter';
-import { X, Link2, Clock } from 'lucide-react';
+import { X, Link2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -278,7 +278,7 @@ export function TimelineComparison({
                             className="text-[10px] px-1.5 py-0.5 bg-orange-500/20 text-orange-400 rounded flex items-center gap-1"
                             title={`Retard médiatique: ${formatGap(gap)}`}
                           >
-                            <Clock className="w-3 h-3" />
+                            <span>⏱️</span>
                             +{formatGap(gap)}
                           </span>
                         )}
@@ -381,7 +381,7 @@ export function TimelineComparison({
                           </span>
                           {gap && gap > 2592000 && (
                             <span className="text-[10px] px-1.5 py-0.5 bg-orange-500/20 text-orange-400 rounded flex items-center gap-1">
-                              <Clock className="w-3 h-3" />
+                              <span>⏱️</span>
                               +{formatGap(gap)}
                             </span>
                           )}

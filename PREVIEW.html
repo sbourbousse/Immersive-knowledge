@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immersive Knowledge - Preview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: white; }
+        .font-display { font-family: 'Space Grotesk', sans-serif; }
+        .gradient-text { background: linear-gradient(90deg, #fff, #a5b4fc, #c4b5fd); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* Timeline vertical styles */
+        .timeline-item {
+            opacity: 0;
+            transform: translateX(-30px);
+            animation: slideIn 0.6s ease forwards;
+        }
+        .timeline-item:nth-child(even) {
+            transform: translateX(30px);
+        }
+        .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.4s; }
+        .timeline-item:nth-child(5) { animation-delay: 0.5s; }
+        .timeline-item:nth-child(6) { animation-delay: 0.6s; }
+        .timeline-item:nth-child(7) { animation-delay: 0.7s; }
+        
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .fact-card {
+            transition: all 0.3s ease;
+        }
+        .fact-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
+        }
+        
+        .tag-badge {
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 9999px;
+            font-weight: 500;
+        }
+        
+        .center-line {
+            background: linear-gradient(to bottom, transparent, #404040 10%, #404040 90%, transparent);
+        }
+        
+        .pulse-dot {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7); }
+            50% { box-shadow: 0 0 0 10px rgba(99, 102, 241, 0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header / Controls -->
+    <div class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Timeline Selector -->
+            <div class="flex items-center gap-4">
+                <div class="relative">
+                    <button class="flex items-center gap-2 px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg hover:border-indigo-500 transition-colors">
+                        <span class="font-medium">Affaire Epstein</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                    </button>
+                </div>
+                
+                <!-- Direction Toggle -->
+                <div class="flex items-center bg-gray-900 border border-gray-700 rounded-lg overflow-hidden">
+                    <button class="px-3 py-2 text-sm bg-indigo-600 text-white">↕ Vertical</button>
+                    <button class="px-3 py-2 text-sm hover:bg-gray-800 transition-colors">↔ Horizontal</button>
+                </div>
+            </div>
+            
+            <!-- Stats -->
+            <div class="text-sm text-gray-400">
+                7 faits • 5 catégories
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-16 px-6 text-center">
+        <h1 class="font-display text-5xl md:text-6xl font-bold mb-6">
+            <span class="gradient-text">Affaire Epstein</span>
+        </h1>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+            La timeline de l'affaire Epstein: 13 ans de silence médiatique
+        </p>
+        <div class="mt-8 flex justify-center gap-8 text-sm">
+            <div class="text-center">
+                <div class="text-2xl font-bold text-red-400">13 ans</div>
+                <div class="text-gray-500">De silence médiatique</div>
+            </div>
+            <div class="text-center">
+                <div class="text-2xl font-bold text-orange-400">2005→2019</div>
+                <div class="text-gray-500">Période couverte</div>
+            </div>
+            <div class="text-center">
+                <div class="text-2xl font-bold text-blue-400">∞</div>
+                <div class="text-gray-500">Questions sans réponse</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Vertical -->
+    <section class="relative max-w-4xl mx-auto py-12 px-6">
+        <!-- Center Line -->
+        <div class="absolute left-1/2 top-0 bottom-0 w-px center-line transform -translate-x-1/2"></div>
+
+        <!-- Timeline Items -->
+        <div class="space-y-16">
+            <!-- Item 1 -->
+            <div class="timeline-item relative flex items-center">
+                <div class="flex-1 pr-12 text-right">
+                    <div class="fact-card inline-block max-w-md bg-gray-900 rounded-xl p-6 border border-gray-800 cursor-pointer">
+                        <div class="inline-block px-3 py-1 mb-3 text-xs font-medium bg-red-600 rounded-full">1er janvier 2005</div>
+                        <div class="flex justify-end gap-1 mb-2">
+                            <span class="w-2 h-2 rounded-full bg-blue-500" title="Justice"></span>
+                            <span class="w-2 h-2 rounded-full bg-orange-500" title="Victimes"></span>
+                        </div>
+                        <h3 class="font-display text-lg font-bold mb-2">Première plainte parentale</h3>
+                        <p class="text-sm text-gray-400">Parents d'une jeune fille de 14 ans déposent plainte à Palm Beach. Début de l'enquête.</p>
+                        <div class="mt-3 flex justify-end gap-2">
+                            <span class="tag-badge bg-green-900/50 text-green-400">source:official</span>
+                            <span class="tag-badge bg-orange-900/50 text-orange-400">coverage:delayed</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative z-10 w-4 h-4 bg-indigo-500 rounded-full border-4 border-black pulse-dot"></div>
+                <div class="flex-1 pl-12"></div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="timeline-item relative flex items-center">
+                <div class="flex-1 pr-12"></div>
+                <div class="relative z-10 w-4 h-4 bg-indigo-500 rounded-full border-4 border-black"></div>
+                <div class="flex-1 pl-12 text-left">
+                    <div class="fact-card inline-block max-w-md bg-gray-900 rounded-xl p-6 border border-gray-800 cursor-pointer">
+                        <div class="inline-block px-3 py-1 mb-3 text-xs font-medium bg-red-600 rounded-full">1er avril 2006</div>
+                        <div class="flex gap-1 mb-2">
+                            <span class="w-2 h-2 rounded-full bg-blue-500" title="Justice"></span>
+                        </div>
+                        <h3 class="font-display text-lg font-bold mb-2">Première arrestation</h3>
+                        <p class="text-sm text-gray-400">Epstein arrêté pour agressions sexuelles sur mineures. Des dizaines de victimes identifiées.</p>
+                        <div class="mt-3 flex gap-2">
+                            <span class="tag-badge bg-green-900/50 text-green-400">source:official</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 - NPA (Key event) -->
+            <div class="timeline-item relative flex items-center">
+                <div class="flex-1 pr-12 text-right">
+                    <div class="fact-card inline-block max-w-md bg-gray-900 rounded-xl p-6 border-2 border-red-500/50 cursor-pointer relative overflow-hidden">
+                        <div class="absolute top-0 right-0 px-2 py-1 bg-red-500 text-xs font-bold">SCANDALE</div>
+                        <div class="inline-block px-3 py-1 mb-3 text-xs font-medium bg-red-600 rounded-full">1er août 2008</div>
+                        <div class="flex justify-end gap-1 mb-2">
+                            <span class="w-2 h-2 rounded-full bg-blue-500" title="Justice"></span>
+                            <span class="w-2 h-2 rounded-full bg-red-500" title="Camouflage"></span>
+                        </div>
+                        <h3 class="font-display text-lg font-bold mb-2 text-red-400">Accord secret (NPA)</h3>
+                        <p class="text-sm text-gray-400">Alexander Acosta signe un accord secret. Charges fédérales abandonnées. Complices immunisés.</p>
+                        <div class="mt-3 text-xs text-orange-400">
+                            ⚠️ Couverture médiatique: AUCUNE (2008-2018)
+                        </div>
+                        <div class="mt-2 flex justify-end gap-2">
+                            <span class="tag-badge bg-green-900/50 text-green-400">source:official</span>
+                            <span class="tag-badge bg-red-900/50 text-red-400">coverage:suppressed</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative z-10 w-6 h-6 bg-red-500 rounded-full border-4 border-black pulse-dot"></div>
+                <div class="flex-1 pl-12"></div>
+            </div>
+
+            <!-- Gap indicator -->
+            <div class="relative flex items-center justify-center py-8">
+                <div class="absolute left-1/2 top-0 bottom-0 w-px bg-gray-700 transform -translate-x-1/2"></div>
+                <div class="relative z-10 bg-black px-4 py-2 border border-gray-700 rounded-full text-sm text-gray-500">
+                    10 ans de silence médiatique quasi-total
+                </div>
+            </div>
+
+            <!-- Item 4 - Miami Herald -->
+            <div class="timeline-item relative flex items-center">
+                <div class="flex-1 pr-12"></div>
+                <div class="relative z-10 w-4 h-4 bg-green-500 rounded-full border-4 border-black"></div>
+                <div class="flex-1 pl-12 text-left">
+                    <div class="fact-card inline-block max-w-md bg-gray-900 rounded-xl p-6 border border-green-500/50 cursor-pointer">
+                        <div class="inline-block px-3 py-1 mb-3 text-xs font-medium bg-green-600 rounded-full">1er juillet 2019</div>
+                        <div class="flex gap-1 mb-2">
+                            <span class="w-2 h-2 rounded-full bg-green-500" title="Médias"></span>
+                            <span class="w-2 h-2 rounded-full bg-blue-500" title="Justice"></span>
+                        </div>
+                        <h3 class="font-display text-lg font-bold mb-2 text-green-400">Miami Herald révèle tout</h3>
+                        <p class="text-sm text-gray-400">Julie Brown publie "Perversion of Justice". Réouverture de l'enquête fédérale.</p>
+                        <div class="mt-3 text-xs text-green-400">
+                            📰 Premier reportage significatif après 13 ans
+                        </div>
+                        <div class="mt-2 flex gap-2">
+                            <span class="tag-badge bg-blue-900/50 text-blue-400">source:media</span>
+                            <span class="tag-badge bg-purple-900/50 text-purple-400">coverage:mainstream</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5 - Suicide -->
+            <div class="timeline-item relative flex items-center">
+                <div class="flex-1 pr-12 text-right">
+                    <div class="fact-card inline-block max-w-md bg-gray-900 rounded-xl p-6 border border-gray-800 cursor-pointer">
+                        <div class="inline-block px-3 py-1 mb-3 text-xs font-medium bg-gray-600 rounded-full">10 août 2019</div>
+                        <div class="flex justify-end gap-1 mb-2">
+                            <span class="w-2 h-2 rounded-full bg-gray-500" title="Mystère"></span>
+                        </div>
+                        <h3 class="font-display text-lg font-bold mb-2">Mort d'Epstein</h3>
+                        <p class="text-sm text-gray-400">"Suicide" en prison. Controverse: caméras défectueuses, gardiens endormis.</p>
+                        <div class="mt-3 text-xs text-gray-500">
+                            ❓ Suicide ou meurtre? Débat persiste
+                        </div>
+                    </div>
+                </div>
+                <div class="relative z-10 w-4 h-4 bg-gray-500 rounded-full border-4 border-black"></div>
+                <div class="flex-1 pl-12"></div>
+            </div>
+
+            <!-- Item 6 - Maxwell -->
+            <div class="timeline-item relative flex items-center">
+                <div class="flex-1 pr-12"></div>
+                <div class="relative z-10 w-4 h-4 bg-indigo-500 rounded-full border-4 border-black"></div>
+                <div class="flex-1 pl-12 text-left">
+                    <div class="fact-card inline-block max-w-md bg-gray-900 rounded-xl p-6 border border-gray-800 cursor-pointer">
+                        <div class="inline-block px-3 py-1 mb-3 text-xs font-medium bg-indigo-600 rounded-full">Juin 2020</div>
+                        <div class="flex gap-1 mb-2">
+                            <span class="w-2 h-2 rounded-full bg-blue-500" title="Justice"></span>
+                        </div>
+                        <h3 class="font-display text-lg font-bold mb-2">Arrestation de Ghislaine Maxwell</h3>
+                        <p class="text-sm text-gray-400">Ex-compagne d'Epstein arrêtée. Procès pour trafic sexuel de mineures.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 7 - Flight Logs -->
+            <div class="timeline-item relative flex items-center">
+                <div class="flex-1 pr-12 text-right">
+                    <div class="fact-card inline-block max-w-md bg-gray-900 rounded-xl p-6 border border-purple-500/50 cursor-pointer">
+                        <div class="inline-block px-3 py-1 mb-3 text-xs font-medium bg-purple-600 rounded-full">Juillet 2019</div>
+                        <div class="flex justify-end gap-1 mb-2">
+                            <span class="w-2 h-2 rounded-full bg-purple-500" title="Réseau"></span>
+                            <span class="w-2 h-2 rounded-full bg-red-500" title="Elite"></span>
+                        </div>
+                        <h3 class="font-display text-lg font-bold mb-2 text-purple-400">Flight Logs révélés</h3>
+                        <p class="text-sm text-gray-400">Journaux de vol saisis. Passagers: Clinton, Trump, Prince Andrew...</p>
+                        <div class="mt-3 text-xs text-purple-400">
+                            👥 Réseau des puissants exposé
+                        </div>
+                        <div class="mt-2 flex justify-end gap-2">
+                            <span class="tag-badge bg-yellow-900/50 text-yellow-400">source:leak</span>
+                            <span class="tag-badge bg-purple-900/50 text-purple-400">category:elite</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative z-10 w-4 h-4 bg-purple-500 rounded-full border-4 border-black"></div>
+                <div class="flex-1 pl-12"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legend -->
+    <section class="py-12 px-6 border-t border-gray-800">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="font-display text-lg font-bold mb-4">Légende des tags</h3>
+            <div class="flex flex-wrap gap-3">
+                <span class="tag-badge bg-green-900/50 text-green-400">source:official</span>
+                <span class="tag-badge bg-blue-900/50 text-blue-400">source:media</span>
+                <span class="tag-badge bg-yellow-900/50 text-yellow-400">source:leak</span>
+                <span class="tag-badge bg-red-900/50 text-red-400">coverage:suppressed</span>
+                <span class="tag-badge bg-orange-900/50 text-orange-400">coverage:delayed</span>
+                <span class="tag-badge bg-purple-900/50 text-purple-400">category:elite</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 text-center text-gray-500 border-t border-gray-800">
+        <p class="font-display text-sm">Architecture de l'Information Immersive</p>
+        <p class="text-xs mt-2">7 faits • Mode: Vertical • Timeline: Epstein</p>
+    </footer>
+
+    <script>
+        // Interactivité simple
+        document.querySelectorAll('.fact-card').forEach(card => {
+            card.addEventListener('click', function() {
+                alert('Focus Mode: Afficherait les détails complets du fait avec sources et documents liés');
+            });
+        });
+    </script>
+</body>
+</html>
