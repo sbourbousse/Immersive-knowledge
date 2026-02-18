@@ -16,6 +16,43 @@ import {
 import { Fact } from '@/types';
 
 // ============================================================================
+// FULLSCREEN BUTTON
+// ============================================================================
+
+function FullscreenButton({ 
+  isFullscreen, 
+  onToggle 
+}: { 
+  isFullscreen: boolean; 
+  onToggle: () => void;
+}) {
+  return (
+    <button
+      onClick={onToggle}
+      className="flex items-center gap-2 px-3 py-1.5 bg-gray-800 hover:bg-gray-700 
+        border border-gray-700 rounded-lg text-sm text-gray-300 transition-colors"
+      title={isFullscreen ? 'Quitter le plein écran' : 'Plein écran'}
+    >
+      {isFullscreen ? (
+        <>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"/>
+          </svg>
+          <span className="hidden sm:inline">Quitter</span>
+        </>
+      ) : (
+        <>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+          </svg>
+          <span className="hidden sm:inline">Plein écran</span>
+        </>
+      )}
+    </button>
+  );
+}
+
+// ============================================================================
 // TIMELINE LANE VIEW
 // ============================================================================
 
@@ -295,9 +332,37 @@ export function MultiTimelineView({ className, onFactClick }: MultiTimelineViewP
   const isScrolling = useRef(false);
   const scrollTimeout = useRef<NodeJS.Timeout | null>(null);
   
+  // Fullscreen state
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  
   const filteredLanes = useFilteredLanes(lanes);
   const timeRange = useCommonTimeRange(filteredLanes);
   const correlations = useCorrelations(filteredLanes);
+
+  // Toggle fullscreen
+  const toggleFullscreen = useCallback(() => {
+    if (!document.fullscreenElement) {
+      containerRef.current?.requestFullscreen().then(() => {
+        setIsFullscreen(true);
+      }).catch(() => {
+        console.error('Fullscreen not supported');
+      });
+    } else {
+      document.exitFullscreen().then(() => {
+        setIsFullscreen(false);
+      });
+    }
+  }, []);
+
+  // Listen for fullscreen changes
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+    
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
+  }, []);
   
   // Sync scroll between lanes
   const handleScroll = useCallback((sourceLaneId: string, scrollTop: number) => {
@@ -356,10 +421,19 @@ export function MultiTimelineView({ className, onFactClick }: MultiTimelineViewP
       ref={containerRef}
       className={cn(
         'relative bg-gray-950 rounded-xl border border-gray-800 overflow-hidden',
+        isFullscreen && 'fixed inset-0 z-[9999] rounded-none',
         direction === 'horizontal' ? 'flex' : 'flex flex-col',
         className
       )}
     >
+      {/* Header with fullscreen button */}
+      <div className="absolute top-4 left-4 z-20 flex items-center gap-2">
+        <FullscreenButton 
+          isFullscreen={isFullscreen} 
+          onToggle={toggleFullscreen} 
+        />
+      </div>
+      
       {/* Lane grid */}
       <div 
         className={cn(

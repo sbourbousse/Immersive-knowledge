@@ -16,8 +16,8 @@ export default function Home() {
 
   return (
     <FocusModeProvider>
-      <main className="relative min-h-screen">
-        {/* Controls */}
+      <main className="relative min-h-screen pt-16">
+        {/* Controls - Fixed at top */}
         <TimelineControls />
         
         {/* Progress Bar */}
@@ -31,7 +31,7 @@ export default function Home() {
         />
         
         {/* Timeline Section */}
-        <section className="relative pt-20">
+        <section className="relative py-12">
           <TimelineComponent 
             facts={currentTimeline.facts}
             categories={currentTimeline.categories}
