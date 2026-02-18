@@ -1,0 +1,24 @@
+{
+  "id": "epstein-009",
+  "timestamp": 915148800,
+  "dateLabel": "January 1, 1999",
+  "title": "Extension du réseau de recrutement européen",
+  "content": "Le réseau d'Epstein s'étend en Europe avec des recrutements signalés en France, principalement à Paris où Epstein possède un appartement avenue Foch. Jean-Luc Brunel, célèbrant français, devient un associé clé dans l'approvisionnement en jeunes filles venues d'Europe de l'Est. Le schéma de recrutement se professionnalise avec des promesses de carrière dans le mannequinat.",
+  "categories": ["Victimes", "Réseau"],
+  "tags": ["source:victims", "category:justice", "coverage:delayed"],
+  "mediaCoverage": {
+    "firstReportedDate": 1325376000,
+    "outlet": "Paris Match",
+    "delayDays": 3745
+  },
+  "source": {
+    "name": "Testimony - Virginia Giuffre vs Maxwell 2015",
+    "url": "https://www.courtlistener.com",
+    "reliabilityScore": 0.85
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

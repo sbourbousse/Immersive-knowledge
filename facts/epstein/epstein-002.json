@@ -1,0 +1,24 @@
+{
+  "id": "epstein-002",
+  "timestamp": 708076800,
+  "dateLabel": "April 12, 1992",
+  "title": "Première acquisition de Little St. James",
+  "content": "Jeffrey Epstein achète l'île privée de Little St. James dans les îles Vierges américaines pour 7,95 millions de dollars. L'île de 75 acres deviendra son sanctuaire privé où il organiserait des rencontres avec des personnalités politiques, des hommes d'affaires et des célébrités. L'endroit, surnommé plus tard 'Orgy Island' par les médias, jouera un rôle central dans les allégations de trafic sexuel.",
+  "categories": ["Réseau", "Victimes", "Camouflage"],
+  "tags": ["source:official", "category:elite", "coverage:delayed"],
+  "mediaCoverage": {
+    "firstReportedDate": 1380585600,
+    "outlet": "The Guardian",
+    "delayDays": 6329
+  },
+  "source": {
+    "name": "US Virgin Islands Property Records",
+    "url": "https://www.vipd.gov",
+    "reliabilityScore": 0.95
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

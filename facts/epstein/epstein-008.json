@@ -1,0 +1,24 @@
+{
+  "id": "epstein-008",
+  "timestamp": 883612800,
+  "dateLabel": "January 1, 1998",
+  "title": "Premier voyage d'Epstein avec Clinton",
+  "content": "Selon les flight logs, Bill Clinton effectue son premier voyage connu avec Jeffrey Epstein à bord de son jet privé. Cette marque le début d'une relation de plusieurs années entre l'ancien président et le financier. Clinton effectuera au total 26 voyages sur les jets d'Epstein selon les registres de vol, dont certains sans service secret.",
+  "categories": ["Réseau", "Médias"],
+  "tags": ["source:leak", "category:elite", "coverage:mainstream"],
+  "mediaCoverage": {
+    "firstReportedDate": 1246406400,
+    "outlet": "Fox News",
+    "delayDays": 3786
+  },
+  "source": {
+    "name": "Epstein Flight Logs - Released 2009",
+    "url": "https://www.documentcloud.org",
+    "reliabilityScore": 0.9
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "epstein-017",
+  "timestamp": 1167609600,
+  "dateLabel": "1er janvier 2007",
+  "title": "Négociations secrètes Acosta",
+  "content": "Le procureur fédéral Alexander Acosta commence des négociations secrètes avec les avocats d'Epstein. Les victimes ne sont pas informées de ces discussions, violant la loi CRIME Victims' Rights Act.",
+  "categories": ["Justice", "Camouflage"],
+  "tags": ["source:official", "category:coverup", "category:elite", "coverage:suppressed"],
+  "source": {
+    "name": "DOJ Internal Documents",
+    "url": "https://www.justice.gov/",
+    "reliabilityScore": 0.9,
+    "accessedAt": "2026-02-18T12:00:00Z"
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

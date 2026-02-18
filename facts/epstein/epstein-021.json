@@ -1,0 +1,20 @@
+{
+  "id": "epstein-021",
+  "timestamp": 1230768000,
+  "dateLabel": "1er janvier 2009",
+  "title": "Epstein libéré - La décennie de silence commence",
+  "content": "Epstein est libéré après avoir purgé 13 mois de sa peine de 18 mois. Il retourne immédiatement à ses activités, voyageant fréquemment à l'international. Les médias restent largement silencieux sur son cas.",
+  "categories": ["Justice"],
+  "tags": ["source:official", "category:justice", "coverage:suppressed"],
+  "source": {
+    "name": "Palm Beach County Sheriff",
+    "url": "https://www.pbso.org/",
+    "reliabilityScore": 0.95,
+    "accessedAt": "2026-02-18T12:00:00Z"
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

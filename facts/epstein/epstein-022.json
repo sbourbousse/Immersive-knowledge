@@ -1,0 +1,20 @@
+{
+  "id": "epstein-022",
+  "timestamp": 1262304000,
+  "dateLabel": "1er janvier 2010",
+  "title": "Voyages internationaux continuent",
+  "content": "Malgré sa condamnation, Epstein continue de voyager à l'international. Il visite fréquemment Paris, où il possède un appartement près de l'Arc de Triomphe, et son ranch au Nouveau-Mexique.",
+  "categories": ["Réseau"],
+  "tags": ["source:leak", "category:elite", "coverage:suppressed"],
+  "source": {
+    "name": "Flight Logs",
+    "url": "https://www.faa.gov/",
+    "reliabilityScore": 0.9,
+    "accessedAt": "2026-02-18T12:00:00Z"
+  },
+  "metadata": {
+    "importance": "medium",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

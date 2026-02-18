@@ -1,0 +1,24 @@
+{
+  "id": "epstein-005",
+  "timestamp": 783993600,
+  "dateLabel": "October 1, 1994",
+  "title": "Premières recrutements de jeunes filles à Palm Beach",
+  "content": "Selon les témoignages ultérieurs des victimes, les premières recrutements systématiques de jeunes filles mineures commencent à Palm Beach, Floride. Le schéma typique émerge : des recruteurs approchent des adolescentes vulnérables, souvent en situation financière précaire, en leur promettant de l'argent pour des 'massages' chez Epstein. Ce mécanisme restera inchangé pendant plus d'une décennie.",
+  "categories": ["Victimes", "Justice"],
+  "tags": ["source:victims", "category:justice", "coverage:suppressed"],
+  "mediaCoverage": {
+    "firstReportedDate": 1222819200,
+    "outlet": "Palm Beach Police Reports",
+    "delayDays": 4465
+  },
+  "source": {
+    "name": "Court testimony - Jane Doe 1 vs Epstein 2005",
+    "url": "https://www.courtlistener.com",
+    "reliabilityScore": 0.9
+  },
+  "metadata": {
+    "importance": "critical",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

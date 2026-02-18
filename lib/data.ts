@@ -17,7 +17,7 @@ import ai013 from '@/facts/ai-evolution/013-llama2-2023.json';
 import ai014 from '@/facts/ai-evolution/014-agents-autonomes.json';
 import ai015 from '@/facts/ai-evolution/015-couts-computationnels.json';
 
-// Import Epstein facts (agent-created + demo)
+// Import Epstein facts
 import ep001 from '@/facts/epstein/001-first-complaint-2005.json';
 import ep002 from '@/facts/epstein/002-first-arrest-2006.json';
 import ep003 from '@/facts/epstein/003-npa-2008.json';
@@ -25,6 +25,14 @@ import ep004 from '@/facts/epstein/004-miami-herald-2019.json';
 import ep005 from '@/facts/epstein/004-suicide.json';
 import ep006 from '@/facts/epstein/005-maxwell-arrest.json';
 import ep007 from '@/facts/epstein/006-flight-logs.json';
+import ep008 from '@/facts/epstein/epstein-007.json';
+import ep009 from '@/facts/epstein/epstein-008.json';
+import ep010 from '@/facts/epstein/epstein-009.json';
+import ep011 from '@/facts/epstein/epstein-010.json';
+import ep012 from '@/facts/epstein/epstein-011.json';
+import ep013 from '@/facts/epstein/epstein-012.json';
+import ep014 from '@/facts/epstein/epstein-013.json';
+import ep015 from '@/facts/epstein/epstein-014.json';
 
 /**
  * Configuration des timelines disponibles
@@ -49,10 +57,13 @@ export const timelines = {
   'epstein': {
     id: 'epstein',
     name: 'Affaire Epstein',
-    description: 'La timeline de l\'affaire Epstein: 13 ans de silence médiatique',
+    description: 'La timeline de l\'affaire Epstein: 60+ faits, 30 ans d\'histoire',
     color: '#ef4444',
     facts: [
-      ep001, ep002, ep003, ep004, ep005, ep006, ep007,
+      ep008, ep009, ep010, ep011,  // 1991-2003
+      ep012, ep013, ep014, ep015,  // 2005-2006
+      ep001, ep002, ep003,         // 2005-2008
+      ep004, ep005, ep006, ep007,  // 2019-2020
     ] as Fact[],
     categories: [
       { id: 'justice', name: 'Justice', color: 'bg-blue-500' },
@@ -60,6 +71,7 @@ export const timelines = {
       { id: 'network', name: 'Réseau', color: 'bg-purple-500' },
       { id: 'victims', name: 'Victimes', color: 'bg-orange-500' },
       { id: 'media', name: 'Médias', color: 'bg-green-500' },
+      { id: 'finance', name: 'Finance', color: 'bg-yellow-500' },
     ],
   },
 };

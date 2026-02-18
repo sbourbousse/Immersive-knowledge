@@ -1,0 +1,21 @@
+{
+  "id": "epstein-015",
+  "timestamp": 1143840000,
+  "dateLabel": "1er avril 2006",
+  "title": "Arrestation d'Epstein",
+  "content": "Jeffrey Epstein est arrêté par le FBI à son domicile de Palm Beach. Il est inculpé pour agressions sexuelles sur mineures. L'enquête a identifié plus de 30 victimes potentielles.",
+  "categories": ["Justice"],
+  "tags": ["source:official", "category:justice", "coverage:delayed"],
+  "source": {
+    "name": "FBI",
+    "url": "https://www.fbi.gov/",
+    "reliabilityScore": 0.98,
+    "accessedAt": "2026-02-18T12:00:00Z"
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed",
+    "mediaCoverageDate": 1561939200
+  }
+}

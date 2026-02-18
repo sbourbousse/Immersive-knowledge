@@ -1,0 +1,20 @@
+{
+  "id": "epstein-020",
+  "timestamp": 1220227200,
+  "dateLabel": "1er septembre 2008",
+  "title": "Condamnation symbolique",
+  "content": "Epstein est condamné à 18 mois de prison. Il passe la plupart de son temps en liberté conditionnelle dans son bureau de Palm Beach, autorisé à sortir 12 heures par jour, 6 jours par semaine.",
+  "categories": ["Justice"],
+  "tags": ["source:official", "category:justice", "coverage:suppressed"],
+  "source": {
+    "name": "Palm Beach County Court",
+    "url": "https://www.pbcgov.com/",
+    "reliabilityScore": 0.95,
+    "accessedAt": "2026-02-18T12:00:00Z"
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

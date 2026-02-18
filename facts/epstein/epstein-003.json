@@ -1,0 +1,24 @@
+{
+  "id": "epstein-003",
+  "timestamp": 725846400,
+  "dateLabel": "October 1993",
+  "title": "Rencontre déterminante avec Les Wexner",
+  "content": "Jeffrey Epstein rencontre Les Wexner, milliardaire propriétaire de Victoria's Secret et de The Limited, à travers des cercles financiers de New York. Cette relation deviendra l'une des plus importantes et mystérieuses d'Epstein. Wexner finira par nommer Epstein gestionnaire de fortune et lui confiera des pouvoirs extraordinaires sur ses actifs, y compris une procuration générale.",
+  "categories": ["Finance", "Réseau"],
+  "tags": ["source:media", "category:finance", "coverage:mainstream"],
+  "mediaCoverage": {
+    "firstReportedDate": 1546300800,
+    "outlet": "New York Times",
+    "delayDays": 8190
+  },
+  "source": {
+    "name": "Vanity Fair Investigation",
+    "url": "https://www.vanityfair.com",
+    "reliabilityScore": 0.85
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "epstein-012",
+  "timestamp": 1107216000,
+  "dateLabel": "February 1, 2005",
+  "title": "Lancement de l'opération 'Operation Leap Year'",
+  "content": "Le détective Joseph Recarey du Palm Beach Police Department lance l'opération 'Operation Leap Year' pour enquêter sur les activités d'Epstein. Les policiers identifient rapidement un schéma systématique : des recruteurs (souvent des victimes précédentes) approchent des adolescentes de collèges locaux. L'enquête révèle des dizaines de victimes potentielles.",
+  "categories": ["Justice", "Victimes"],
+  "tags": ["source:official", "category:justice", "coverage:suppressed"],
+  "mediaCoverage": {
+    "firstReportedDate": 1222819200,
+    "outlet": "Palm Beach Post",
+    "delayDays": 914
+  },
+  "source": {
+    "name": "Palm Beach Police Investigation Files",
+    "url": "https://www.pbso.org",
+    "reliabilityScore": 0.95
+  },
+  "metadata": {
+    "importance": "critical",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}
