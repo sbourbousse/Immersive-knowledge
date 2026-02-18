@@ -7,7 +7,7 @@ export function TimelineControls() {
   const { direction, setDirection, isComparisonMode, comparedTimelines } = useTimelineStore();
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-[100] bg-black/90 backdrop-blur-md border-b border-gray-800">
+    <div className="sticky top-0 left-0 right-0 z-40 bg-black/90 backdrop-blur-md border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <TimelineSelector />

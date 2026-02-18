@@ -16,8 +16,8 @@ export default function Home() {
 
   return (
     <FocusModeProvider>
-      <main className="relative min-h-screen pt-16">
-        {/* Controls - Fixed at top */}
+      <main className="relative min-h-screen">
+        {/* Controls - Sticky at top */}
         <TimelineControls />
         
         {/* Progress Bar */}
