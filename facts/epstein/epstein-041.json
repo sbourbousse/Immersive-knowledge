@@ -1,0 +1,24 @@
+{
+  "id": "epstein-041",
+  "timestamp": 1543622400,
+  "dateLabel": "December 1, 2018",
+  "title": "Ouverture d'une nouvelle enquête fédérale par le SDNY",
+  "content": "Suite aux révélations du Miami Herald, le Bureau du Procureur du Southern District of New York (SDNY) ouvre une nouvelle enquête criminelle sur Epstein. L'équipe de Geoffrey Berman, procureur fédéral, commence à examiner de nouvelles accusations de trafic sexuel. Cette enquête contourne l'accord de 2008 en se concentrant sur des crimes commis dans d'autres juridictions.",
+  "categories": ["Justice"],
+  "tags": ["source:official", "category:justice", "coverage:mainstream"],
+  "mediaCoverage": {
+    "firstReportedDate": 1543622400,
+    "outlet": "Wall Street Journal",
+    "delayDays": 0
+  },
+  "source": {
+    "name": "DOJ Press Release - SDNY",
+    "url": "https://www.justice.gov/usao-sdny",
+    "reliabilityScore": 0.95
+  },
+  "metadata": {
+    "importance": "critical",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

@@ -1,19 +1,23 @@
 {
   "id": "epstein-021",
-  "timestamp": 1230768000,
-  "dateLabel": "1er janvier 2009",
-  "title": "Epstein libéré - La décennie de silence commence",
-  "content": "Epstein est libéré après avoir purgé 13 mois de sa peine de 18 mois. Il retourne immédiatement à ses activités, voyageant fréquemment à l'international. Les médias restent largement silencieux sur son cas.",
-  "categories": ["Justice"],
-  "tags": ["source:official", "category:justice", "coverage:suppressed"],
+  "timestamp": 1180656000,
+  "dateLabel": "June 2, 2007",
+  "title": "Signature de l'accord de non-poursuite (NPA) secret",
+  "content": "Un Non-Prosecution Agreement (NPA) secret est signé entre les avocats d'Epstein et les procureurs fédéraux. Cet accord garantit qu'Epstein ne sera pas poursuivi au niveau fédéral pour les crimes présumés. Le document est scellé et caché aux victimes, violant ainsi la loi CVRA (Crime Victims' Rights Act) qui garantit aux victimes le droit d'être informées des négociations.",
+  "categories": ["Justice", "Camouflage"],
+  "tags": ["source:official", "category:coverup", "coverage:suppressed"],
+  "mediaCoverage": {
+    "firstReportedDate": 1543449600,
+    "outlet": "Miami Herald",
+    "delayDays": 5668
+  },
   "source": {
-    "name": "Palm Beach County Sheriff",
-    "url": "https://www.pbso.org/",
-    "reliabilityScore": 0.95,
-    "accessedAt": "2026-02-18T12:00:00Z"
+    "name": "US District Court - Southern District of Florida",
+    "url": "https://www.flsd.uscourts.gov",
+    "reliabilityScore": 0.95
   },
   "metadata": {
-    "importance": "high",
+    "importance": "critical",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
   }

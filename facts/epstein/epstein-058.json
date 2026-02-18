@@ -1,0 +1,24 @@
+{
+  "id": "epstein-058",
+  "timestamp": 1704067200,
+  "dateLabel": "January 1, 2024",
+  "title": "Déclassification des documents de l'affaire Epstein",
+  "content": "Un juge fédéral ordonne la déclassification partielle de milliers de documents judiciaires liés à l'affaire Epstein. Les documents, souvent appelés à tort 'liste des clients', incluent des témoignages sous serment, des emails, et des mentions de noms de personnalités liées à Epstein. Les médias analysent ces documents qui confirment les relations d'Epstein avec des figures politiques, des célébrités, et des hommes d'affaires, sans pour autant révéler de 'liste de clients' pédophiles.",
+  "categories": ["Justice", "Médias"],
+  "tags": ["source:official", "category:elite", "coverage:mainstream"],
+  "mediaCoverage": {
+    "firstReportedDate": 1704067200,
+    "outlet": "Miami Herald",
+    "delayDays": 0
+  },
+  "source": {
+    "name": "US District Court - Southern District of New York",
+    "url": "https://www.courtlistener.com",
+    "reliabilityScore": 0.95
+  },
+  "metadata": {
+    "importance": "critical",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

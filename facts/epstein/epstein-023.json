@@ -1,0 +1,24 @@
+{
+  "id": "epstein-023",
+  "timestamp": 1188518400,
+  "dateLabel": "August 31, 2008",
+  "title": "Début de l'incarcération au centre de détention de Palm Beach",
+  "content": "Epstein commence sa peine au Palm Beach County Stockade. Contrairement aux détenus ordinaires, il bénéficie d'un régime privilégié : une cellule privée, des visites illimitées, et surtout un programme de 'travail' qui lui permet de quitter la prison 12 heures par jour. Il enregistre officiellement son bureau de Palm Beach comme lieu de travail.",
+  "categories": ["Justice", "Camouflage"],
+  "tags": ["source:official", "category:coverup", "coverage:suppressed"],
+  "mediaCoverage": {
+    "firstReportedDate": 1543449600,
+    "outlet": "Miami Herald",
+    "delayDays": 5210
+  },
+  "source": {
+    "name": "Palm Beach County Sheriff's Office Records",
+    "url": "https://www.pbso.org",
+    "reliabilityScore": 0.95
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

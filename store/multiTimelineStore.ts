@@ -217,15 +217,21 @@ export const useMultiTimelineStore = create<MultiTimelineState & MultiTimelineAc
             if (lane.id !== laneId) return lane;
             
             if (mode === 'include') {
+              const newIncluded = lane.includedTags.includes(tag) 
+                ? lane.includedTags 
+                : [...lane.includedTags, tag];
               return {
                 ...lane,
-                includedTags: [...new Set([...lane.includedTags, tag])],
+                includedTags: newIncluded,
                 excludedTags: lane.excludedTags.filter(t => t !== tag),
               };
             } else {
+              const newExcluded = lane.excludedTags.includes(tag)
+                ? lane.excludedTags
+                : [...lane.excludedTags, tag];
               return {
                 ...lane,
-                excludedTags: [...new Set([...lane.excludedTags, tag])],
+                excludedTags: newExcluded,
                 includedTags: lane.includedTags.filter(t => t !== tag),
               };
             }

@@ -1,0 +1,24 @@
+{
+  "id": "epstein-053",
+  "timestamp": 1601510400,
+  "dateLabel": "October 1, 2020",
+  "title": "Maxwell placée en isolement cellulaire",
+  "content": "Ghislaine Maxwell est placée en isolement cellulaire au Metropolitan Detention Center de Brooklyn pour des raisons de sécurité. Ses avocats dénoncent des conditions de détention inhumaines, alléguant qu'elle est maintenue dans des conditions pires que celles des détenus condamnés à mort. Le juge rejette plusieurs demandes de libération sous caution, considérant Maxwell comme un risque de fuite majeur compte tenu de ses multiples passeports et de ses ressources financières.",
+  "categories": ["Justice"],
+  "tags": ["source:official", "category:justice", "coverage:mainstream"],
+  "mediaCoverage": {
+    "firstReportedDate": 1601510400,
+    "outlet": "BBC",
+    "delayDays": 0
+  },
+  "source": {
+    "name": "Court filings - US vs Maxwell",
+    "url": "https://www.courtlistener.com",
+    "reliabilityScore": 0.9
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

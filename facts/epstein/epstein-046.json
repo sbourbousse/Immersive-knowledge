@@ -1,0 +1,24 @@
+{
+  "id": "epstein-046",
+  "timestamp": 1565827200,
+  "dateLabel": "August 15, 2019",
+  "title": "Epstein retrouvé mort dans sa cellule",
+  "content": "Jeffrey Epstein est retrouvé sans vie dans sa cellule au Metropolitan Correctional Center de New York à 6h30 du matin. La mort est initialement présentée comme un suicide par pendaison. Cependant, les circonstances sont immédiatement contestées : il aurait dû être sous surveillance constante après une tentative de suicide précédente, ses gardiens étaient en sous-effectif et fatigués, et les caméras de surveillance présentaient des 'dysfonctionnements'.",
+  "categories": ["Justice", "Camouflage"],
+  "tags": ["source:official", "category:coverup", "coverage:mainstream"],
+  "mediaCoverage": {
+    "firstReportedDate": 1565913600,
+    "outlet": "New York Times",
+    "delayDays": 1
+  },
+  "source": {
+    "name": "Federal Bureau of Prisons",
+    "url": "https://www.bop.gov",
+    "reliabilityScore": 0.95
+  },
+  "metadata": {
+    "importance": "critical",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "epstein-024",
+  "timestamp": 1199145600,
+  "dateLabel": "January 1, 2008",
+  "title": "Victimes exclues du processus judiciaire",
+  "content": "Les victimes d'Epstein découvrent avec stupéfaction qu'un accord a été signé sans leur consultation. La loi fédérale (CVRA) exige pourtant que les victimes soient informées et consultées sur tout accord de plaidoyer. Bradley Edwards, avocat des victimes, déposera plus tard une plainte arguant que cet accord était non seulement immoral mais illégal. Les victimes n'ont jamais eu l'occasion de témoigner au tribunal.",
+  "categories": ["Justice", "Victimes", "Camouflage"],
+  "tags": ["source:official", "category:coverup", "coverage:suppressed"],
+  "mediaCoverage": {
+    "firstReportedDate": 1543449600,
+    "outlet": "Miami Herald",
+    "delayDays": 5389
+  },
+  "source": {
+    "name": "Bradley Edwards - Victim representation filings",
+    "url": "https://www.courtlistener.com",
+    "reliabilityScore": 0.9
+  },
+  "metadata": {
+    "importance": "critical",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

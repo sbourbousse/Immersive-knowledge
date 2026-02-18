@@ -388,11 +388,11 @@ export interface LaneBuilderProps {
 }
 
 export function LaneBuilder({ className }: LaneBuilderProps) {
+  const store = useMultiTimelineStore();
   const {
     lanes,
     activeLaneId,
     maxLanes,
-    canAddLane,
     addLane,
     removeLane,
     setActiveLane,
@@ -401,7 +401,8 @@ export function LaneBuilder({ className }: LaneBuilderProps) {
     resetLanes,
     exportLaneConfig,
     importLaneConfig,
-  } = useMultiTimelineStore();
+  } = store;
+  const canAddLane = lanes.length < maxLanes;
   
   const [editingLaneId, setEditingLaneId] = useState<string | null>(null);
   const [showImportExport, setShowImportExport] = useState(false);

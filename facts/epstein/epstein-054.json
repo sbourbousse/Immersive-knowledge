@@ -1,0 +1,24 @@
+{
+  "id": "epstein-054",
+  "timestamp": 1639526400,
+  "dateLabel": "December 15, 2021",
+  "title": "Condamnation de Ghislaine Maxwell à 20 ans de prison",
+  "content": "Après un procès de plusieurs semaines à New York, Ghislaine Maxwell est reconnue coupable de trafic sexuel de mineures et de complot. Elle est condamnée à 20 ans de prison fédérale. Les jurés ont entendu les témoignages détaillés de victimes décrivant Maxwell comme la principale recruteuse et parfois participante aux abus. La condamnation est considérée comme une victoire pour les victimes et la justice.",
+  "categories": ["Justice", "Victimes"],
+  "tags": ["source:official", "category:justice", "coverage:mainstream"],
+  "mediaCoverage": {
+    "firstReportedDate": 1639612800,
+    "outlet": "New York Times",
+    "delayDays": 1
+  },
+  "source": {
+    "name": "US District Court - Southern District of New York",
+    "url": "https://www.justice.gov/usao-sdny",
+    "reliabilityScore": 0.95
+  },
+  "metadata": {
+    "importance": "critical",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

@@ -1,19 +1,23 @@
 {
   "id": "epstein-022",
-  "timestamp": 1262304000,
-  "dateLabel": "1er janvier 2010",
-  "title": "Voyages internationaux continuent",
-  "content": "Malgré sa condamnation, Epstein continue de voyager à l'international. Il visite fréquemment Paris, où il possède un appartement près de l'Arc de Triomphe, et son ranch au Nouveau-Mexique.",
-  "categories": ["Réseau"],
-  "tags": ["source:leak", "category:elite", "coverage:suppressed"],
+  "timestamp": 1183248000,
+  "dateLabel": "July 1, 2008",
+  "title": "Condamnation symbolique à 18 mois de prison",
+  "content": "Epstein plaide coupable à deux chefs d'accusation d'État : sollicitation de prostitution et sollicitation de mineure. Il est condamné à 18 mois d'incarcération, mais le régime est exceptionnellement clément. Il est autorisé à quitter la prison 12 heures par jour, 6 jours par semaine, pour travailler dans son bureau. Cette 'prison de week-end' est dénoncée comme une mascarade judiciaire.",
+  "categories": ["Justice", "Camouflage"],
+  "tags": ["source:official", "category:coverup", "coverage:suppressed"],
+  "mediaCoverage": {
+    "firstReportedDate": 1543449600,
+    "outlet": "Miami Herald",
+    "delayDays": 5359
+  },
   "source": {
-    "name": "Flight Logs",
-    "url": "https://www.faa.gov/",
-    "reliabilityScore": 0.9,
-    "accessedAt": "2026-02-18T12:00:00Z"
+    "name": "Palm Beach County Court Records",
+    "url": "https://www.palmbeachcounty.gov",
+    "reliabilityScore": 0.95
   },
   "metadata": {
-    "importance": "medium",
+    "importance": "critical",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
   }

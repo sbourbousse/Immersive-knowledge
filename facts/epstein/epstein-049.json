@@ -1,0 +1,24 @@
+{
+  "id": "epstein-049",
+  "timestamp": 1568332800,
+  "dateLabel": "September 13, 2019",
+  "title": "Clinton et Trump se distancient publiquement",
+  "content": "Suite à la mort d'Epstein, Bill Clinton et Donald Trump publient des déclarations publiques pour se distancier du financier. Clinton nie avoir jamais été sur l'île privée d'Epstein. Trump déclare s'être 'éloigné' d'Epstein il y a plusieurs années. Les médias commencent à examiner les connections des deux présidents avec Epstein, révélant des photographies et des témoignages de leurs fréquentations.",
+  "categories": ["Politique", "Médias"],
+  "tags": ["source:media", "category:elite", "coverage:mainstream"],
+  "mediaCoverage": {
+    "firstReportedDate": 1568419200,
+    "outlet": "CNN",
+    "delayDays": 1
+  },
+  "source": {
+    "name": "Multiple press statements - Clinton Foundation, White House",
+    "url": "https://www.cnn.com",
+    "reliabilityScore": 0.85
+  },
+  "metadata": {
+    "importance": "medium",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

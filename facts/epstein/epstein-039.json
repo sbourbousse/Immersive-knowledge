@@ -1,0 +1,24 @@
+{
+  "id": "epstein-039",
+  "timestamp": 1514764800,
+  "dateLabel": "January 1, 2018",
+  "title": "Alexander Acosta interrogé sur le NPA",
+  "content": "Lors de son audition de confirmation comme Secrétaire au Travail, Alexander Acosta est interrogé sur son rôle dans l'accord de non-poursuite d'Epstein. Il défend sa décision, affirmant qu'elle était la seule façon d'obtenir une condamnation. Cependant, les sénateurs expriment leur préoccupation. La nomination est confirmée mais le sujet continue de hanter Acosta.",
+  "categories": ["Justice", "Politique"],
+  "tags": ["source:official", "category:coverup", "coverage:mainstream"],
+  "mediaCoverage": {
+    "firstReportedDate": 1514764800,
+    "outlet": "Washington Post",
+    "delayDays": 0
+  },
+  "source": {
+    "name": "Senate Confirmation Hearing - H.R. 1633",
+    "url": "https://www.congress.gov",
+    "reliabilityScore": 0.95
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

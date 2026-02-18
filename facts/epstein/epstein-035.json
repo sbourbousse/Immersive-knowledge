@@ -1,0 +1,24 @@
+{
+  "id": "epstein-035",
+  "timestamp": 1451606400,
+  "dateLabel": "January 1, 2016",
+  "title": "Julie Brown du Miami Herald commence son enquête",
+  "content": "La journaliste d'investigation Julie Brown commence à travailler sur une série d'articles sur l'affaire Epstein. Frustrée par le silence médiatique entourant le cas malgré les condamnations précédentes, elle entreprend une enquête de plus de 2 ans. Elle interviewera des victimes, des policiers, et analysera des milliers de pages de documents judiciaires. Son travail aboutira à l'explosion médiatique de 2018.",
+  "categories": ["Médias", "Victimes"],
+  "tags": ["source:media", "category:justice", "coverage:independent"],
+  "mediaCoverage": {
+    "firstReportedDate": 1541030400,
+    "outlet": "Miami Herald",
+    "delayDays": 0
+  },
+  "source": {
+    "name": "Miami Herald Editorial",
+    "url": "https://www.miamiherald.com",
+    "reliabilityScore": 0.95
+  },
+  "metadata": {
+    "importance": "critical",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

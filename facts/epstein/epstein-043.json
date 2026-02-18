@@ -1,0 +1,24 @@
+{
+  "id": "epstein-043",
+  "timestamp": 1563235200,
+  "dateLabel": "July 16, 2019",
+  "title": "Arrestation d'Epstein à l'aéroport Teterboro",
+  "content": "Jeffrey Epstein est arrêté à son retour de Paris à l'aéroport privé de Teterboro au New Jersey. Les agents du FBI l'attendent à la descente de son jet privé. Il est immédiatement inculpé de trafic sexuel et de conspiration. L'arrestation est coordonnée par le SDNY et marque le début d'un nouveau chapitre judiciaire, ignorant l'accord de non-poursuite de 2008.",
+  "categories": ["Justice"],
+  "tags": ["source:official", "category:justice", "coverage:mainstream"],
+  "mediaCoverage": {
+    "firstReportedDate": 1563321600,
+    "outlet": "New York Times",
+    "delayDays": 1
+  },
+  "source": {
+    "name": "FBI Press Release - July 2019",
+    "url": "https://www.fbi.gov",
+    "reliabilityScore": 0.95
+  },
+  "metadata": {
+    "importance": "critical",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

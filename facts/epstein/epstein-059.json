@@ -1,0 +1,24 @@
+{
+  "id": "epstein-059",
+  "timestamp": 1706745600,
+  "dateLabel": "February 1, 2024",
+  "title": "Rapport DOJ OIG sur l'accord Acosta-Epstein",
+  "content": "Le Bureau de l'Inspecteur Général du DOJ publie un rapport détaillé concluant que l'accord de non-poursuite de 2008 était 'inapproprié' et que les victimes ont été illégalement exclues du processus. Cependant, le rapport ne recommande pas de poursuites contre Acosta, arguant que l'accord était techniquement légal bien que 'mal avisé'. Le rapport confirme les soupçons de 'cover-up' mais sans conséquences pénales pour les responsables.",
+  "categories": ["Justice", "Camouflage"],
+  "tags": ["source:official", "category:coverup", "coverage:mainstream"],
+  "mediaCoverage": {
+    "firstReportedDate": 1706832000,
+    "outlet": "Washington Post",
+    "delayDays": 1
+  },
+  "source": {
+    "name": "DOJ Office of Inspector General Report",
+    "url": "https://oig.justice.gov",
+    "reliabilityScore": 0.95
+  },
+  "metadata": {
+    "importance": "critical",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

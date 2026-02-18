@@ -1,0 +1,24 @@
+{
+  "id": "epstein-038",
+  "timestamp": 1512086400,
+  "dateLabel": "December 1, 2017",
+  "title": "Nouvelles révélations sur le rôle de Ghislaine Maxwell",
+  "content": "Des documents de l'enquête du Miami Herald révèlent l'ampleur du rôle de Ghislaine Maxwell comme recruteuse en chef pour Epstein. Plusieurs victimes la décrivent comme l'architecte du réseau de recrutement, approchant personnellement des adolescentes avec des promesses de formation en mannequinat. Maxwell est également accusée d'avoir participé aux abus sexuels.",
+  "categories": ["Réseau", "Victimes"],
+  "tags": ["source:victims", "category:justice", "coverage:independent"],
+  "mediaCoverage": {
+    "firstReportedDate": 1541030400,
+    "outlet": "Miami Herald",
+    "delayDays": 730
+  },
+  "source": {
+    "name": "Miami Herald - Perversion of Justice (pre-publication)",
+    "url": "https://www.miamiherald.com",
+    "reliabilityScore": 0.9
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

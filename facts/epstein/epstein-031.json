@@ -1,0 +1,24 @@
+{
+  "id": "epstein-031",
+  "timestamp": 1356998400,
+  "dateLabel": "January 1, 2013",
+  "title": "Les Wexner commencent à remettre en question leur relation",
+  "content": "Les Wexner commencent à s'éloigner d'Epstein, bien que publiquement ils maintiennent une façade d'amitié. Les rumeurs sur les activités d'Epstein circulent dans les cercles de l'élite. Cependant, aucune action publique n'est prise pour dénoncer Epstein. Les dons à des œuvres de charité liées à Epstein diminuent progressivement.",
+  "categories": ["Réseau", "Camouflage"],
+  "tags": ["source:media", "category:elite", "coverage:delayed"],
+  "mediaCoverage": {
+    "firstReportedDate": 1556668800,
+    "outlet": "New York Times",
+    "delayDays": 4748
+  },
+  "source": {
+    "name": "New York Times Investigation",
+    "url": "https://www.nytimes.com",
+    "reliabilityScore": 0.85
+  },
+  "metadata": {
+    "importance": "medium",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

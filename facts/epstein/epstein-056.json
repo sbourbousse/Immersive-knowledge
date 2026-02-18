@@ -1,0 +1,24 @@
+{
+  "id": "epstein-056",
+  "timestamp": 1648684800,
+  "dateLabel": "March 31, 2022",
+  "title": "Règlement du procès civil Giuffre vs Prince Andrew",
+  "content": "Le Prince Andrew conclut un accord financier confidentiel avec Virginia Giuffre, mettant fin au procès civil où il était accusé d'agression sexuelle. Bien que le montant ne soit pas divulgué, les estimations parlent de plusieurs millions de dollars. Le prince Andrew ne reconnaît pas sa culpabilité mais accepte de faire un don à l'association de Giuffre soutenant les victimes de traite. Il renonce également à ses titres militaires et à ses patronages royaux.",
+  "categories": ["Justice", "Réseau"],
+  "tags": ["source:official", "category:elite", "coverage:mainstream"],
+  "mediaCoverage": {
+    "firstReportedDate": 1648771200,
+    "outlet": "BBC",
+    "delayDays": 1
+  },
+  "source": {
+    "name": "US District Court - Southern District of New York",
+    "url": "https://www.courtlistener.com",
+    "reliabilityScore": 0.95
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

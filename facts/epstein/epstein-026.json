@@ -1,0 +1,24 @@
+{
+  "id": "epstein-026",
+  "timestamp": 1235692800,
+  "dateLabel": "February 28, 2009",
+  "title": "Libération d'Epstein après 13 mois d'incarcération",
+  "content": "Jeffrey Epstein est libéré après avoir purgé 13 mois de sa peine de 18 mois, grâce au crédit de bonne conduite. Il est immédiatement placé sous probation pendant un an. Dès sa sortie, il reprend ses activités normales, voyageant à l'international et recevant des invités chez lui. La sentence ne l'empêche nullement de continuer à fréquenter des personnalités influentes.",
+  "categories": ["Justice", "Camouflage"],
+  "tags": ["source:official", "category:coverup", "coverage:suppressed"],
+  "mediaCoverage": {
+    "firstReportedDate": 1543449600,
+    "outlet": "Miami Herald",
+    "delayDays": 4934
+  },
+  "source": {
+    "name": "Palm Beach County Sheriff's Office",
+    "url": "https://www.pbso.org",
+    "reliabilityScore": 0.95
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "epstein-052",
+  "timestamp": 1592784000,
+  "dateLabel": "June 22, 2020",
+  "title": "Arrestation de Ghislaine Maxwell au New Hampshire",
+  "content": "Ghislaine Maxwell est arrêtée par le FBI à Bradford, New Hampshire, où elle vivait recluse dans une propriété isolée depuis des mois. Elle est inculpée d'enticement de mineures, de trafic sexuel, et de parjure. L'arrestation est décrite comme une opération minutieusement planifiée. Maxwell est considérée comme la clé pour comprendre l'ensemble du réseau d'Epstein.",
+  "categories": ["Justice", "Réseau"],
+  "tags": ["source:official", "category:justice", "coverage:mainstream"],
+  "mediaCoverage": {
+    "firstReportedDate": 1592870400,
+    "outlet": "New York Times",
+    "delayDays": 1
+  },
+  "source": {
+    "name": "FBI Press Release - July 2, 2020",
+    "url": "https://www.fbi.gov",
+    "reliabilityScore": 0.95
+  },
+  "metadata": {
+    "importance": "critical",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

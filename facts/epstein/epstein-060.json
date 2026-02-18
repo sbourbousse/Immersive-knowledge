@@ -1,0 +1,24 @@
+{
+  "id": "epstein-060",
+  "timestamp": 1738368000,
+  "dateLabel": "February 1, 2025",
+  "title": "Nouvelles révélations sur l'implication de figures politiques",
+  "content": "De nouveaux documents et témoignages émergent en 2025 concernant l'implication de personnalités politiques non précédemment identifiées dans le réseau Epstein. L'enquête du SDNY continue d'examiner les complices potentiels. Des victimes supplémentaires ont témoigné devant les grands jurys. L'affaire Epstein reste un sujet d'actualité avec des développements continus sur les ramifications financières et le rôle des institutions qui ont fermé les yeux.",
+  "categories": ["Justice", "Réseau"],
+  "tags": ["source:media", "category:justice", "coverage:mainstream"],
+  "mediaCoverage": {
+    "firstReportedDate": 1738454400,
+    "outlet": "Miami Herald",
+    "delayDays": 1
+  },
+  "source": {
+    "name": "Ongoing SDNY Investigation - Multiple sources",
+    "url": "https://www.justice.gov/usao-sdny",
+    "reliabilityScore": 0.85
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "epstein-main",
+    "verificationStatus": "partial"
+  }
+}

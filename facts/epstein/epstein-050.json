@@ -1,0 +1,24 @@
+{
+  "id": "epstein-050",
+  "timestamp": 1575158400,
+  "dateLabel": "December 1, 2019",
+  "title": "Enquête interne du Bureau of Prisons révèle des failles",
+  "content": "Une enquête interne du Bureau of Prisons confirme de nombreuses failles de sécurité dans la gestion de la détention d'Epstein : deux gardiens accusés de ne pas avoir effectué leurs rondes, de fausses entrées dans les registres, et un manque de surveillance vidéo. Les deux gardiens sont inculpés pour falsification de documents et négligence. L'enquête ne trouve cependant pas de preuves d'un complot extérieur.",
+  "categories": ["Justice", "Camouflage"],
+  "tags": ["source:official", "category:coverup", "coverage:mainstream"],
+  "mediaCoverage": {
+    "firstReportedDate": 1575244800,
+    "outlet": "Associated Press",
+    "delayDays": 1
+  },
+  "source": {
+    "name": "Department of Justice OIG Report",
+    "url": "https://oig.justice.gov",
+    "reliabilityScore": 0.95
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

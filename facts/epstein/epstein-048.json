@@ -1,0 +1,25 @@
+{
+  "id": "epstein-048",
+  "timestamp": 1567468800,
+  "dateLabel": "September 3, 2019",
+  "title": "Barbara Sampson confirme le suicide officiel",
+  "title": "Barbara Sampson confirme le suicide officiel",
+  "content": "Barbara Sampson, médecin légiste en chef de New York City, publie un communiqué officiel confirmant que la cause de la mort de Jeffrey Epstein est un suicide par pendaison. Elle rejette les spéculations du Dr. Baden, affirmant avoir examiné toutes les preuves scientifiques et conclu définitivement au suicide. Cependant, elle refuse de rendre publiques les photos d'autopsie.",
+  "categories": ["Justice"],
+  "tags": ["source:official", "category:justice", "coverage:mainstream"],
+  "mediaCoverage": {
+    "firstReportedDate": 1567555200,
+    "outlet": "New York Times",
+    "delayDays": 1
+  },
+  "source": {
+    "name": "NYC Chief Medical Examiner Office",
+    "url": "https://www1.nyc.gov/site/ocme/index.page",
+    "reliabilityScore": 0.9
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

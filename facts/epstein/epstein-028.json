@@ -1,0 +1,24 @@
+{
+  "id": "epstein-028",
+  "timestamp": 1270080000,
+  "dateLabel": "April 1, 2010",
+  "title": "Prince Andrew photographié avec Virginia Roberts",
+  "content": "Une photographie est prise au manoir londonien de Ghislaine Maxwell montrant le Prince Andrew avec son bras autour de la taille de Virginia Giuffre (alors Roberts), alors âgée de 17 ans. Cette image deviendra l'une des preuves les plus emblématiques de l'affaire. Le prince Andrew niera plus tard avoir rencontré Giuffre, malgré la photographie et les témoignages.",
+  "categories": ["Réseau", "Victimes", "Médias"],
+  "tags": ["source:victims", "category:elite", "coverage:delayed"],
+  "mediaCoverage": {
+    "firstReportedDate": 1388534400,
+    "outlet": "Daily Mail",
+    "delayDays": 2863
+  },
+  "source": {
+    "name": "Virginia Giuffre legal filings - Photographic evidence",
+    "url": "https://www.courtlistener.com",
+    "reliabilityScore": 0.85
+  },
+  "metadata": {
+    "importance": "critical",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

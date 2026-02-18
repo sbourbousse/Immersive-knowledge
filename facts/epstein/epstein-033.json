@@ -1,0 +1,24 @@
+{
+  "id": "epstein-033",
+  "timestamp": 1404172800,
+  "dateLabel": "July 1, 2014",
+  "title": "Révélation des 'Lolita Express' flight logs",
+  "content": "Des registres de vol partiels du jet Gulfstream d'Epstein (surnommé 'Lolita Express') sont rendus publics lors d'un procès civil. Les logs montrent des voyages avec des destinations incluant l'île privée, Paris, et diverses villes américaines. Plusieurs noms célèbres apparaissent, bien que les enregistrements soient partiels. Ces documents alimentent les spéculations sur l'étendue du réseau d'Epstein.",
+  "categories": ["Médias", "Réseau"],
+  "tags": ["source:leak", "category:elite", "coverage:mainstream"],
+  "mediaCoverage": {
+    "firstReportedDate": 1404172800,
+    "outlet": "Gawker",
+    "delayDays": 0
+  },
+  "source": {
+    "name": "Court Records - Giuffre vs Epstein",
+    "url": "https://www.documentcloud.org",
+    "reliabilityScore": 0.9
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

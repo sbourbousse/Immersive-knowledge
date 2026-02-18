@@ -1,0 +1,24 @@
+{
+  "id": "epstein-057",
+  "timestamp": 1680307200,
+  "dateLabel": "April 1, 2023",
+  "title": "Procès civil contre JPMorgan Chase et Deutsche Bank",
+  "content": "Des procès civils sont déposés contre JPMorgan Chase et Deutsche Bank, accusés d'avoir facilité le trafic sexuel d'Epstein en ignorant des signaux d'alerte évidents sur ses transactions financières. Les plaintes allèguent que les banques ont consciemment participé au réseau en traitant des paiements suspects vers des victimes et des complices. Ces procès mettent en lumière le rôle crucial des institutions financières dans le camouflage des activités d'Epstein.",
+  "categories": ["Justice", "Finance"],
+  "tags": ["source:official", "category:finance", "coverage:mainstream"],
+  "mediaCoverage": {
+    "firstReportedDate": 1680393600,
+    "outlet": "Financial Times",
+    "delayDays": 1
+  },
+  "source": {
+    "name": "US District Court - Southern District of New York",
+    "url": "https://www.courtlistener.com",
+    "reliabilityScore": 0.9
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

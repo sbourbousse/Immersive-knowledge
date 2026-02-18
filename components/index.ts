@@ -5,3 +5,8 @@ export { ProgressBar } from './ProgressBar/index';
 export { FocusMode } from './FocusMode/FocusMode';
 export { FocusModeProvider, useFocusMode } from './FocusMode/FocusModeProvider';
 export { SmoothScrollProvider } from './providers/SmoothScrollProvider';
+
+// Multi-timeline components
+export { LaneBuilder } from './LaneBuilder';
+export { MultiTimelineView } from './MultiTimelineView';
+export { AdvancedTagFilter } from './TagFilter/AdvancedTagFilter';

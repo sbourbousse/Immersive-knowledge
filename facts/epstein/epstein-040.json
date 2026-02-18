@@ -1,0 +1,24 @@
+{
+  "id": "epstein-040",
+  "timestamp": 1541030400,
+  "dateLabel": "November 1, 2018",
+  "title": "Publication de 'Perversion of Justice' par Julie Brown",
+  "content": "Le Miami Herald publie la série d'articles 'Perversion of Justice' de Julie Brown, révélant l'ampleur du scandale Epstein au grand jour. L'enquête détaille l'accord secret, les victimes ignorées, et le traitement de faveur accordé à Epstein. Les articles sont largement repris par les médias nationaux et internationaux, forçant une réouverture de l'enquête fédérale.",
+  "categories": ["Médias", "Justice"],
+  "tags": ["source:media", "category:justice", "coverage:mainstream"],
+  "mediaCoverage": {
+    "firstReportedDate": 1541030400,
+    "outlet": "Miami Herald",
+    "delayDays": 0
+  },
+  "source": {
+    "name": "Miami Herald - Perversion of Justice Series",
+    "url": "https://www.miamiherald.com",
+    "reliabilityScore": 0.95
+  },
+  "metadata": {
+    "importance": "critical",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

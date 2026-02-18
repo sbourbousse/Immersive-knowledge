@@ -4,6 +4,9 @@ import { useMemo } from 'react';
 import { getTagInfo, StandardTagKey, STANDARD_TAGS } from '@/types';
 import { cn } from '@/lib/utils';
 
+// Export du filtre avancé
+export { AdvancedTagFilter } from './AdvancedTagFilter';
+
 interface TagBadgeProps {
   tag: string;
   size?: 'xs' | 'sm' | 'md';

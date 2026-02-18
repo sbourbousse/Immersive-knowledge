@@ -1,0 +1,24 @@
+{
+  "id": "epstein-025",
+  "timestamp": 1201824000,
+  "dateLabel": "February 1, 2008",
+  "title": "Dershowitz nie toute implication dans les activités d'Epstein",
+  "content": "Dans une déclaration publique, Alan Dershowitz nie catégoriquement avoir participé aux activités criminelles d'Epstein. Cependant, Virginia Giuffre (anciennement Roberts) alléguera plus tard que Dershowitz était non seulement un ami proche d'Epstein mais également un participant aux activités sexuelles impliquant des mineures. Dershowitz répondra par des poursuites en diffamation.",
+  "categories": ["Justice", "Médias"],
+  "tags": ["source:media", "category:coverup", "coverage:delayed"],
+  "mediaCoverage": {
+    "firstReportedDate": 1388534400,
+    "outlet": "Vanity Fair",
+    "delayDays": 3338
+  },
+  "source": {
+    "name": "Court testimony - Giuffre vs Maxwell 2015",
+    "url": "https://www.courtlistener.com",
+    "reliabilityScore": 0.8
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}
