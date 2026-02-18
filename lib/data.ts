@@ -21,21 +21,21 @@ import fact015 from '@/facts/015-couts-computationnels.json';
  * Tous les faits validés sur l'évolution de l'IA Générative
  */
 export const facts: Fact[] = [
-  fact001,
-  fact002,
-  fact003,
-  fact004,
-  fact005,
-  fact006,
-  fact007,
-  fact008,
-  fact009,
-  fact010,
-  fact011,
-  fact012,
-  fact013,
-  fact014,
-  fact015,
+  fact001 as Fact,
+  fact002 as Fact,
+  fact003 as Fact,
+  fact004 as Fact,
+  fact005 as Fact,
+  fact006 as Fact,
+  fact007 as Fact,
+  fact008 as Fact,
+  fact009 as Fact,
+  fact010 as Fact,
+  fact011 as Fact,
+  fact012 as Fact,
+  fact013 as Fact,
+  fact014 as Fact,
+  fact015 as Fact,
 ];
 
 /**

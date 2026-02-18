@@ -93,7 +93,7 @@ export function FocusMode({ fact, onClose }: FocusModeProps) {
           <div>
             <div className="flex items-center gap-3 mb-2">
               <span className="flex items-center gap-1.5 text-sm text-indigo-400">
-                <Calendar size={14} />
+                <Calendar width={14} height={14} />
                 {fact.dateLabel}
               </span>
               <span className={`px-2 py-0.5 rounded text-xs ${
@@ -115,7 +115,7 @@ export function FocusMode({ fact, onClose }: FocusModeProps) {
             className="p-2 hover:bg-gray-800 rounded-full transition-colors"
             aria-label="Fermer"
           >
-            <X size={24} />
+            <X width={24} height={24} />
           </button>
         </div>
 
@@ -128,7 +128,7 @@ export function FocusMode({ fact, onClose }: FocusModeProps) {
                 key={cat}
                 className="flex items-center gap-1.5 px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-300"
               >
-                <Tag size={14} />
+                <Tag width={14} height={14} />
                 {cat}
               </span>
             ))}
@@ -142,7 +142,7 @@ export function FocusMode({ fact, onClose }: FocusModeProps) {
           {/* Source */}
           <div className="mt-8 pt-6 border-t border-gray-800">
             <h3 className="flex items-center gap-2 text-sm font-medium text-gray-400 mb-3">
-              <Shield size={16} />
+              <Shield width={16} height={16} />
               Source
             </h3>
             <a
@@ -161,7 +161,7 @@ export function FocusMode({ fact, onClose }: FocusModeProps) {
                 <span className="text-sm text-gray-500">
                   Fiabilité: {Math.round(fact.source.reliabilityScore * 100)}%
                 </span>
-                <ExternalLink size={18} className="text-gray-500 group-hover:text-white transition-colors" />
+                <ExternalLink width={18} height={18} className="text-gray-500 group-hover:text-white transition-colors" />
               </div>
             </a>
           </div>

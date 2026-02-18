@@ -121,7 +121,7 @@ export function TimelineComparison({ lane1, lane2, onClose }: TimelineComparison
       <div className="absolute top-0 left-0 right-0 z-20 px-6 py-4 bg-ui-surface/95 backdrop-blur border-b border-gray-800">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           <div className="flex items-center gap-4">
-            <ArrowLeftRight className="text-indigo-400" size={24} />
+            <ArrowLeftRight className="text-indigo-400" width={24} height={24} />
             <h2 className="font-display text-xl font-bold">Mode Comparaison</h2>
           </div>
           
@@ -142,7 +142,7 @@ export function TimelineComparison({ lane1, lane2, onClose }: TimelineComparison
             onClick={onClose}
             className="p-2 hover:bg-gray-800 rounded-full transition-colors"
           >
-            <X size={24} />
+            <X width={24} height={24} />
           </button>
         </div>
       </div>
@@ -206,7 +206,7 @@ export function TimelineComparison({ lane1, lane2, onClose }: TimelineComparison
               }`}
               style={{ left: `${corr.position}%` }}
             >
-              <Link2 size={12} />
+              <Link2 width={12} height={12} />
               {corr.description}
             </div>
           ))}

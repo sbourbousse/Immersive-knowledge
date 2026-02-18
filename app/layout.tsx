@@ -1,14 +1,23 @@
-/**
- * Layout racine avec providers
- * Configuration globale de l'application
- */
-
 import type { Metadata } from 'next';
+import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
+import { SmoothScrollProvider } from '@/components/providers/SmoothScrollProvider';
+
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space-grotesk',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Évolution de l\'IA Générative | Timeline Interactive',
-  description: 'Explorez l\'histoire fascinante de l\'intelligence artificielle générative à travers une timeline immersive et interactive.',
+  description: 'Explorez l\'histoire de l\'intelligence artificielle générative de GPT-1 à aujourd\'hui. Une expérience immersive avec animations GSAP.',
 };
 
 export default function RootLayout({
@@ -17,14 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr">
-      <head>
-        {/* Préconnexion pour les performances */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-      </head>
-      <body className="antialiased">
-        {children}
+    <html lang="fr" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+      <body className="bg-ui-background text-ui-primary antialiased">
+        <SmoothScrollProvider>
+          {children}
+        </SmoothScrollProvider>
       </body>
     </html>
   );

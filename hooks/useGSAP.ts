@@ -5,10 +5,10 @@
  */
 
 import { useEffect, useRef, DependencyList } from 'react';
-import { gsap } from './gsap';
+import { gsap } from '@/lib/gsap';
 
 // Type pour la fonction de contexte
-type ContextFunc = (context: gsap.Context, contextSafe: (func: Function) => Function) => void;
+type ContextFunc = (context: gsap.Context) => void;
 
 /**
  * Hook personnalisé pour gérer le contexte GSAP
@@ -31,7 +31,7 @@ export function useGSAP(
     // Créer le contexte GSAP
     const scope = scopeRef?.current || undefined;
     contextRef.current = gsap.context((self) => {
-      callback(self, (func) => gsap.context(func, scope).add || func);
+      callback(self);
     }, scope);
     
     // Cleanup au unmount ou changement de dépendances
