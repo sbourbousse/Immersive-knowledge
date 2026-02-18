@@ -130,7 +130,7 @@ export const useMultiTimelineStore = create<MultiTimelineState & MultiTimelineAc
       lanes: [createDefaultLane('ai-evolution', 'AI Evolution')],
       activeLaneId: null,
       maxLanes: 4,
-      direction: 'horizontal',
+      direction: 'vertical',
       isComparisonMode: false,
       comparedTimelines: [],
       activeTags: [],
@@ -280,7 +280,7 @@ export const useMultiTimelineStore = create<MultiTimelineState & MultiTimelineAc
       
       setSelectedFact: () => {}, // Legacy stub
       
-      setDirection: (dir) => set({ direction: dir }),
+      setDirection: (dir) => set({ direction: dir === 'horizontal' ? 'vertical' : dir }),
       
       toggleComparisonMode: () => set((state) => ({
         isComparisonMode: !state.isComparisonMode,

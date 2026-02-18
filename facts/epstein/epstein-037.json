@@ -3,10 +3,16 @@
   "timestamp": 1506816000,
   "dateLabel": "October 1, 2017",
   "title": "Les Wexner rompent définitivement avec Epstein",
-  "title": "Les Wexner rompent définitivement avec Epstein",
   "content": "Les Wexner annoncent publiquement qu'ils ont coupé tous les liens avec Epstein et exigent le remboursement de millions de dollars. C'est la première prise de position publique majeure d'une figure de l'élite contre Epstein. Les Wexner accusent Epstein d'avoir détourné des fonds importants de leurs affaires. Cette rupture publique légitime les questions sur Epstein.",
-  "categories": ["Réseau", "Finance"],
-  "tags": ["source:media", "category:finance", "coverage:mainstream"],
+  "categories": [
+    "Réseau",
+    "Finance"
+  ],
+  "tags": [
+    "source:media",
+    "category:finance",
+    "coverage:mainstream"
+  ],
   "mediaCoverage": {
     "firstReportedDate": 1506816000,
     "outlet": "Wall Street Journal",
@@ -21,5 +27,11 @@
     "importance": "high",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": true,
+    "level": 40,
+    "description": "Couvert par les médias mais sans grande attention publique"
+  },
+  "relevanceScore": 52
 }

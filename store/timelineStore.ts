@@ -29,9 +29,9 @@ interface TimelineState {
 
 export const useTimelineStore = create<TimelineState>((set, get) => ({
   // Initial state
-  currentTimelineId: 'ai-evolution',
+  currentTimelineId: 'epstein',
   selectedFact: null,
-  direction: 'horizontal',
+  direction: 'vertical',
   isComparisonMode: false,
   comparedTimelines: [],
   activeTags: [],
@@ -42,7 +42,7 @@ export const useTimelineStore = create<TimelineState>((set, get) => ({
   
   setSelectedFact: (fact) => set({ selectedFact: fact }),
   
-  setDirection: (dir) => set({ direction: dir }),
+  setDirection: (dir) => set({ direction: dir === 'horizontal' ? 'vertical' : dir }),
   
   toggleComparisonMode: () => set((state) => ({
     isComparisonMode: !state.isComparisonMode,

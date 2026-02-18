@@ -4,8 +4,15 @@
   "dateLabel": "January 1, 2011",
   "title": "Acquisition du ranch Zorro à New Mexico",
   "content": "Epstein achète le ranch Zorro de 10 000 acres près de Stanley, Nouveau-Mexique, pour 12 millions de dollars. La propriété isolée est présentée comme un projet de 'amélioration génétique' et de recherche scientifique, mais elle servira également à accueillir des visiteurs et potentiellement des victimes. Bill Clinton est photographié sur le ranch lors d'un événement organisé par Epstein.",
-  "categories": ["Réseau", "Camouflage"],
-  "tags": ["source:official", "category:elite", "coverage:delayed"],
+  "categories": [
+    "Réseau",
+    "Camouflage"
+  ],
+  "tags": [
+    "source:official",
+    "category:elite",
+    "coverage:delayed"
+  ],
   "mediaCoverage": {
     "firstReportedDate": 1543449600,
     "outlet": "Miami Herald",
@@ -20,5 +27,11 @@
     "importance": "high",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": false,
+    "level": 10,
+    "description": "Information révélée des années plus tard, inconnue du public à l'époque"
+  },
+  "relevanceScore": 74
 }

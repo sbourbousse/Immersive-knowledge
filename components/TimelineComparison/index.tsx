@@ -4,7 +4,7 @@ import { useRef, useState, useMemo, useCallback } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Fact, TimelineLane, FactCorrelation, TimelineDirection, getTagInfo } from '@/types';
+import { Fact, TimelineLane, FactCorrelation, getTagInfo, getAwarenessOpacity, getRelevanceTextStyle } from '@/types';
 import { TagBadge } from '../TagFilter';
 import { X, Link2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -14,16 +14,13 @@ gsap.registerPlugin(ScrollTrigger);
 interface TimelineComparisonProps {
   lanes: TimelineLane[];
   onClose: () => void;
-  direction?: TimelineDirection;
 }
 
 export function TimelineComparison({ 
   lanes, 
-  onClose, 
-  direction = 'horizontal' 
+  onClose
 }: TimelineComparisonProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const timelineRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [hoveredCorrelations, setHoveredCorrelations] = useState<string[]>([]);
   const [selectedFact, setSelectedFact] = useState<{ fact: Fact; laneId: string } | null>(null);
   const triggersRef = useRef<ScrollTrigger[]>([]);
@@ -57,109 +54,44 @@ export function TimelineComparison({
     }
 
     const ctx = gsap.context(() => {
-      if (direction === 'horizontal') {
-        // Entrance animation
+      // Vertical mode animations
+      gsap.fromTo(
+        '.comparison-lane',
+        { opacity: 0, x: -30 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.5,
+          stagger: 0.1,
+          ease: 'power2.out',
+        }
+      );
+
+      gsap.utils.toArray<HTMLElement>('.comparison-fact').forEach((card) => {
         gsap.fromTo(
-          '.comparison-lane',
-          { opacity: 0, y: 30 },
+          card,
+          { opacity: 0, y: 20 },
           {
             opacity: 1,
             y: 0,
-            duration: 0.5,
-            stagger: 0.1,
+            duration: 0.4,
             ease: 'power2.out',
-          }
-        );
-
-        // Synchronized horizontal scroll for all lanes
-        const maxScrollWidth = Math.max(
-          ...timelineRefs.current.map(ref => ref?.scrollWidth || 0)
-        );
-        const viewportWidth = window.innerWidth;
-        const scrollDistance = maxScrollWidth - viewportWidth + 100;
-
-        if (scrollDistance > 0) {
-          gsap.to(timelineRefs.current.filter(Boolean), {
-            x: -scrollDistance,
-            ease: 'none',
             scrollTrigger: {
-              trigger: containerRef.current,
-              start: 'top top',
-              end: () => `+=${scrollDistance}`,
-              scrub: 1,
-              pin: true,
-              anticipatePin: 1,
+              trigger: card,
+              start: 'top 85%',
+              toggleActions: 'play none none reverse',
               onRefresh: (self) => triggersRef.current.push(self),
             },
-          });
-        }
-
-        // Animate fact cards
-        gsap.utils.toArray<HTMLElement>('.comparison-fact').forEach((card) => {
-          gsap.fromTo(
-            card,
-            { opacity: 0, scale: 0.9 },
-            {
-              opacity: 1,
-              scale: 1,
-              duration: 0.4,
-              ease: 'power2.out',
-              scrollTrigger: {
-                trigger: card,
-                start: 'left 90%',
-                end: 'left 50%',
-                toggleActions: 'play none none reverse',
-                onRefresh: (self) => triggersRef.current.push(self),
-              },
-            }
-          );
-        });
-      } else {
-        // Vertical mode animations
-        gsap.fromTo(
-          '.comparison-lane',
-          { opacity: 0, x: -30 },
-          {
-            opacity: 1,
-            x: 0,
-            duration: 0.5,
-            stagger: 0.1,
-            ease: 'power2.out',
           }
         );
-
-        gsap.utils.toArray<HTMLElement>('.comparison-fact').forEach((card) => {
-          gsap.fromTo(
-            card,
-            { opacity: 0, y: 20 },
-            {
-              opacity: 1,
-              y: 0,
-              duration: 0.4,
-              ease: 'power2.out',
-              scrollTrigger: {
-                trigger: card,
-                start: 'top 85%',
-                toggleActions: 'play none none reverse',
-                onRefresh: (self) => triggersRef.current.push(self),
-              },
-            }
-          );
-        });
-      }
+      });
     }, containerRef);
 
     return () => {
       ctx.revert();
       triggersRef.current = [];
     };
-  }, [lanes, direction]);
-
-  const getFactPosition = useCallback((timestamp: number) => {
-    const range = timeRange.end - timeRange.start;
-    if (range === 0) return 50;
-    return ((timestamp - timeRange.start) / range) * 100;
-  }, [timeRange]);
+  }, [lanes]);
 
   const handleFactHover = useCallback((factId: string | null) => {
     if (!factId) {
@@ -222,129 +154,19 @@ export function TimelineComparison({
       </div>
 
       {/* Content */}
-      {direction === 'horizontal' ? (
-        <div className="pt-24 h-full flex flex-col justify-center gap-4 px-20">
-          {lanes.map((lane, index) => (
-            <div key={lane.id} className="comparison-lane relative">
+      <div className="pt-24 pb-8 max-w-6xl mx-auto px-6">
+        <div className="space-y-8">
+          {lanes.map((lane) => (
+            <div key={lane.id} className="comparison-lane">
               {/* Lane header */}
-              <div className="flex items-center gap-3 mb-2">
-                <div
-                  className="w-4 h-4 rounded-full"
-                  style={{ backgroundColor: lane.color }}
-                />
-                <span className="font-display font-bold text-sm">{lane.title}</span>
-                <span className="text-xs text-gray-500">
-                  ({lane.facts.length} faits)
-                </span>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-4 h-4 rounded-full" style={{ backgroundColor: lane.color }} />
+                <h3 className="font-display font-bold text-lg">{lane.title}</h3>
+                <span className="text-xs text-gray-500">({lane.facts.length} faits)</span>
               </div>
-              
-              {/* Timeline track */}
-              <div
-                ref={el => { timelineRefs.current[index] = el; }}
-                className="flex items-center gap-6 relative"
-                style={{ width: `${Math.max(lane.facts.length * 350, 2000)}px` }}
-              >
-                {/* Time axis */}
-                <div
-                  className="absolute top-1/2 left-0 right-0 h-px -translate-y-1/2"
-                  style={{
-                    background: `linear-gradient(to right, transparent, ${lane.color}30, transparent)`,
-                  }}
-                />
-                
-                {lane.facts.sort((a, b) => a.timestamp - b.timestamp).map((fact) => {
-                  const gap = getCoverageGap(fact);
-                  const isHighlighted = hoveredCorrelations.includes(fact.id);
-                  
-                  return (
-                    <article
-                      key={fact.id}
-                      className={cn(
-                        'comparison-fact relative flex-shrink-0 w-72 bg-ui-surface rounded-xl p-5',
-                        'border cursor-pointer transition-all duration-300',
-                        isHighlighted 
-                          ? 'ring-2 scale-105 border-indigo-500' 
-                          : 'border-gray-800 hover:border-gray-700'
-                      )}
-                      onMouseEnter={() => handleFactHover(fact.id)}
-                      onMouseLeave={() => handleFactHover(null)}
-                      onClick={() => setSelectedFact({ fact, laneId: lane.id })}
-                    >
-                      {/* Date */}
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="text-xs text-gray-500">{fact.dateLabel}</span>
-                        {gap && gap > 2592000 && (
-                          <span
-                            className="text-[10px] px-1.5 py-0.5 bg-orange-500/20 text-orange-400 rounded flex items-center gap-1"
-                            title={`Retard médiatique: ${formatGap(gap)}`}
-                          >
-                            <span>⏱️</span>
-                            +{formatGap(gap)}
-                          </span>
-                        )}
-                      </div>
-                      
-                      {/* Title */}
-                      <h3 className="font-bold text-sm line-clamp-2 mb-2">
-                        {fact.title}
-                      </h3>
-                      
-                      {/* Tags */}
-                      <div className="flex flex-wrap gap-1">
-                        {fact.tags.slice(0, 3).map(tag => (
-                          <TagBadge key={tag} tag={tag} size="xs" />
-                        ))}
-                      </div>
-                    </article>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
 
-          {/* Correlation connectors */}
-          <div className="relative h-16 my-2">
-            {correlations.map((corr) => (
-              <button
-                key={corr.id}
-                className={cn(
-                  'absolute flex items-center gap-2 px-3 py-1.5 rounded-full text-xs',
-                  'transition-all duration-200 border',
-                  hoveredCorrelations.includes(corr.id)
-                    ? 'bg-indigo-500/30 border-indigo-500 text-indigo-300 scale-110'
-                    : 'bg-gray-800/50 border-gray-700 text-gray-400 hover:border-gray-600'
-                )}
-                style={{ left: `${corr.position}%`, top: '50%', transform: 'translate(-50%, -50%)' }}
-                onMouseEnter={() => setHoveredCorrelations([corr.id, corr.fact1Id, corr.fact2Id])}
-                onMouseLeave={() => setHoveredCorrelations([])}
-              >
-                <Link2 className="w-3 h-3" />
-                {corr.type === 'coverage-gap' && corr.timeGap 
-                  ? `Écart: ${formatGap(corr.timeGap)}`
-                  : corr.description}
-              </button>
-            ))}
-          </div>
-        </div>
-      ) : (
-        // Vertical mode
-        <div className="pt-24 h-full overflow-y-auto px-6 pb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
-            {lanes.map((lane) => (
-              <div key={lane.id} className="comparison-lane">
-                {/* Lane header */}
-                <div className="flex items-center gap-3 mb-6 sticky top-0 bg-ui-background/95 backdrop-blur py-3 z-10">
-                  <div
-                    className="w-4 h-4 rounded-full"
-                    style={{ backgroundColor: lane.color }}
-                  />
-                  <span className="font-display font-bold">{lane.title}</span>
-                  <span className="text-xs text-gray-500">
-                    ({lane.facts.length} faits)
-                  </span>
-                </div>
-
-                {/* Timeline axis */}
+              {/* Timeline axis */}
+              <div className="relative">
                 <div
                   className="absolute left-8 w-px h-full"
                   style={{ backgroundColor: `${lane.color}30` }}
@@ -355,60 +177,54 @@ export function TimelineComparison({
                   {lane.facts.sort((a, b) => a.timestamp - b.timestamp).map((fact) => {
                     const gap = getCoverageGap(fact);
                     const isHighlighted = hoveredCorrelations.includes(fact.id);
-                    
+                    const relevanceText = getRelevanceTextStyle(fact.relevanceScore);
+                    const opacity = getAwarenessOpacity(fact);
+
                     return (
-                      <article
+                      <button
                         key={fact.id}
+                        type="button"
                         className={cn(
-                          'comparison-fact relative bg-ui-surface rounded-xl p-5',
-                          'border cursor-pointer transition-all duration-300',
+                          'comparison-fact relative w-full text-left',
+                          'px-3 py-2 rounded-md border',
+                          'transition-colors duration-150',
                           isHighlighted
-                            ? 'ring-2 border-indigo-500'
-                            : 'border-gray-800 hover:border-gray-700'
+                            ? 'bg-indigo-500/10 border-indigo-500/30'
+                            : 'bg-ui-surface border-gray-800 hover:border-gray-700'
                         )}
-                        style={{
-                          borderLeftColor: lane.color,
-                          borderLeftWidth: '3px',
-                        }}
+                        style={{ borderLeftColor: lane.color, borderLeftWidth: '3px', opacity }}
                         onMouseEnter={() => handleFactHover(fact.id)}
                         onMouseLeave={() => handleFactHover(null)}
                         onClick={() => setSelectedFact({ fact, laneId: lane.id })}
                       >
-                        {/* Date & Gap */}
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className="text-xs font-medium" style={{ color: lane.color }}>
+                        <div className="flex items-baseline gap-2 flex-wrap">
+                          <span className="text-[11px] font-medium" style={{ color: lane.color }}>
                             {fact.dateLabel}
                           </span>
+                          <span
+                            className={cn('text-sm text-gray-100 line-clamp-1', relevanceText.className)}
+                            style={relevanceText.style}
+                          >
+                            {fact.title}
+                          </span>
                           {gap && gap > 2592000 && (
-                            <span className="text-[10px] px-1.5 py-0.5 bg-orange-500/20 text-orange-400 rounded flex items-center gap-1">
-                              <span>⏱️</span>
+                            <span
+                              className="text-[10px] px-1.5 py-0.5 bg-orange-500/10 text-orange-300 rounded"
+                              title={`Retard médiatique: ${formatGap(gap)}`}
+                            >
                               +{formatGap(gap)}
                             </span>
                           )}
                         </div>
-
-                        <h3 className="font-bold mb-2">{fact.title}</h3>
-                        
-                        <div className="flex flex-wrap gap-1">
-                          {fact.tags.slice(0, 4).map(tag => (
-                            <TagBadge key={tag} tag={tag} size="xs" />
-                          ))}
-                        </div>
-
-                        {/* Timeline dot */}
-                        <div
-                          className="absolute -left-[25px] top-6 w-3 h-3 rounded-full border-2 border-ui-background"
-                          style={{ backgroundColor: lane.color }}
-                        />
-                      </article>
+                      </button>
                     );
                   })}
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      )}
+      </div>
 
       {/* Fact detail modal */}
       {selectedFact && (
@@ -418,12 +234,24 @@ export function TimelineComparison({
         >
           <div
             className="bg-ui-surface rounded-2xl p-6 max-w-2xl w-full max-h-[80vh] overflow-y-auto border border-gray-800"
-            onClick={e => e.stopPropagation()}
+            onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-start justify-between mb-4">
               <div>
                 <span className="text-sm text-gray-500">{selectedFact.fact.dateLabel}</span>
-                <h3 className="text-xl font-bold mt-1">{selectedFact.fact.title}</h3>
+                <h3
+                  className={cn('font-bold mt-1', getRelevanceTextStyle(selectedFact.fact.relevanceScore).className)}
+                  style={getRelevanceTextStyle(selectedFact.fact.relevanceScore).style}
+                >
+                  {selectedFact.fact.title}
+                </h3>
+                {selectedFact.fact.relevanceScore !== undefined && (
+                  <div className="mt-2">
+                    <span className="text-xs px-2 py-0.5 rounded bg-orange-500/10 text-orange-300">
+                      Pertinence: {selectedFact.fact.relevanceScore}/100
+                    </span>
+                  </div>
+                )}
               </div>
               <button
                 onClick={() => setSelectedFact(null)}
@@ -432,21 +260,29 @@ export function TimelineComparison({
                 <X className="w-5 h-5" />
               </button>
             </div>
-            
+
             <div className="prose prose-invert max-w-none mb-4">
               <div className="text-gray-300 whitespace-pre-wrap">
                 {selectedFact.fact.content}
               </div>
             </div>
-            
+
             <div className="flex flex-wrap gap-2 mb-4">
-              {selectedFact.fact.tags.map(tag => (
+              {selectedFact.fact.tags.map((tag) => (
                 <TagBadge key={tag} tag={tag} />
               ))}
             </div>
-            
+
             <div className="pt-4 border-t border-gray-800 text-sm text-gray-500">
-              Source: <a href={selectedFact.fact.source.url} target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:underline">{selectedFact.fact.source.name}</a>
+              Source:{' '}
+              <a
+                href={selectedFact.fact.source.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-indigo-400 hover:underline"
+              >
+                {selectedFact.fact.source.name}
+              </a>
             </div>
           </div>
         </div>

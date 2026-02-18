@@ -4,8 +4,15 @@
   "dateLabel": "November 1, 1995",
   "title": "Acquisition du manoir de Palm Beach",
   "content": "Jeffrey Epstein achète une propriété de 14 000 pieds carrés au 358 El Brillo Way à Palm Beach pour 2,5 millions de dollars. Cette résidence devient le principal lieu de rencontre entre Epstein et ses victimes en Floride. La maison est équipée de chambres spécialement aménagées et le système de surveillance couvre l'ensemble de la propriété.",
-  "categories": ["Réseau", "Victimes"],
-  "tags": ["source:official", "category:elite", "coverage:delayed"],
+  "categories": [
+    "Réseau",
+    "Victimes"
+  ],
+  "tags": [
+    "source:official",
+    "category:elite",
+    "coverage:delayed"
+  ],
   "mediaCoverage": {
     "firstReportedDate": 1136073600,
     "outlet": "Palm Beach Daily News",
@@ -20,5 +27,11 @@
     "importance": "high",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": false,
+    "level": 5,
+    "description": "Inconnu du grand public, révélé des années plus tard"
+  },
+  "relevanceScore": 70
 }

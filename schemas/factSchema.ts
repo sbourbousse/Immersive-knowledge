@@ -49,6 +49,26 @@ export const FactSchema = z.object({
     accessedAt: z.string()
       .datetime('La date doit être au format ISO 8601'),
   }).describe('Métadonnées de la source'),
+
+  publicAwareness: z.object({
+    wasPublicAtTime: z.boolean()
+      .describe('Le fait était-il connu du public au moment où il s\'est produit ?'),
+    level: z.number()
+      .int()
+      .min(0)
+      .max(100)
+      .describe('Niveau de connaissance publique (0 = secret total, 100 = largement médiatisé)'),
+    description: z.string()
+      .min(1, 'La description du niveau de connaissance est requise')
+      .describe('Description du contexte de connaissance publique'),
+  }).optional().describe('Niveau de connaissance publique au moment des faits'),
+
+  relevanceScore: z.number()
+    .int()
+    .min(0)
+    .max(100)
+    .optional()
+    .describe('Score de pertinence/intérêt (0 = anodin, 100 = choquant/captivant)'),
   
   metadata: z.object({
     importance: z.enum(['low', 'medium', 'high'])

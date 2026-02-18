@@ -1,11 +1,10 @@
 'use client';
 
-import React, { useRef, useEffect, useCallback, useState } from 'react';
+import React, { useRef, useEffect, useCallback, useState, useMemo } from 'react';
 import { cn } from '@/lib/utils';
 import { 
   useMultiTimelineStore, 
   selectVisibleLanes,
-  LaneConfig,
 } from '@/store/multiTimelineStore';
 import { 
   useFilteredLanes, 
@@ -14,6 +13,10 @@ import {
   FilteredLane,
 } from '@/hooks/useLaneFilters';
 import { Fact } from '@/types';
+import { useFocusMode } from '@/components/FocusMode/FocusModeProvider';
+
+const PIXELS_PER_YEAR = 80;
+const MIN_ITEM_GAP_PX = 28;
 
 // ============================================================================
 // FULLSCREEN BUTTON
@@ -62,7 +65,8 @@ interface TimelineLaneViewProps {
   isActive: boolean;
   onActivate: () => void;
   onFactClick?: (fact: Fact) => void;
-  scrollRef?: React.RefObject<HTMLDivElement>;
+  onScroll?: (scrollTop: number) => void;
+  scrollRef?: React.RefCallback<HTMLDivElement>;
 }
 
 function TimelineLaneView({
@@ -71,16 +75,43 @@ function TimelineLaneView({
   isActive,
   onActivate,
   onFactClick,
+  onScroll,
   scrollRef,
 }: TimelineLaneViewProps) {
   const { lane, facts } = filteredLane;
   const { start, end } = timeRange;
-  const duration = end - start || 1;
+  const { openFocus } = useFocusMode();
+
+  const { positionedFacts, totalHeight } = useMemo(() => {
+    if (facts.length === 0) return { positionedFacts: [] as { fact: Fact; position: number; index: number }[], totalHeight: 0 };
+
+    const sorted = [...facts].sort((a, b) => a.timestamp - b.timestamp);
+
+    const toTimePosition = (timestamp: number) => {
+      const yearsSinceStart = (timestamp - start) / (365.25 * 24 * 60 * 60);
+      return 32 + yearsSinceStart * PIXELS_PER_YEAR;
+    };
+
+    const anchors: { timeY: number; y: number }[] = [];
+    const positions = sorted.map((fact, index) => {
+      const timeY = toTimePosition(fact.timestamp);
+      const prevY = anchors[anchors.length - 1]?.y;
+      const y = prevY == null ? timeY : Math.max(timeY, prevY + MIN_ITEM_GAP_PX);
+      anchors.push({ timeY, y });
+      return { fact, position: y, index };
+    });
+
+    const lastPos = positions[positions.length - 1]?.position || 0;
+    return {
+      positionedFacts: positions,
+      totalHeight: Math.max(lastPos + 120, 900),
+    };
+  }, [facts, start]);
   
   return (
     <div
       className={cn(
-        'flex flex-col h-full border-r border-gray-800 last:border-r-0',
+        'flex flex-col h-full min-h-0 border-r border-gray-800 last:border-r-0',
         'transition-all duration-200',
         isActive && 'bg-gray-900/30'
       )}
@@ -118,11 +149,12 @@ function TimelineLaneView({
       {/* Timeline content */}
       <div 
         ref={scrollRef}
-        className="flex-1 overflow-y-auto overflow-x-hidden relative"
+        onScroll={(e) => onScroll?.((e.currentTarget as HTMLDivElement).scrollTop)}
+        className="flex-1 min-h-0 max-h-full overflow-y-scroll overflow-x-hidden relative overscroll-contain"
         style={{ scrollBehavior: 'smooth' }}
       >
         {/* Timeline track */}
-        <div className="relative min-h-full py-8">
+        <div className="relative" style={{ height: totalHeight }}>
           {/* Center line */}
           <div 
             className="absolute left-1/2 top-0 bottom-0 w-px bg-gray-800"
@@ -130,21 +162,18 @@ function TimelineLaneView({
           />
           
           {/* Facts */}
-          {facts.map((fact, index) => {
-            const position = ((fact.timestamp - start) / duration) * 100;
-            const isEven = index % 2 === 0;
-            
-            return (
-              <FactNode
-                key={fact.id}
-                fact={fact}
-                position={position}
-                isEven={isEven}
-                laneColor={lane.color}
-                onClick={() => onFactClick?.(fact)}
-              />
-            );
-          })}
+          {positionedFacts.map(({ fact, position, index }) => (
+            <FactNode
+              key={fact.id}
+              fact={fact}
+              positionPx={position}
+              laneColor={lane.color}
+              onClick={() => {
+                onFactClick?.(fact);
+                openFocus(fact);
+              }}
+            />
+          ))}
           
           {/* Empty state */}
           {facts.length === 0 && (
@@ -164,67 +193,52 @@ function TimelineLaneView({
 
 interface FactNodeProps {
   fact: Fact;
-  position: number;
-  isEven: boolean;
+  positionPx: number;
   laneColor: string;
   onClick?: () => void;
 }
 
-function FactNode({ fact, position, isEven, laneColor, onClick }: FactNodeProps) {
+function FactNode({ fact, positionPx, laneColor, onClick }: FactNodeProps) {
   const [isHovered, setIsHovered] = useState(false);
-  
-  // Clamp position between 0 and 100
-  const clampedPosition = Math.max(0, Math.min(100, position));
   
   return (
     <div
       className="absolute left-0 right-0 px-4"
-      style={{ top: `${clampedPosition}%`, transform: 'translateY(-50%)' }}
+      style={{ top: positionPx, transform: 'translateY(-50%)' }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div 
-        className={cn(
-          'flex items-center gap-3',
-          isEven ? 'flex-row' : 'flex-row-reverse'
-        )}
-      >
-        {/* Content card */}
-        <div 
+      <div className="flex items-start">
+        <div className="flex-1" />
+
+        <div
           className={cn(
-            'flex-1 max-w-[45%] p-3 rounded-lg cursor-pointer transition-all duration-200',
-            'bg-gray-900 border border-gray-800 hover:border-gray-600',
-            isHovered && 'shadow-lg scale-105'
-          )}
-          style={{ 
-            borderLeftColor: isEven ? laneColor : undefined,
-            borderRightColor: !isEven ? laneColor : undefined,
-            borderLeftWidth: isEven ? '3px' : undefined,
-            borderRightWidth: !isEven ? '3px' : undefined,
-          }}
-          onClick={onClick}
-        >
-          <div className="flex items-center gap-2 mb-1">
-            <span className="text-xs text-gray-500">{fact.dateLabel}</span>
-            {fact.metadata?.verificationStatus === 'confirmed' && (
-              <span className="w-2 h-2 rounded-full bg-green-500" title="Confirmé" />
-            )}
-          </div>
-          <h4 className="text-sm font-medium text-white line-clamp-2">{fact.title}</h4>
-          <p className="text-xs text-gray-400 line-clamp-2 mt-1">{fact.content}</p>
-        </div>
-        
-        {/* Node dot */}
-        <div 
-          className={cn(
-            'w-3 h-3 rounded-full border-2 border-gray-950 flex-shrink-0 transition-transform',
-            isHovered && 'scale-150'
+            'absolute left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full border-2 border-gray-950 shadow-md',
+            isHovered && 'scale-125'
           )}
           style={{ backgroundColor: laneColor }}
         />
-        
-        {/* Spacer for alignment */}
-        <div className="flex-1 max-w-[45%]" />
+
+        <div className="flex-1 pl-6">
+          <button
+            type="button"
+            onClick={onClick}
+            className="group inline-flex items-baseline gap-2 max-w-[320px] text-left"
+          >
+            <span className="text-[10px] font-medium shrink-0" style={{ color: `${laneColor}CC` }}>
+              {fact.dateLabel}
+            </span>
+            <span
+              className={cn(
+                'text-sm font-display font-semibold text-gray-100 transition-colors line-clamp-1',
+                'group-hover:text-white'
+              )}
+            >
+              {fact.title}
+            </span>
+            <span className="sr-only">Ouvrir les détails</span>
+          </button>
+        </div>
       </div>
     </div>
   );
@@ -386,14 +400,13 @@ export function MultiTimelineView({ className, onFactClick }: MultiTimelineViewP
   }, [isScrollSynced]);
   
   // Set scroll ref for a lane
-  const setScrollRef = useCallback((laneId: string) => (el: HTMLDivElement | null) => {
-    if (el) {
-      scrollRefs.current.set(laneId, el);
-      el.addEventListener('scroll', () => {
-        handleScroll(laneId, el.scrollTop);
-      }, { passive: true });
+  const setScrollRef = useCallback((laneId: string): React.RefCallback<HTMLDivElement> => (el) => {
+    if (!el) {
+      scrollRefs.current.delete(laneId);
+      return;
     }
-  }, [handleScroll]);
+    scrollRefs.current.set(laneId, el);
+  }, []);
   
   // Cleanup
   useEffect(() => {
@@ -420,7 +433,7 @@ export function MultiTimelineView({ className, onFactClick }: MultiTimelineViewP
     <div 
       ref={containerRef}
       className={cn(
-        'relative bg-gray-950 rounded-xl border border-gray-800 overflow-hidden',
+        'relative h-full bg-gray-950 rounded-xl border border-gray-800 overflow-hidden min-h-0',
         isFullscreen && 'fixed inset-0 z-[9999] rounded-none',
         direction === 'horizontal' ? 'flex' : 'flex flex-col',
         className
@@ -437,7 +450,7 @@ export function MultiTimelineView({ className, onFactClick }: MultiTimelineViewP
       {/* Lane grid */}
       <div 
         className={cn(
-          'flex-1 grid',
+          'flex-1 h-full min-h-0 grid',
           direction === 'horizontal' 
             ? 'grid-flow-col auto-cols-fr'
             : 'grid-flow-row auto-rows-fr'
@@ -456,7 +469,8 @@ export function MultiTimelineView({ className, onFactClick }: MultiTimelineViewP
             isActive={activeLaneId === filteredLane.lane.id}
             onActivate={() => setActiveLane(filteredLane.lane.id)}
             onFactClick={onFactClick}
-            scrollRef={{ current: scrollRefs.current.get(filteredLane.lane.id) || null } as React.RefObject<HTMLDivElement>}
+            onScroll={(scrollTop) => handleScroll(filteredLane.lane.id, scrollTop)}
+            scrollRef={setScrollRef(filteredLane.lane.id)}
           />
         ))}
       </div>

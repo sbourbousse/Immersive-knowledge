@@ -4,17 +4,30 @@
   "dateLabel": "10 août 2019",
   "title": "Mort de Jeffrey Epstein en prison",
   "content": "Jeffrey Epstein est trouvé mort dans sa cellule au Metropolitan Correctional Center de New York. Le médecin légiste conclut à un suicide par pendaison, mais des circonstances suspectes alimentent les théories du complot.\\n\\n**Points clés :**\\n- Caméra de surveillance défectueuse\\n- Gardes endormis (faussé les registres)\\n- Os hyoïde fracturé (souvent lié à la strangulation)\\n- Bill Clinton et Donald Trump parmi les contacts",
-  "tags": ["category:justice", "source:official", "category:elite", "coverage:mainstream"],
+  "tags": [
+    "category:justice",
+    "source:official",
+    "category:elite",
+    "coverage:mainstream"
+  ],
   "source": {
     "name": "New York City Medical Examiner",
     "url": "https://www1.nyc.gov/site/ocme/index.page",
-    "reliabilityScore": 0.90,
+    "reliabilityScore": 0.9,
     "accessedAt": "2026-02-18T10:00:00Z"
   },
   "metadata": {
     "importance": "high",
     "threadId": "main",
     "verificationStatus": "confirmed",
-    "crossReferences": ["ep005-maxwell-arrest"]
-  }
+    "crossReferences": [
+      "ep005-maxwell-arrest"
+    ]
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": true,
+    "level": 95,
+    "description": "Couverture médiatique mondiale, sujet d'intérêt public majeur"
+  },
+  "relevanceScore": 100
 }

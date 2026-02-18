@@ -17,21 +17,6 @@ const Check = ({ className = '' }: { className?: string }) => (
   </svg>
 );
 
-const Columns = ({ className = '' }: { className?: string }) => (
-  <svg className={className} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-    <rect x="4" y="4" width="16" height="16" rx="2"/>
-    <path d="M12 4v16"/>
-  </svg>
-);
-
-const LayoutGrid = ({ className = '' }: { className?: string }) => (
-  <svg className={className} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-    <rect x="3" y="3" width="7" height="7"/>
-    <rect x="14" y="3" width="7" height="7"/>
-    <rect x="14" y="14" width="7" height="7"/>
-    <rect x="3" y="14" width="7" height="7"/>
-  </svg>
-);
 
 interface TimelineSelectorProps {
   className?: string;
@@ -45,10 +30,8 @@ export function TimelineSelector({ className }: TimelineSelectorProps) {
     currentTimelineId,
     isComparisonMode,
     comparedTimelines,
-    direction,
     setTimeline,
     toggleTimelineComparison,
-    setDirection,
     toggleComparisonMode,
   } = useTimelineStore();
 
@@ -64,7 +47,11 @@ export function TimelineSelector({ className }: TimelineSelectorProps) {
   }, []);
 
   const currentTimeline = timelines[currentTimelineId];
-  const allTimelines = Object.values(timelines);
+  const allTimelines = Object.values(timelines).sort((a, b) => {
+    if (a.id === 'epstein') return -1;
+    if (b.id === 'epstein') return 1;
+    return a.name.localeCompare(b.name);
+  });
 
   return (
     <div ref={dropdownRef} className={`relative ${className}`}>
@@ -174,31 +161,6 @@ export function TimelineSelector({ className }: TimelineSelectorProps) {
             })}
           </div>
 
-          {/* Direction toggle */}
-          <div className="px-4 py-3 border-t border-gray-800">
-            <div className="flex items-center justify-between">
-              <span className="text-xs text-gray-400">Direction</span>
-              <div className="flex items-center gap-1 bg-gray-800 rounded-lg p-1">
-                <button
-                  onClick={() => setDirection('horizontal')}
-                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-medium transition-colors
-                    ${direction === 'horizontal' ? 'bg-gray-700 text-white' : 'text-gray-400 hover:text-white'}`}
-                >
-                  <Columns className="w-3.5 h-3.5" />
-                  Horizontal
-                </button>
-                <button
-                  onClick={() => setDirection('vertical')}
-                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-medium transition-colors
-                    ${direction === 'vertical' ? 'bg-gray-700 text-white' : 'text-gray-400 hover:text-white'}`}
-                >
-                  <LayoutGrid className="w-3.5 h-3.5" />
-                  Vertical
-                </button>
-              </div>
-            </div>
-          </div>
-
           {/* Comparison mode toggle */}
           <div className="px-4 py-3 border-t border-gray-800 bg-gray-900/50">
             <button
@@ -216,37 +178,6 @@ export function TimelineSelector({ className }: TimelineSelectorProps) {
           </div>
         </div>
       )}
-    </div>
-  );
-}
-
-interface DirectionToggleProps {
-  value: 'horizontal' | 'vertical';
-  onChange: (value: 'horizontal' | 'vertical') => void;
-  className?: string;
-}
-
-export function DirectionToggle({ value, onChange, className }: DirectionToggleProps) {
-  return (
-    <div className={`flex items-center gap-2 bg-gray-800 rounded-lg p-1 ${className}`}>
-      <button
-        onClick={() => onChange('horizontal')}
-        className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium transition-colors
-          ${value === 'horizontal' ? 'bg-gray-700 text-white shadow-sm' : 'text-gray-400 hover:text-white'}`}
-        title="Défilement horizontal avec pinning"
-      >
-        <Columns className="w-4 h-4" />
-        <span className="hidden sm:inline">Horizontal</span>
-      </button>
-      <button
-        onClick={() => onChange('vertical')}
-        className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium transition-colors
-          ${value === 'vertical' ? 'bg-gray-700 text-white shadow-sm' : 'text-gray-400 hover:text-white'}`}
-        title="Défilement vertical naturel"
-      >
-        <LayoutGrid className="w-4 h-4" />
-        <span className="hidden sm:inline">Vertical</span>
-      </button>
     </div>
   );
 }

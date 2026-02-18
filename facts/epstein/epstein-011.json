@@ -4,8 +4,15 @@
   "dateLabel": "January 1, 2005",
   "title": "Première plainte officielle déposée par parents de victime",
   "content": "Les parents d'une adolescente de 14 ans déposent une plainte auprès de la police de Palm Beach concernant des activités suspectes chez Jeffrey Epstein. La jeune fille, qui a été recrutée pour des 'massages' au domicile d'Epstein, révèle avoir reçu 300 dollars en échange d'actes sexuels. Cette plainte initiale déclenche l'enquête qui se développera pendant trois ans.",
-  "categories": ["Justice", "Victimes"],
-  "tags": ["source:official", "category:justice", "coverage:suppressed"],
+  "categories": [
+    "Justice",
+    "Victimes"
+  ],
+  "tags": [
+    "source:official",
+    "category:justice",
+    "coverage:suppressed"
+  ],
   "mediaCoverage": {
     "firstReportedDate": 1222819200,
     "outlet": "Palm Beach Post",
@@ -20,5 +27,11 @@
     "importance": "critical",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": false,
+    "level": 15,
+    "description": "Connu des autorités locales de Palm Beach, peu médiatisé nationalement"
+  },
+  "relevanceScore": 43
 }

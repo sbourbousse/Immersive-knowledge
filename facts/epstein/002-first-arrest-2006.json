@@ -4,8 +4,15 @@
   "dateLabel": "1er avril 2006",
   "title": "Première arrestation d'Epstein",
   "content": "La police de Palm Beach arrête Jeffrey Epstein pour agressions sexuelles sur mineures. L'enquête identifie des dizaines de victimes potentielles et un système de recrutement organisé par des assistantes personnelles.",
-  "categories": ["Justice", "Victimes"],
-  "tags": ["source:official", "category:justice", "coverage:delayed"],
+  "categories": [
+    "Justice",
+    "Victimes"
+  ],
+  "tags": [
+    "source:official",
+    "category:justice",
+    "coverage:delayed"
+  ],
   "source": {
     "name": "FBI Vault - Epstein Files",
     "url": "https://vault.fbi.gov/jeffrey-epstein",
@@ -17,5 +24,11 @@
     "threadId": "epstein-main",
     "verificationStatus": "confirmed",
     "mediaCoverageDate": 1561939200
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": false,
+    "level": 10,
+    "description": "Enquête locale, couverture médiatique nationale absente à l'époque"
+  },
+  "relevanceScore": 88
 }

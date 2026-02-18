@@ -4,8 +4,15 @@
   "dateLabel": "June 1, 1997",
   "title": "Fondation Epstein créée comme outil fiscal",
   "content": "Création de la 'Jeffrey Epstein VI Foundation', une organisation à but non lucratif qui sera utilisée comme mécanisme fiscal et de légitimation sociale. La fondation prétend soutenir la recherche scientifique, mais ses finances opaques et ses déductions fiscales susciteront des questions. Elle servira également à canaliser des paiements vers des victimes et des associés.",
-  "categories": ["Finance", "Camouflage"],
-  "tags": ["source:official", "category:finance", "coverage:delayed"],
+  "categories": [
+    "Finance",
+    "Camouflage"
+  ],
+  "tags": [
+    "source:official",
+    "category:finance",
+    "coverage:delayed"
+  ],
   "mediaCoverage": {
     "firstReportedDate": 1388534400,
     "outlet": "ProPublica",
@@ -20,5 +27,11 @@
     "importance": "medium",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": false,
+    "level": 5,
+    "description": "Inconnu du grand public, révélé des années plus tard"
+  },
+  "relevanceScore": 52
 }

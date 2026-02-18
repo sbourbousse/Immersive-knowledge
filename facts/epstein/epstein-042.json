@@ -4,8 +4,15 @@
   "dateLabel": "June 1, 2019",
   "title": "Indictement par le grand jury du SDNY",
   "content": "Un grand jury fédéral à New York vote l'inculpation de Jeffrey Epstein pour trafic sexuel et conspiration. L'acte d'accusation cite des victimes dès 14 ans et détaille un réseau d'exploitation s'étalant sur des années. Les charges incluent le 'transport de mineures à des fins d'activité sexuelle criminelle'. Le cas est considéré comme une priorité majeure par le SDNY.",
-  "categories": ["Justice", "Victimes"],
-  "tags": ["source:official", "category:justice", "coverage:mainstream"],
+  "categories": [
+    "Justice",
+    "Victimes"
+  ],
+  "tags": [
+    "source:official",
+    "category:justice",
+    "coverage:mainstream"
+  ],
   "mediaCoverage": {
     "firstReportedDate": 1561852800,
     "outlet": "New York Times",
@@ -20,5 +27,11 @@
     "importance": "critical",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": true,
+    "level": 90,
+    "description": "Largement médiatisé après l'enquête du Miami Herald"
+  },
+  "relevanceScore": 43
 }

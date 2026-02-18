@@ -4,8 +4,15 @@
   "dateLabel": "January 1990",
   "title": "Création de J. Epstein & Co",
   "content": "Jeffrey Epstein fonde sa société de gestion financière 'J. Epstein & Co.' à New York. L'entreprise se spécialise dans la gestion des fortunes ultra-riches avec une politique de confidentialité stricte. Epstein prétend ne gérer que des clients avec au moins 1 milliard de dollars d'actifs. Cette structure opaque deviendra le véhicule financier principal de ses opérations et de son réseau d'influence.",
-  "categories": ["Finance", "Réseau"],
-  "tags": ["source:official", "category:finance", "coverage:mainstream"],
+  "categories": [
+    "Finance",
+    "Réseau"
+  ],
+  "tags": [
+    "source:official",
+    "category:finance",
+    "coverage:mainstream"
+  ],
   "mediaCoverage": {
     "firstReportedDate": 946684800,
     "outlet": "New York Times",
@@ -20,5 +27,11 @@
     "importance": "high",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": false,
+    "level": 5,
+    "description": "Inconnu du grand public, connu uniquement du cercle proche d'Epstein"
+  },
+  "relevanceScore": 67
 }

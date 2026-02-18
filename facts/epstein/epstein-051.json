@@ -4,8 +4,15 @@
   "dateLabel": "April 1, 2020",
   "title": "Reprise de l'enquête sur les complices",
   "content": "Le FBI et le SDNY annoncent officiellement que l'enquête se poursuit malgré la mort d'Epstein, se concentrant sur ses complices et co-conspirateurs. Ghislaine Maxwell est identifiée comme cible principale de l'enquête. Les procureurs contactent les victimes pour recueillir de nouveaux témoignages. L'enquête s'étend également à d'autres associés comme Jean-Luc Brunel.",
-  "categories": ["Justice", "Réseau"],
-  "tags": ["source:official", "category:justice", "coverage:mainstream"],
+  "categories": [
+    "Justice",
+    "Réseau"
+  ],
+  "tags": [
+    "source:official",
+    "category:justice",
+    "coverage:mainstream"
+  ],
   "mediaCoverage": {
     "firstReportedDate": 1585699200,
     "outlet": "Reuters",
@@ -20,5 +27,11 @@
     "importance": "critical",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": true,
+    "level": 95,
+    "description": "Couverture médiatique mondiale, sujet d'intérêt public majeur"
+  },
+  "relevanceScore": 100
 }

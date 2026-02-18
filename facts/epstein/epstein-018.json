@@ -4,8 +4,16 @@
   "dateLabel": "1er mai 2007",
   "title": "Alan Dershowitz rejoint la défense",
   "content": "L'avocat renommé Alan Dershowitz, professeur à Harvard, rejoint l'équipe de défense d'Epstein. Il négocie directement avec Acosta pour obtenir un accord favorable.",
-  "categories": ["Justice", "Réseau"],
-  "tags": ["source:media", "category:elite", "category:justice", "coverage:delayed"],
+  "categories": [
+    "Justice",
+    "Réseau"
+  ],
+  "tags": [
+    "source:media",
+    "category:elite",
+    "category:justice",
+    "coverage:delayed"
+  ],
   "source": {
     "name": "Miami Herald",
     "url": "https://www.miamiherald.com/",
@@ -17,5 +25,11 @@
     "threadId": "epstein-main",
     "verificationStatus": "confirmed",
     "mediaCoverageDate": 1543622400
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": false,
+    "level": 10,
+    "description": "Enquête locale, couverture médiatique nationale absente à l'époque"
+  },
+  "relevanceScore": 72
 }

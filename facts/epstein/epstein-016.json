@@ -4,8 +4,14 @@
   "dateLabel": "1er juillet 2006",
   "title": "Perquisition chez Epstein",
   "content": "Les agents du FBI perquisitionnent le domicile d'Epstein à Palm Beach. Ils saisissent des photos de mineures nues, des caméras, et des enregistrements. La preuve est considérée comme accablante.",
-  "categories": ["Justice"],
-  "tags": ["source:official", "category:justice", "coverage:suppressed"],
+  "categories": [
+    "Justice"
+  ],
+  "tags": [
+    "source:official",
+    "category:justice",
+    "coverage:suppressed"
+  ],
   "source": {
     "name": "FBI Vault",
     "url": "https://vault.fbi.gov/",
@@ -16,5 +22,11 @@
     "importance": "high",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": false,
+    "level": 15,
+    "description": "Connu des autorités locales de Palm Beach, peu médiatisé nationalement"
+  },
+  "relevanceScore": 81
 }

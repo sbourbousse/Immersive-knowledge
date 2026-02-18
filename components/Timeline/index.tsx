@@ -4,8 +4,9 @@ import { useRef, useState, useCallback, useMemo } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Fact, TimelineDirection, getTagInfo } from '@/types';
+import { Fact, TimelineDirection, getTagInfo, getAwarenessOpacity, getRelevanceTextStyle } from '@/types';
 import { TagBadge } from '../TagFilter';
+import { useFocusMode } from '@/components/FocusMode/FocusModeProvider';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,6 +37,7 @@ export function Timeline({
   const timelineRef = useRef<HTMLDivElement>(null);
   const [activeFact, setActiveFact] = useState<string | null>(null);
   const triggersRef = useRef<ScrollTrigger[]>([]);
+  const { openFocus } = useFocusMode();
 
   // Filter facts by selected tags
   const filteredFacts = useMemo(() => {
@@ -146,6 +148,7 @@ export function Timeline({
   const handleFactClick = useCallback((fact: Fact) => {
     setActiveFact(fact.id);
     onFactClick?.(fact);
+    openFocus(fact);
   }, [onFactClick]);
 
   const isHighlighted = useCallback((factId: string) => {
@@ -171,73 +174,35 @@ export function Timeline({
 
         {/* Facts list */}
         <div className="space-y-8 px-6 pl-16">
-          {sortedFacts.map((fact, index) => (
-            <article
-              key={fact.id}
-              className={`fact-card relative bg-ui-surface rounded-xl p-6 cursor-pointer 
-                transition-all duration-300 hover:scale-[1.02] hover:shadow-lg
-                ${activeFact === fact.id ? 'ring-2 ring-offset-2 ring-offset-ui-background' : ''}
-                ${isHighlighted(fact.id) ? 'ring-2 ring-indigo-500' : 'border border-gray-800'}`}
+          {sortedFacts.map((fact, index) => {
+            const relevanceText = getRelevanceTextStyle(fact.relevanceScore);
+            const opacity = getAwarenessOpacity(fact);
+
+            return (
+              <button
+                key={fact.id}
+              type="button"
+              className={`fact-card relative w-full text-left rounded-lg px-3 py-2 
+                transition-colors duration-150
+                ${activeFact === fact.id ? 'bg-indigo-500/10' : ''}
+                ${isHighlighted(fact.id) ? 'ring-1 ring-indigo-500' : 'hover:bg-gray-800/40'}`}
               style={{
-                borderLeftColor: isHighlighted(fact.id) ? undefined : laneColor,
-                borderLeftWidth: isHighlighted(fact.id) ? undefined : '3px',
+                borderLeftColor: laneColor,
+                borderLeftWidth: '3px',
+                opacity,
               }}
               onClick={() => handleFactClick(fact)}
             >
-              {/* Date marker */}
-              <div className="flex items-center gap-3 mb-3">
-                <div
-                  className="px-3 py-1 rounded-full text-xs font-medium text-white"
-                  style={{ backgroundColor: laneColor }}
-                >
+              <div className="flex items-baseline gap-2">
+                <span className="text-[11px] font-medium shrink-0" style={{ color: `${laneColor}CC` }}>
                   {fact.dateLabel}
-                </div>
-                {fact.metadata.importance === 'high' && (
-                  <span className="text-xs px-2 py-0.5 bg-red-500/20 text-red-400 rounded">
-                    Important
-                  </span>
-                )}
-              </div>
-
-              {/* Title */}
-              <h3 className="font-display text-xl font-bold mb-3">
-                {fact.title}
-              </h3>
-
-              {/* Content preview */}
-              <p className="text-gray-400 mb-4 line-clamp-3">
-                {fact.content.replace(/[#*_]/g, '').slice(0, 200)}...
-              </p>
-
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-4">
-                {fact.tags.slice(0, 4).map((tag) => (
-                  <TagBadge key={tag} tag={tag} size="sm" />
-                ))}
-                {fact.tags.length > 4 && (
-                  <span className="text-xs text-gray-500">
-                    +{fact.tags.length - 4}
-                  </span>
-                )}
-              </div>
-
-              {/* Source */}
-              <div className="flex items-center justify-between text-xs text-gray-500 pt-4 border-t border-gray-800">
-                <span>{fact.source.name}</span>
-                <div className="flex items-center gap-2">
-                  <div
-                    className="w-2 h-2 rounded-full"
-                    style={{
-                      backgroundColor:
-                        fact.source.reliabilityScore > 0.9
-                          ? '#10b981'
-                          : fact.source.reliabilityScore > 0.7
-                          ? '#f59e0b'
-                          : '#ef4444',
-                    }}
-                    title={`Fiabilité: ${Math.round(fact.source.reliabilityScore * 100)}%`}
-                  />
-                </div>
+                </span>
+                <span
+                  className={`text-sm text-gray-100 line-clamp-1 ${relevanceText.className}`}
+                  style={relevanceText.style}
+                >
+                  {fact.title}
+                </span>
               </div>
 
               {/* Timeline dot */}
@@ -245,8 +210,9 @@ export function Timeline({
                 className="absolute -left-[25px] top-8 w-3 h-3 rounded-full border-2 border-ui-background"
                 style={{ backgroundColor: laneColor }}
               />
-            </article>
-          ))}
+            </button>
+            );
+          })}
         </div>
       </div>
     );
@@ -280,53 +246,30 @@ export function Timeline({
           }}
         />
 
-        {sortedFacts.map((fact, index) => (
-          <article
-            key={fact.id}
-            className={`fact-card relative flex-shrink-0 w-80 bg-ui-surface rounded-xl p-6 
-              cursor-pointer transition-all duration-300 hover:scale-[1.02]
-              ${activeFact === fact.id ? 'ring-2 ring-offset-2 ring-offset-ui-background' : 'border border-gray-800'}
-              ${isHighlighted(fact.id) ? 'ring-2 ring-indigo-500 scale-105' : ''}`}
+        {sortedFacts.map((fact, index) => {
+          const relevanceText = getRelevanceTextStyle(fact.relevanceScore);
+          const opacity = getAwarenessOpacity(fact);
+
+          return (
+            <button
+              key={fact.id}
+            type="button"
+            className={`fact-card relative flex-shrink-0 w-[420px] text-left px-3 py-2 rounded-md
+              transition-colors duration-150
+              ${activeFact === fact.id ? 'bg-indigo-500/10' : ''}
+              ${isHighlighted(fact.id) ? 'ring-1 ring-indigo-500' : 'hover:bg-gray-800/40'}`}
+            style={{ opacity }}
             onClick={() => handleFactClick(fact)}
           >
-            {/* Date marker */}
-            <div
-              className="absolute -top-3 left-6 px-3 py-1 rounded-full text-xs font-medium text-white"
-              style={{ backgroundColor: laneColor }}
-            >
-              {fact.dateLabel}
-            </div>
-
-            {/* Tags */}
-            <div className="flex flex-wrap gap-1 mb-3 mt-2">
-              {fact.tags.slice(0, 3).map((tag) => (
-                <TagBadge key={tag} tag={tag} size="xs" />
-              ))}
-            </div>
-
-            {/* Title */}
-            <h3 className="font-display text-lg font-bold mb-2 line-clamp-2">
-              {fact.title}
-            </h3>
-
-            {/* Content preview */}
-            <p className="text-sm text-gray-400 line-clamp-3">
-              {fact.content.replace(/[#*_]/g, '').slice(0, 120)}...
-            </p>
-
-            {/* Source indicator */}
-            <div className="mt-4 flex items-center justify-between text-xs text-gray-500">
-              <span className="truncate max-w-[150px]">{fact.source.name}</span>
+            <div className="flex items-baseline gap-2">
+              <span className="text-[11px] font-medium shrink-0" style={{ color: `${laneColor}CC` }}>
+                {fact.dateLabel}
+              </span>
               <span
-                className={`px-2 py-0.5 rounded ${
-                  fact.metadata.importance === 'high'
-                    ? 'bg-red-500/20 text-red-400'
-                    : fact.metadata.importance === 'medium'
-                    ? 'bg-yellow-500/20 text-yellow-400'
-                    : 'bg-gray-700'
-                }`}
+                className={`text-sm text-gray-100 line-clamp-1 ${relevanceText.className}`}
+                style={relevanceText.style}
               >
-                {fact.metadata.importance}
+                {fact.title}
               </span>
             </div>
 
@@ -339,8 +282,9 @@ export function Timeline({
                 }}
               />
             )}
-          </article>
-        ))}
+            </button>
+          );
+        })}
       </div>
     </div>
   );

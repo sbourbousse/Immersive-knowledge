@@ -4,8 +4,15 @@
   "dateLabel": "May 1, 2005",
   "title": "Découverte du schéma de recrutement pyramidale",
   "content": "Les enquêteurs du Palm Beach PD découvrent le mécanisme de recrutement en pyramide : Epstein paie 200-300 dollars par 'massage', plus une prime de 200 dollars pour chaque nouvelle fille recrutée. Certaines recruteuses gagnent ainsi des milliers de dollars. Ce système crée une chaîne d'exploitation auto-alimentée ciblant des filles de 14 à 17 ans.",
-  "categories": ["Victimes", "Justice"],
-  "tags": ["source:official", "category:justice", "coverage:suppressed"],
+  "categories": [
+    "Victimes",
+    "Justice"
+  ],
+  "tags": [
+    "source:official",
+    "category:justice",
+    "coverage:suppressed"
+  ],
   "mediaCoverage": {
     "firstReportedDate": 1543449600,
     "outlet": "Miami Herald",
@@ -20,5 +27,11 @@
     "importance": "critical",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": false,
+    "level": 15,
+    "description": "Connu des autorités locales de Palm Beach, peu médiatisé nationalement"
+  },
+  "relevanceScore": 33
 }

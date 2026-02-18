@@ -4,8 +4,15 @@
   "dateLabel": "August 25, 2019",
   "title": "Dr. Michael Baden suggère un homicide",
   "content": "Le Dr. Michael Baden, médecin légiste renommé ayant assisté à l'autopsie d'Epstein (à la demande du frère de la victime), déclare publiquement que les blessures sont plus compatibles avec un homicide qu'avec un suicide. Il souligne des fractures au cou typiques d'un étranglement par strangulation plutôt que d'une pendaison. Cette déclaration alimente les théories du complot, bien que le médecin légiste officiel maintienne la conclusion du suicide.",
-  "categories": ["Justice", "Médias"],
-  "tags": ["source:media", "category:coverup", "coverage:mainstream"],
+  "categories": [
+    "Justice",
+    "Médias"
+  ],
+  "tags": [
+    "source:media",
+    "category:coverup",
+    "coverage:mainstream"
+  ],
   "mediaCoverage": {
     "firstReportedDate": 1566950400,
     "outlet": "Fox News",
@@ -20,5 +27,11 @@
     "importance": "high",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": true,
+    "level": 95,
+    "description": "Couverture médiatique mondiale, sujet d'intérêt public majeur"
+  },
+  "relevanceScore": 100
 }

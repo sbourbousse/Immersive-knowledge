@@ -4,8 +4,16 @@
   "dateLabel": "5 janvier 2021 - Présent",
   "title": "Génération d'images : DALL-E, Midjourney, Stable Diffusion",
   "content": "La génération d'images par IA connaît une révolution avec trois acteurs majeurs. **DALL-E** (OpenAI, jan 2021) popularise le text-to-image. **Midjourney** (juil 2022) devient référence pour la qualité artistique. **Stable Diffusion** (Stability AI, août 2022) démocratise l'accès en open source et fonctionne sur GPU grand public. Ces outils génèrent des controverses sur le droit d'auteur et l'impact sur les artistes.\n\n**Évolution clé :**\n- DALL-E 3 (oct 2023) : intégration ChatGPT, meilleure compréhension des prompts\n- Midjourney V7 (avr 2025) : haute fidélité artistique\n- Stable Diffusion XL (juil 2023) : 1024x1024 natif, meilleures anatomies",
-  "categories": ["Technologie", "Société"],
-  "tags": ["category:technology", "category:society", "source:media", "coverage:mainstream"],
+  "categories": [
+    "Technologie",
+    "Société"
+  ],
+  "tags": [
+    "category:technology",
+    "category:society",
+    "source:media",
+    "coverage:mainstream"
+  ],
   "source": {
     "name": "Wikipedia - DALL-E, Midjourney, Stable Diffusion",
     "url": "https://en.wikipedia.org/wiki/DALL-E",
@@ -17,5 +25,11 @@
     "threadId": "main",
     "verificationStatus": "confirmed",
     "crossReferences": []
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": true,
+    "level": 85,
+    "description": "Annonce publique largement couverte par les médias tech et grand public"
+  },
+  "relevanceScore": 62
 }

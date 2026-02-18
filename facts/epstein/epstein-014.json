@@ -4,8 +4,15 @@
   "dateLabel": "September 1, 2005",
   "title": "Première perquisition au manoir de Palm Beach",
   "content": "La police de Palm Beach perquisitionne le manoir d'Epstein à El Brillo Way. Les agents saisissent des preuves cruciales : des photographies de jeunes filles, des agendas, des listes de contacts, et des ordinateurs. Les enquêteurs trouvent également des caméras de surveillance et des systèmes d'enregistrement dans toute la maison, suggérant une documentation systématique des activités.",
-  "categories": ["Justice", "Camouflage"],
-  "tags": ["source:official", "category:coverup", "coverage:suppressed"],
+  "categories": [
+    "Justice",
+    "Camouflage"
+  ],
+  "tags": [
+    "source:official",
+    "category:coverup",
+    "coverage:suppressed"
+  ],
   "mediaCoverage": {
     "firstReportedDate": 1222819200,
     "outlet": "Palm Beach Post",
@@ -20,5 +27,11 @@
     "importance": "critical",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": false,
+    "level": 15,
+    "description": "Connu des autorités locales de Palm Beach, peu médiatisé nationalement"
+  },
+  "relevanceScore": 26
 }

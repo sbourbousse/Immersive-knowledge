@@ -3,6 +3,8 @@
  * Définit les structures de données pour les faits, timelines et comparaisons
  */
 
+import type { CSSProperties } from 'react';
+
 // ============================================================================
 // TIMELINE IDS
 // ============================================================================
@@ -27,6 +29,83 @@ export interface Tag {
   label: string;
   /** Couleur associée */
   color?: string;
+}
+
+// ============================================================================
+// AWARENESS & RELEVANCE HELPERS
+// ============================================================================
+
+export function getAwarenessOpacity(fact: Fact): number {
+  if (!fact.publicAwareness) return 1;
+  if (fact.publicAwareness.wasPublicAtTime) return 1;
+  return 0.45 + (fact.publicAwareness.level / 100) * 0.4;
+}
+
+export function getAwarenessStyle(fact: Fact): {
+  label: string;
+  badgeClass: string;
+  icon: string;
+} {
+  if (!fact.publicAwareness) {
+    return { label: 'Inconnu', badgeClass: 'bg-gray-700 text-gray-400', icon: '❓' };
+  }
+  const level = fact.publicAwareness.level;
+  if (level <= 10) return { label: 'Secret', badgeClass: 'bg-purple-500/20 text-purple-400', icon: '🔒' };
+  if (level <= 25) return { label: 'Cercle restreint', badgeClass: 'bg-violet-500/20 text-violet-400', icon: '👥' };
+  if (level <= 50) return { label: 'Peu médiatisé', badgeClass: 'bg-amber-500/20 text-amber-400', icon: '📰' };
+  if (level <= 75) return { label: 'Médiatisé', badgeClass: 'bg-blue-500/20 text-blue-400', icon: '📡' };
+  return { label: 'Public', badgeClass: 'bg-emerald-500/20 text-emerald-400', icon: '🌍' };
+}
+
+export function getRelevanceIntensity(fact: Fact): {
+  glowClass: string;
+  borderClass: string;
+  dotSize: string;
+  label: string;
+} {
+  const score = fact.relevanceScore ?? 50;
+  if (score >= 85) return {
+    glowClass: 'shadow-lg shadow-red-500/20',
+    borderClass: 'border-red-500/40',
+    dotSize: 'w-4 h-4',
+    label: 'Très captivant',
+  };
+  if (score >= 70) return {
+    glowClass: 'shadow-md shadow-orange-500/15',
+    borderClass: 'border-orange-500/30',
+    dotSize: 'w-3.5 h-3.5',
+    label: 'Captivant',
+  };
+  if (score >= 50) return {
+    glowClass: '',
+    borderClass: 'border-gray-700',
+    dotSize: 'w-3 h-3',
+    label: 'Notable',
+  };
+  return {
+    glowClass: '',
+    borderClass: 'border-gray-800',
+    dotSize: 'w-2.5 h-2.5',
+    label: 'Mineur',
+  };
+}
+
+export function getRelevanceTextStyle(score: number | undefined): {
+  className: string;
+  style: CSSProperties;
+} {
+  const s = Math.max(0, Math.min(100, score ?? 50));
+  // Scaling plus contrasté: les faits mineurs sont nettement plus petits.
+  // Courbe douce (gamma) pour éviter que tout se ressemble au milieu.
+  const min = 0.78;
+  const max = 1.32;
+  const t = Math.pow(s / 100, 1.35);
+  const size = min + t * (max - min);
+  const className = s >= 85 ? 'font-bold' : s >= 55 ? 'font-semibold' : 'font-medium';
+  return {
+    className,
+    style: { fontSize: `${size.toFixed(3)}em` },
+  };
 }
 
 /** Tags standards disponibles */
@@ -93,6 +172,19 @@ export interface Fact {
     /** Date d'accès à la source (ISO 8601) */
     accessedAt: string;
   };
+
+  /** Niveau de connaissance publique au moment des faits */
+  publicAwareness?: {
+    /** Le fait était-il connu du public au moment où il s'est produit ? */
+    wasPublicAtTime: boolean;
+    /** Niveau de connaissance publique (0 = secret total, 100 = largement médiatisé) */
+    level: number;
+    /** Description du contexte de connaissance publique */
+    description: string;
+  };
+
+  /** Score de pertinence/intérêt du fait (0 = anodin, 100 = choquant/captivant) */
+  relevanceScore?: number;
   
   /** Métadonnées additionnelles */
   metadata: {
@@ -344,14 +436,12 @@ export function getTagInfo(tagValue: string): { type: TagType; label: string; co
 /** Helper pour filtrer les faits par tags */
 export function filterFactsByTags(facts: Fact[], selectedTags: string[]): Fact[] {
   if (selectedTags.length === 0) return facts;
-  return facts.filter(fact => 
-    selectedTags.some(tag => fact.tags.includes(tag))
-  );
+  return facts.filter((fact) => selectedTags.some((tag) => fact.tags.includes(tag)));
 }
 
 /** Helper pour filtrer par couverture médiatique */
 export function filterFactsByMediaCoverage(
-  facts: Fact[], 
+  facts: Fact[],
   showOnlyWithCoverage: boolean | null
 ): Fact[] {
   if (showOnlyWithCoverage === null) return facts;

@@ -4,8 +4,15 @@
   "dateLabel": "January 1, 2015",
   "title": "Alan Dershowitz cité dans des documents judiciaires",
   "content": "Des documents judiciaires récemment déclassés citent Alan Dershowitz comme ayant participé aux activités d'Epstein impliquant des mineures. Virginia Giuffre allègue avoir été contrainte d'avoir des relations sexuelles avec lui. Dershowitz nie vigoureusement les accusations et contre-attaque avec des poursuites en diffamation. La bataille juridique s'éternisera sur plusieurs années.",
-  "categories": ["Justice", "Médias"],
-  "tags": ["source:official", "category:justice", "coverage:mainstream"],
+  "categories": [
+    "Justice",
+    "Médias"
+  ],
+  "tags": [
+    "source:official",
+    "category:justice",
+    "coverage:mainstream"
+  ],
   "mediaCoverage": {
     "firstReportedDate": 1420070400,
     "outlet": "The Guardian",
@@ -20,5 +27,11 @@
     "importance": "high",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": true,
+    "level": 40,
+    "description": "Couvert par les médias mais sans grande attention publique"
+  },
+  "relevanceScore": 75
 }

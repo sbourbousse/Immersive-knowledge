@@ -4,7 +4,11 @@
   "dateLabel": "Juillet 2019",
   "title": "Arrestation de Jeffrey Epstein",
   "content": "Epstein est arrêté à son retour de Paris par le FBI. Il est inculpé pour trafic sexuel de mineures. Les charges portent sur des faits commis entre 2002 et 2005 impliquant des dizaines de victimes.",
-  "tags": ["category:justice", "source:official", "coverage:mainstream"],
+  "tags": [
+    "category:justice",
+    "source:official",
+    "coverage:mainstream"
+  ],
   "source": {
     "name": "FBI / SDNY",
     "url": "https://www.fbi.gov/news/press-releases/",
@@ -15,5 +19,11 @@
     "importance": "high",
     "threadId": "main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": true,
+    "level": 90,
+    "description": "Largement médiatisé après l'enquête du Miami Herald"
+  },
+  "relevanceScore": 88
 }

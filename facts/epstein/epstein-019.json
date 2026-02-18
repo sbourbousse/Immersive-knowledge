@@ -4,8 +4,16 @@
   "dateLabel": "1er août 2008",
   "title": "Non-Prosecution Agreement signé",
   "content": "Alexander Acosta signe officiellement le NPA (Non-Prosecution Agreement). Toutes les charges fédérales sont abandonnées. Epstein plaide coupable à deux charges d'État mineures. Les complices sont immunisés.",
-  "categories": ["Justice", "Camouflage"],
-  "tags": ["source:official", "category:coverup", "category:elite", "coverage:suppressed"],
+  "categories": [
+    "Justice",
+    "Camouflage"
+  ],
+  "tags": [
+    "source:official",
+    "category:coverup",
+    "category:elite",
+    "coverage:suppressed"
+  ],
   "source": {
     "name": "DOJ",
     "url": "https://www.justice.gov/",
@@ -16,5 +24,11 @@
     "importance": "high",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": false,
+    "level": 5,
+    "description": "Information supprimée ou censurée, inaccessible au grand public"
+  },
+  "relevanceScore": 66
 }

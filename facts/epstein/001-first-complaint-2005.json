@@ -4,8 +4,15 @@
   "dateLabel": "1er janvier 2005",
   "title": "Première plainte parentale en Floride",
   "content": "Les parents d'une jeune fille de 14 ans déposent plainte auprès de la police de Palm Beach. Leur fille aurait reçu 300$ pour un massage chez Epstein. C'est le début de l'enquête qui révélera un réseau systémique de recrutement de mineures.",
-  "categories": ["Justice", "Victimes"],
-  "tags": ["source:official", "category:justice", "coverage:delayed"],
+  "categories": [
+    "Justice",
+    "Victimes"
+  ],
+  "tags": [
+    "source:official",
+    "category:justice",
+    "coverage:delayed"
+  ],
   "source": {
     "name": "Palm Beach Police Department",
     "url": "https://www.documentcloud.org/documents/6250479-Epstein-Palm-Beach-PD-investigation.html",
@@ -17,5 +24,11 @@
     "threadId": "epstein-main",
     "verificationStatus": "confirmed",
     "mediaCoverageDate": 1561939200
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": false,
+    "level": 10,
+    "description": "Enquête locale, couverture médiatique nationale absente à l'époque"
+  },
+  "relevanceScore": 86
 }

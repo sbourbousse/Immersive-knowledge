@@ -4,8 +4,15 @@
   "dateLabel": "July 25, 2019",
   "title": "Perquisition du manoir de Manhattan",
   "content": "Le FBI perquisitionne le manoir de Jeffrey Epstein au 9 East 71st Street à Manhattan. Les agents saisissent des preuves substantielles : des milliers de photos de jeunes filles nues, des disques durs, des agendas détaillés, et des œuvres d'art suggestives. La perquisition révèle également un coffre-fort contenant des passeports falsifiés, de l'argent liquide, et des diamants, suggérant une préparation à une fuite.",
-  "categories": ["Justice", "Camouflage"],
-  "tags": ["source:official", "category:justice", "coverage:mainstream"],
+  "categories": [
+    "Justice",
+    "Camouflage"
+  ],
+  "tags": [
+    "source:official",
+    "category:justice",
+    "coverage:mainstream"
+  ],
   "mediaCoverage": {
     "firstReportedDate": 1564185600,
     "outlet": "New York Times",
@@ -20,5 +27,11 @@
     "importance": "critical",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": true,
+    "level": 95,
+    "description": "Couverture médiatique mondiale, sujet d'intérêt public majeur"
+  },
+  "relevanceScore": 38
 }

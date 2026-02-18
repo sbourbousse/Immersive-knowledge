@@ -4,8 +4,15 @@
   "dateLabel": "October 1, 2001",
   "title": "Acquisition de l'appartement à Paris avenue Foch",
   "content": "Epstein acquiert un appartement luxueux au 22 avenue Foch dans le 16ème arrondissement de Paris pour un montant estimé à plusieurs millions d'euros. Cette propriété devient un hub européen pour ses activités, accueillant des personnalités politiques et des célébrités. La proximité avec les cérémonies de mode (Victoria's Secret) facilite le recrutement.",
-  "categories": ["Réseau", "Victimes"],
-  "tags": ["source:media", "category:elite", "coverage:delayed"],
+  "categories": [
+    "Réseau",
+    "Victimes"
+  ],
+  "tags": [
+    "source:media",
+    "category:elite",
+    "coverage:delayed"
+  ],
   "mediaCoverage": {
     "firstReportedDate": 1577836800,
     "outlet": "Le Monde",
@@ -20,5 +27,11 @@
     "importance": "high",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": false,
+    "level": 5,
+    "description": "Inconnu du grand public, révélé des années plus tard"
+  },
+  "relevanceScore": 63
 }

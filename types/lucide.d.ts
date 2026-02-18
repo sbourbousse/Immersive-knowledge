@@ -47,4 +47,5 @@ declare module 'lucide-react' {
   export const Info: FC<IconProps>;
   export const AlertCircle: FC<IconProps>;
   export const CheckCircle: FC<IconProps>;
+  export const Zap: FC<IconProps>;
 }

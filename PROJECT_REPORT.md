@@ -20,38 +20,43 @@ Architecture complète mise en place avec **3 agents autonomes** travaillant en 
 ## 📁 Structure du Projet
 
 ```
-immersive-info-architecture/
-├── agents/                          # Configuration des 3 agents
-│   ├── research-digger/config/      # 🔍 SOUL, IDENTITY, SHIELD, etc.
-│   ├── code-architect/config/       # 🏗️ Standards de code
-│   └── supervisor/config/           # 👁️ Validation & qualité
-├── shared/
-│   ├── types/index.ts               # Types TypeScript stricts
-│   └── schemas/factSchema.ts        # Validation Zod
-└── projects/demo/
-    ├── app/                         # Next.js 14 App Router
-    │   ├── layout.tsx
-    │   ├── page.tsx
-    │   └── globals.css
-    ├── components/
-    │   ├── Hero/                    # Animation SplitText
-    │   ├── Timeline/                # Timeline horizontale ScrollTrigger
-    │   ├── TimelineComparison/      # Mode comparaison 2 lanes
-    │   ├── FocusMode/               # Modal d'exploration
-    │   └── ProgressBar/             # Barre de progression
-    ├── hooks/
-    │   ├── useGSAP.ts               # Hook gsap.context
-    │   └── useLenis.ts              # Smooth scroll
-    ├── lib/
-    │   ├── data.ts                  # Données de démo
-    │   ├── facts.ts                 # Gestion des faits
-    │   └── gsap.ts                  # Config GSAP
-    ├── facts/                       # 15 atomes de fait JSON
-    │   ├── 001-gpt1-2018.json
-    │   ├── 004-chatgpt-2022.json
-    │   ├── 008-eu-ai-act-2024.json
-    │   └── ... (15 fichiers)
-    └── preview.html                 # Démo visuelle standalone
+Immersive-knowledge/
+├── agents/                          # Système Multi-Agents Autonomes
+│   ├── research-digger/config/      # 🔍 SOUL, IDENTITY, USER, MEMORY, SHIELD, AGENTS
+│   ├── code-architect/config/       # 🏗️ Standards de code & performance
+│   └── supervisor/config/           # 👁️ Validation, qualité & sécurité
+├── app/                             # Next.js 14 App Router
+│   ├── layout.tsx                   # Layout racine (providers, Lenis)
+│   ├── page.tsx                     # Page principale (Hero + Timeline)
+│   ├── globals.css                  # Styles globaux + Tailwind
+│   └── multi-lane/page.tsx          # Page mode multi-lane
+├── components/                      # Composants React/GSAP
+│   ├── Hero/                        # Animation d'entrée immersive
+│   ├── Timeline/                    # Timeline horizontale ScrollTrigger
+│   ├── TimelineVertical/            # Timeline verticale alternative
+│   ├── TimelineComparison/          # Mode comparaison multi-lanes
+│   ├── TimelineControls/            # Contrôles de navigation
+│   ├── TimelineSelector/            # Sélecteur de timeline
+│   ├── FocusMode/                   # Modal d'exploration détaillée
+│   ├── ProgressBar/                 # Barre de progression globale
+│   ├── TagFilter/                   # Filtrage par tags
+│   ├── LaneBuilder/                 # Configuration des lanes
+│   ├── MultiTimelineView/           # Vue multi-lanes synchronisée
+│   └── providers/                   # Context providers
+├── facts/                           # Atomes de Fait (JSON)
+│   ├── 001-gpt1-2018.json
+│   ├── 004-chatgpt-2022.json
+│   ├── 008-eu-ai-act-2024.json
+│   └── ... (15+ fichiers)
+├── hooks/                           # useGSAP, useLenis, useLaneFilters
+├── lib/                             # Utilitaires (data, facts, gsap, utils)
+├── store/                           # Zustand (timelineStore, multiTimelineStore)
+├── schemas/factSchema.ts            # Validation Zod (source de vérité)
+├── types/index.ts                   # Types TypeScript stricts
+├── docs/                            # Documentation technique
+│   ├── ARCHITECTURE.md              # Architecture technique détaillée
+│   └── MULTI_LANE.md               # Système multi-lane
+└── PREVIEW.html                     # Démo visuelle standalone
 ```
 
 ---
@@ -245,13 +250,22 @@ npm run dev
 
 ## 📚 Documentation des Agents
 
-Chaque agent dispose de sa propre documentation dans `agents/{agent}/config/`:
-- **SOUL.md** : Constitution et éthique
-- **IDENTITY.md** : Persona et style de communication
-- **USER.md** : Profil utilisateur cible
-- **MEMORY.md** : Faits durables et patterns
-- **SHIELD.md** : Sécurité et limites
-- **AGENTS.md** : Guide opérationnel et outils
+Chaque agent dispose de **6 fichiers de contexte** dans `agents/{agent}/config/` :
+
+| Fichier | Rôle | Contenu |
+|---------|------|---------|
+| **SOUL.md** | Constitution & Éthique | Règles non-négociables, principes de décision, gestion des erreurs |
+| **IDENTITY.md** | Persona & Masque | Nom, rôle, ton, style de communication, avatar |
+| **USER.md** | Profil Utilisateur | Préférences du destinataire, niveau d'expertise, format de livraison |
+| **MEMORY.md** | Faits Durables | Connaissances accumulées, décisions passées, patterns appris |
+| **SHIELD.md** | Sécurité | Protocoles anti-injection, limites de coût/tokens, domaines autorisés |
+| **AGENTS.md** | Guide Opérationnel | Outils autorisés, structure du projet, normes de codage, workflow |
+
+### Agents configurés
+
+- **Research Digger** (`agents/research-digger/config/`) — Extraction de données et vérification de sources
+- **Code Architect** (`agents/code-architect/config/`) — Construction d'interfaces React/GSAP immersives
+- **Supervisor** (`agents/supervisor/config/`) — Validation qualité, cohérence narrative, sécurité
 
 ---
 

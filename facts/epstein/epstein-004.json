@@ -4,8 +4,15 @@
   "dateLabel": "November 1, 1993",
   "title": "Ghislaine Maxwell intègre le cercle Epstein",
   "content": "Ghislaine Maxwell, fille du magnat de la presse Robert Maxwell (mort en 1991), rencontre Jeffrey Epstein peu après la mort de son père. Leur relation évolue d'une romance vers un partenariat complexe où Maxwell devient la principale recruteuse et organisatrice du réseau d'Epstein. Sa position sociale et ses connexions internationales légitiment Epstein dans les cercles de l'élite.",
-  "categories": ["Réseau", "Victimes"],
-  "tags": ["source:media", "category:elite", "coverage:mainstream"],
+  "categories": [
+    "Réseau",
+    "Victimes"
+  ],
+  "tags": [
+    "source:media",
+    "category:elite",
+    "coverage:mainstream"
+  ],
   "mediaCoverage": {
     "firstReportedDate": 1380585600,
     "outlet": "Daily Telegraph",
@@ -20,5 +27,11 @@
     "importance": "high",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": false,
+    "level": 5,
+    "description": "Inconnu du grand public, connu uniquement du cercle proche d'Epstein"
+  },
+  "relevanceScore": 100
 }

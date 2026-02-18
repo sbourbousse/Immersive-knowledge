@@ -4,8 +4,15 @@
   "dateLabel": "January 1, 2017",
   "title": "Plainte pour violation des droits des victimes (CVRA)",
   "content": "Bradley Edwards et Paul Cassell déposent une plainte fédérale arguant que l'accord de non-poursuite de 2008 violait le Crime Victims' Rights Act en excluant les victimes du processus. La plainte vise spécifiquement Alexander Acosta, devenu Secrétaire au Travail de Trump. Cette action judiciaire force une réexamination publique de l'accord secret et de ses circonstances.",
-  "categories": ["Justice", "Victimes"],
-  "tags": ["source:official", "category:justice", "coverage:mainstream"],
+  "categories": [
+    "Justice",
+    "Victimes"
+  ],
+  "tags": [
+    "source:official",
+    "category:justice",
+    "coverage:mainstream"
+  ],
   "mediaCoverage": {
     "firstReportedDate": 1483228800,
     "outlet": "Palm Beach Post",
@@ -20,5 +27,11 @@
     "importance": "critical",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": true,
+    "level": 40,
+    "description": "Couvert par les médias mais sans grande attention publique"
+  },
+  "relevanceScore": 42
 }

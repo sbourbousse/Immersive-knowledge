@@ -4,8 +4,16 @@
   "dateLabel": "18 juillet 2023",
   "title": "Llama 2 - Meta libère les poids du modèle",
   "content": "Meta publie Llama 2, marquant un tournant pour les modèles open source. Contrairement à GPT-4 (propriétaire), Llama 2 est disponible gratuitement avec des poids téléchargeables, autorisant l'usage commercial (avec Acceptable Use Policy). Les modèles 7B, 13B et 70B paramètres sont publiés avec versions chat fine-tunées. Cette décision démocratise l'accès aux LLM puissants et stimule l'écosystème open source (Hugging Face, Together AI, etc.).\n\n**Llama 3** (avril 2024) : 8B et 70B, entraîné sur 15T tokens\n**Llama 3.1** (juillet 2024) : ajout du modèle 405B\n**Llama 4** (avril 2025) : architecture Mixture of Experts, jusqu'à 2T paramètres\n\n**Impact :** Permet aux entreprises de déployer des LLM on-premise sans dépendance API",
-  "categories": ["Technologie", "Économie"],
-  "tags": ["category:technology", "category:finance", "source:official", "coverage:mainstream"],
+  "categories": [
+    "Technologie",
+    "Économie"
+  ],
+  "tags": [
+    "category:technology",
+    "category:finance",
+    "source:official",
+    "coverage:mainstream"
+  ],
   "source": {
     "name": "Meta AI - Llama 2",
     "url": "https://ai.meta.com/llama/",
@@ -16,6 +24,14 @@
     "importance": "high",
     "threadId": "main",
     "verificationStatus": "confirmed",
-    "crossReferences": ["f6f3a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a9b"]
-  }
+    "crossReferences": [
+      "f6f3a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a9b"
+    ]
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": true,
+    "level": 85,
+    "description": "Annonce publique largement couverte par les médias tech et grand public"
+  },
+  "relevanceScore": 60
 }

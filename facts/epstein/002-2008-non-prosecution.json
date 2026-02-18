@@ -4,7 +4,12 @@
   "dateLabel": "Juin 2008",
   "title": "Accord de non-poursuite controversé",
   "content": "Le procureur fédéral Alexander Acosta signe un accord de non-poursuite secret avec Epstein. Les charges fédérales sont abandonnées en échange d'une condamnation d'État minimale. L'accord immunise également les complices d'Epstein et viole la loi sur les droits des victimes en ne les informant pas.",
-  "tags": ["category:coverup", "source:official", "coverage:suppressed", "category:elite"],
+  "tags": [
+    "category:coverup",
+    "source:official",
+    "coverage:suppressed",
+    "category:elite"
+  ],
   "source": {
     "name": "Department of Justice",
     "url": "https://www.justice.gov/opa/pr/statement-department-justice-epstein-case",
@@ -16,5 +21,11 @@
     "threadId": "main",
     "verificationStatus": "confirmed",
     "mediaCoverageDate": 1543622400
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": false,
+    "level": 5,
+    "description": "Information supprimée ou censurée, inaccessible au grand public"
+  },
+  "relevanceScore": 86
 }

@@ -4,8 +4,15 @@
   "dateLabel": "February 24, 2022",
   "title": "Mort de Jean-Luc Brunel en prison en France",
   "content": "Jean-Luc Brunel, célèbrant français proche d'Epstein accusé de trafic de mineures, est retrouvé mort dans sa cellule à la prison de la Santé à Paris. Sa mort, qualifiée de suicide, met fin au principal procès connexe en France. Brunel aurait approvisionné Epstein en jeunes mannequins venues d'Europe de l'Est. Les victimes françaises expriment leur frustration face à la fin des poursuites.",
-  "categories": ["Justice", "Réseau"],
-  "tags": ["source:official", "category:justice", "coverage:mainstream"],
+  "categories": [
+    "Justice",
+    "Réseau"
+  ],
+  "tags": [
+    "source:official",
+    "category:justice",
+    "coverage:mainstream"
+  ],
   "mediaCoverage": {
     "firstReportedDate": 1645747200,
     "outlet": "Le Monde",
@@ -20,5 +27,11 @@
     "importance": "high",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": true,
+    "level": 95,
+    "description": "Couverture médiatique mondiale, sujet d'intérêt public majeur"
+  },
+  "relevanceScore": 100
 }

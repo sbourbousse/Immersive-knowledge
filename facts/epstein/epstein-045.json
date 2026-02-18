@@ -4,8 +4,15 @@
   "dateLabel": "July 30, 2019",
   "title": "Démission d'Alexander Acosta",
   "content": "Face à la pression croissante suite à la réarrestation d'Epstein, Alexander Acosta démissionne de son poste de Secrétaire au Travail. Il défend à nouveau sa décision de 2008, affirmant avoir agi pour protéger les victimes. Cependant, des documents internes révélés plus tard montreront que la pression des avocats d'Epstein et des considérations politiques ont influencé sa décision. Acosta est le premier responsable politique à tomber.",
-  "categories": ["Politique", "Justice"],
-  "tags": ["source:official", "category:coverup", "coverage:mainstream"],
+  "categories": [
+    "Politique",
+    "Justice"
+  ],
+  "tags": [
+    "source:official",
+    "category:coverup",
+    "coverage:mainstream"
+  ],
   "mediaCoverage": {
     "firstReportedDate": 1564531200,
     "outlet": "Washington Post",
@@ -20,5 +27,11 @@
     "importance": "high",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": true,
+    "level": 95,
+    "description": "Couverture médiatique mondiale, sujet d'intérêt public majeur"
+  },
+  "relevanceScore": 79
 }

@@ -4,8 +4,15 @@
   "dateLabel": "October 1, 2013",
   "title": "Virginia Giuffre dépose plainte contre Epstein",
   "content": "Virginia Giuffre (anciennement Roberts) dépose une plainte civile contre Epstein, alléguant avoir été victime de trafic sexuel et avoir été contrainte à des relations sexuelles avec des hommes puissants, notamment le Prince Andrew. C'est la première fois qu'une victime nomme publiquement des membres de l'élite. La plainte est initialement scellée sur demande de la défense.",
-  "categories": ["Justice", "Victimes"],
-  "tags": ["source:victims", "category:justice", "coverage:delayed"],
+  "categories": [
+    "Justice",
+    "Victimes"
+  ],
+  "tags": [
+    "source:victims",
+    "category:justice",
+    "coverage:delayed"
+  ],
   "mediaCoverage": {
     "firstReportedDate": 1380585600,
     "outlet": "Daily Mail",
@@ -20,5 +27,11 @@
     "importance": "critical",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": false,
+    "level": 10,
+    "description": "Information révélée des années plus tard, inconnue du public à l'époque"
+  },
+  "relevanceScore": 36
 }

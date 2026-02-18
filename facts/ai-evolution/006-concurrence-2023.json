@@ -4,8 +4,16 @@
   "dateLabel": "Mars 2023 - Présent",
   "title": "Concurrence : Claude (Anthropic), Bard/Gemini (Google), LLaMA (Meta)",
   "content": "L'écosystème des LLM se diversifie avec l'émergence de compétiteurs majeurs. **Claude** (Anthropic, mars 2023) innove avec la \"Constitutional AI\" pour l'alignement. **Bard** (Google, février 2023) devient Gemini (février 2024) avec une architecture multimodale native. **LLaMA** (Meta, février 2023) popularise les modèles open source avec des poids disponibles gratuitement. Cette concurrence stimule l'innovation et réduit les coûts d'inférence.\n\n**Versions actuelles (2024-2025) :**\n- Claude 4.6 (Anthropic, fév 2026)\n- Gemini 3 Pro/Flash (Google, 2025)\n- Llama 4 (Meta, avril 2025) : jusqu'à 2T paramètres\n\n**Distinction clé :** OpenAI (propriétaire) vs Meta (open weights)",
-  "categories": ["Technologie", "Économie"],
-  "tags": ["category:technology", "category:finance", "source:media", "coverage:mainstream"],
+  "categories": [
+    "Technologie",
+    "Économie"
+  ],
+  "tags": [
+    "category:technology",
+    "category:finance",
+    "source:media",
+    "coverage:mainstream"
+  ],
   "source": {
     "name": "Wikipedia - Claude, Gemini, LLaMA",
     "url": "https://en.wikipedia.org/wiki/Claude_(language_model)",
@@ -16,6 +24,14 @@
     "importance": "high",
     "threadId": "main",
     "verificationStatus": "confirmed",
-    "crossReferences": ["f5e2f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a"]
-  }
+    "crossReferences": [
+      "f5e2f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a"
+    ]
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": true,
+    "level": 85,
+    "description": "Annonce publique largement couverte par les médias tech et grand public"
+  },
+  "relevanceScore": 62
 }

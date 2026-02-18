@@ -3,7 +3,7 @@
 import { useRef, useEffect } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { Fact } from '@/types';
+import { Fact, getRelevanceTextStyle } from '@/types';
 import { X, ExternalLink, Calendar, Tag, Shield } from 'lucide-react';
 
 interface FocusModeProps {
@@ -14,6 +14,7 @@ interface FocusModeProps {
 export function FocusMode({ fact, onClose }: FocusModeProps) {
   const overlayRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+  const relevanceText = getRelevanceTextStyle(fact.relevanceScore);
 
   useGSAP(() => {
     const ctx = gsap.context(() => {
@@ -91,7 +92,7 @@ export function FocusMode({ fact, onClose }: FocusModeProps) {
         {/* Header */}
         <div className="sticky top-0 bg-ui-surface/95 backdrop-blur border-b border-gray-800 p-6 flex items-start justify-between">
           <div>
-            <div className="flex items-center gap-3 mb-2">
+            <div className="flex items-center gap-3 mb-2 flex-wrap">
               <span className="flex items-center gap-1.5 text-sm text-indigo-400">
                 <Calendar width={14} height={14} />
                 {fact.dateLabel}
@@ -105,8 +106,16 @@ export function FocusMode({ fact, onClose }: FocusModeProps) {
               }`}>
                 {fact.metadata.importance}
               </span>
+              {fact.relevanceScore !== undefined && (
+                <span className="px-2 py-0.5 rounded text-xs bg-orange-500/10 text-orange-300">
+                  Pertinence: {fact.relevanceScore}/100
+                </span>
+              )}
             </div>
-            <h2 className="font-display text-2xl md:text-3xl font-bold">
+            <h2
+              className={`font-display font-bold ${relevanceText.className}`}
+              style={relevanceText.style}
+            >
               {fact.title}
             </h2>
           </div>

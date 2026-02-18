@@ -1,7 +1,6 @@
 'use client';
 
 import { Hero } from '@/components/Hero';
-import { Timeline } from '@/components/Timeline';
 import { TimelineVertical } from '@/components/TimelineVertical';
 import { ProgressBar } from '@/components/ProgressBar';
 import { TimelineControls } from '@/components/TimelineControls';
@@ -10,9 +9,8 @@ import { useTimelineStore } from '@/store/timelineStore';
 import { timelines } from '@/lib/data';
 
 export default function Home() {
-  const { currentTimelineId, direction } = useTimelineStore();
+  const { currentTimelineId } = useTimelineStore();
   const currentTimeline = timelines[currentTimelineId];
-  const TimelineComponent = direction === 'horizontal' ? Timeline : TimelineVertical;
 
   return (
     <FocusModeProvider>
@@ -32,7 +30,7 @@ export default function Home() {
         
         {/* Timeline Section */}
         <section className="relative py-12">
-          <TimelineComponent 
+          <TimelineVertical 
             facts={currentTimeline.facts}
             categories={currentTimeline.categories}
           />

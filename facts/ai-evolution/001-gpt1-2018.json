@@ -4,8 +4,14 @@
   "dateLabel": "11 juin 2018",
   "title": "Publication de GPT-1 par OpenAI",
   "content": "OpenAI publie le papier de recherche \"Improving Language Understanding by Generative Pre-Training\" introduisant GPT-1 (Generative Pre-trained Transformer 1). Ce modèle de 117 millions de paramètres est le premier à démontrer l'efficacité du pré-entraînement génératif suivi d'un affinement supervisé pour les tâches NLP. Il utilise une architecture Transformer à 12 couches et établit les fondations de ce qui deviendra la famille GPT.\n\n**Points clés :**\n- 117 millions de paramètres\n- Architecture Transformer decoder-only à 12 couches\n- Pré-entraîné sur BookCorpus (7000 livres)\n- Licence MIT (open source)",
-  "categories": ["Technologie"],
-  "tags": ["category:technology", "source:official", "coverage:mainstream"],
+  "categories": [
+    "Technologie"
+  ],
+  "tags": [
+    "category:technology",
+    "source:official",
+    "coverage:mainstream"
+  ],
   "source": {
     "name": "OpenAI Research - Language Unsupervised",
     "url": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf",
@@ -17,5 +23,11 @@
     "threadId": "main",
     "verificationStatus": "confirmed",
     "crossReferences": []
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": true,
+    "level": 85,
+    "description": "Annonce publique largement couverte par les médias tech et grand public"
+  },
+  "relevanceScore": 57
 }

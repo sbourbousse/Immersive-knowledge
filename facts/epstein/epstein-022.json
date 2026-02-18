@@ -4,8 +4,15 @@
   "dateLabel": "July 1, 2008",
   "title": "Condamnation symbolique à 18 mois de prison",
   "content": "Epstein plaide coupable à deux chefs d'accusation d'État : sollicitation de prostitution et sollicitation de mineure. Il est condamné à 18 mois d'incarcération, mais le régime est exceptionnellement clément. Il est autorisé à quitter la prison 12 heures par jour, 6 jours par semaine, pour travailler dans son bureau. Cette 'prison de week-end' est dénoncée comme une mascarade judiciaire.",
-  "categories": ["Justice", "Camouflage"],
-  "tags": ["source:official", "category:coverup", "coverage:suppressed"],
+  "categories": [
+    "Justice",
+    "Camouflage"
+  ],
+  "tags": [
+    "source:official",
+    "category:coverup",
+    "coverage:suppressed"
+  ],
   "mediaCoverage": {
     "firstReportedDate": 1543449600,
     "outlet": "Miami Herald",
@@ -20,5 +27,11 @@
     "importance": "critical",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": false,
+    "level": 15,
+    "description": "Connu des autorités locales de Palm Beach, peu médiatisé nationalement"
+  },
+  "relevanceScore": 40
 }

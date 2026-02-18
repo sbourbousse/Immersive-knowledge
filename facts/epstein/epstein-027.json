@@ -4,8 +4,15 @@
   "dateLabel": "November 1, 2009",
   "title": "Epstein continue ses voyages internationaux",
   "content": "Malgré son statut de délinquant sexuel enregistré, Epstein reprend immédiatement ses voyages à l'international. Les registres montrent des déplacements fréquents vers Paris, New York, et les îles Vierges. Il reçoit régulièrement des personnalités politiques et des célébrités dans ses résidences. L'affaire semble avoir été enterrée sans conséquences durables pour son réseau.",
-  "categories": ["Réseau", "Camouflage"],
-  "tags": ["source:leak", "category:elite", "coverage:suppressed"],
+  "categories": [
+    "Réseau",
+    "Camouflage"
+  ],
+  "tags": [
+    "source:leak",
+    "category:elite",
+    "coverage:suppressed"
+  ],
   "mediaCoverage": {
     "firstReportedDate": 1543449600,
     "outlet": "Miami Herald",
@@ -20,5 +27,11 @@
     "importance": "high",
     "threadId": "epstein-main",
     "verificationStatus": "confirmed"
-  }
+  },
+  "publicAwareness": {
+    "wasPublicAtTime": false,
+    "level": 5,
+    "description": "Information supprimée ou censurée, inaccessible au grand public"
+  },
+  "relevanceScore": 75
 }
