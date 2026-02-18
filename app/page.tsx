@@ -2,29 +2,39 @@
 
 import { Hero } from '@/components/Hero';
 import { Timeline } from '@/components/Timeline';
+import { TimelineVertical } from '@/components/TimelineVertical';
 import { ProgressBar } from '@/components/ProgressBar';
+import { TimelineControls } from '@/components/TimelineControls';
 import { FocusModeProvider } from '@/components/FocusMode/FocusModeProvider';
-import { facts, categories } from '@/lib/data';
+import { useTimelineStore } from '@/store/timelineStore';
+import { timelines } from '@/lib/data';
 
 export default function Home() {
+  const { currentTimelineId, direction } = useTimelineStore();
+  const currentTimeline = timelines[currentTimelineId];
+  const TimelineComponent = direction === 'horizontal' ? Timeline : TimelineVertical;
+
   return (
     <FocusModeProvider>
       <main className="relative min-h-screen">
+        {/* Controls */}
+        <TimelineControls />
+        
         {/* Progress Bar */}
         <ProgressBar />
         
         {/* Hero Section */}
         <Hero 
-          title="L'Évolution de l'IA Générative"
-          subtitle="De GPT-1 (2018) aux agents autonomes (2025) — une exploration immersive des moments clés qui ont défini l'intelligence artificielle moderne."
+          title={currentTimeline.name}
+          subtitle={currentTimeline.description}
           theme="reveal"
         />
         
         {/* Timeline Section */}
-        <section className="relative">
-          <Timeline 
-            facts={facts}
-            categories={categories}
+        <section className="relative pt-20">
+          <TimelineComponent 
+            facts={currentTimeline.facts}
+            categories={currentTimeline.categories}
           />
         </section>
         
@@ -34,7 +44,7 @@ export default function Home() {
             Architecture de l'Information Immersive
           </p>
           <p className="text-xs mt-2">
-            Propulsé par Next.js, GSAP & Intelligence Artificielle
+            {currentTimeline.facts.length} faits • {currentTimeline.categories.length} catégories
           </p>
         </footer>
       </main>
