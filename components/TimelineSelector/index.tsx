@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { timelines } from '@/lib/data';
-import { useTimelineStore } from '@/store/timelineStore';
+import { useTimelineStore, AVAILABLE_TIMELINES } from '@/store/timelineStore';
+import { TimelineId } from '@/types';
 
 // Simple inline icons since lucide-react types are problematic
 const ChevronDown = ({ size = 16 }: { size?: number }) => (
