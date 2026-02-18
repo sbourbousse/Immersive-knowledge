@@ -1,41 +1,47 @@
-import { validateFact, formatZodErrors, FactSchema } from '@/schemas/factSchema';
-import { Fact } from '@/types';
+/**
+ * Utilitaires de chargement et validation des faits
+ * Wrapper autour du nouveau système multi-timeline
+ */
+
+import { validateFact, formatZodErrors } from '@/schemas/factSchema';
+import { Fact, TimelineId } from '@/types';
+import { timelines, getTimeline, getAvailableTimelines } from './data';
+
+export { getTimeline, getAvailableTimelines };
 
 /**
+ * Charge les faits pour une timeline spécifique
+ */
+export function loadFactsForTimeline(id: TimelineId): Fact[] {
+  return timelines[id]?.facts || [];
+}
+
+/**
+ * Charge une timeline complète
+ */
+export function loadTimeline(id: TimelineId) {
+  return getTimeline(id);
+}
+
+/**
+ * Charge toutes les timelines
+ */
+export function loadAllTimelines() {
+  return getAvailableTimelines();
+}
+
+/**
+ * @deprecated Utiliser loadFactsForTimeline() à la place
  * Charge et valide les faits depuis les fichiers JSON
- * @returns Tableau de faits validés
  */
 export async function loadFacts(): Promise<Fact[]> {
-  try {
-    // En environnement Node/build, on pourrait charger depuis le filesystem
-    // Pour le client, les faits sont importés directement
-    const { demoFacts } = await import('./data');
-    
-    // Validation de tous les faits
-    const validatedFacts: Fact[] = [];
-    
-    for (const fact of demoFacts) {
-      const result = validateFact(fact);
-      
-      if (result.success) {
-        validatedFacts.push(result.data);
-      } else {
-        console.warn(`Fact validation failed for ${fact.id}:`, formatZodErrors(result.errors));
-      }
-    }
-    
-    return validatedFacts;
-  } catch (error) {
-    console.error('Error loading facts:', error);
-    return [];
-  }
+  return loadFactsForTimeline('ai-evolution');
 }
 
 /**
  * Sauvegarde un fait (côté serveur uniquement)
  */
 export async function saveFact(fact: Fact): Promise<boolean> {
-  // Validation
   const result = validateFact(fact);
   
   if (!result.success) {
@@ -43,8 +49,54 @@ export async function saveFact(fact: Fact): Promise<boolean> {
     return false;
   }
   
-  // En production, ceci sauvegarderait dans une base de données
-  // ou un système de fichiers côté serveur
   console.log('Saving fact:', fact.id);
   return true;
+}
+
+/**
+ * Filtre les faits par tags
+ */
+export function filterFactsByTags(facts: Fact[], tags: string[]): Fact[] {
+  if (tags.length === 0) return facts;
+  return facts.filter(fact => 
+    tags.some(tag => fact.tags?.includes(tag))
+  );
+}
+
+/**
+ * Filtre les faits par couverture médiatique
+ */
+export function filterFactsByCoverage(
+  facts: Fact[],
+  showOnlyWithCoverage: boolean | null
+): Fact[] {
+  if (showOnlyWithCoverage === null) return facts;
+  
+  return facts.filter(fact => {
+    const hasCoverage = fact.metadata?.mediaCoverageDate !== undefined ||
+                       fact.tags?.some(t => t.startsWith('coverage:'));
+    return showOnlyWithCoverage ? hasCoverage : !hasCoverage;
+  });
+}
+
+/**
+ * Calcule l'écart temporel entre un événement et sa couverture médiatique
+ */
+export function getCoverageGap(fact: Fact): number | null {
+  if (!fact.metadata?.mediaCoverageDate) return null;
+  return fact.metadata.mediaCoverageDate - fact.timestamp;
+}
+
+/**
+ * Formate un écart temporel en texte lisible
+ */
+export function formatTimeGap(seconds: number): string {
+  const days = Math.floor(seconds / 86400);
+  const months = Math.floor(days / 30);
+  const years = Math.floor(days / 365);
+  
+  if (years > 0) return `${years} an${years > 1 ? 's' : ''}`;
+  if (months > 0) return `${months} mois`;
+  if (days > 0) return `${days} jour${days > 1 ? 's' : ''}`;
+  return 'immédiat';
 }

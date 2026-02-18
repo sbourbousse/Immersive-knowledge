@@ -1,0 +1,24 @@
+{
+  "id": "ep006-flight-logs",
+  "timestamp": 1562716800,
+  "dateLabel": "Juillet 2019",
+  "title": "Révélation des journaux de vol (flight logs)",
+  "content": "Les journaux de vol des avions privés d'Epstein sont saisis et révèlent des voyages avec de nombreuses personnalités sur l'île privée et d'autres destinations. Les noms incluent des politiciens, des célébrités et des membres de la royauté.\n\n**Points clés :**
+- Voyages vers Little St. James ("Orgy Island")
+- Passagers: Clinton, Trump, Prince Andrew, etc.
+- Vols internationaux vers Paris, New Mexico
+- Minieures listées comme passagers",
+  "tags": ["source:leak", "category:elite", "coverage:mainstream", "category:finance"],
+  "source": {
+    "name": "Court Documents - Southern District of NY",
+    "url": "https://www.nysd.uscourts.gov/",
+    "reliabilityScore": 0.95,
+    "accessedAt": "2026-02-18T10:00:00Z"
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "main",
+    "verificationStatus": "confirmed",
+    "crossReferences": ["ep003-2019-arrest"]
+  }
+}

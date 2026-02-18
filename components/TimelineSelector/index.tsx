@@ -3,7 +3,25 @@
 import { useState } from 'react';
 import { timelines } from '@/lib/data';
 import { useTimelineStore } from '@/store/timelineStore';
-import { ChevronDown, Check, ArrowRightLeft } from 'lucide-react';
+
+// Simple inline icons since lucide-react types are problematic
+const ChevronDown = ({ size = 16 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="m6 9 6 6 6-6"/>
+  </svg>
+);
+
+const Check = ({ size = 16 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M20 6 9 17l-5-5"/>
+  </svg>
+);
+
+const ArrowRightLeft = ({ size = 16 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M8 3 4 7l4 4M4 7h16M20 17l-4 4M20 17H4"/>
+  </svg>
+);
 
 export function TimelineSelector() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +37,7 @@ export function TimelineSelector() {
         className="flex items-center gap-2 px-4 py-2 bg-ui-surface border border-gray-700 rounded-lg hover:border-indigo-500 transition-colors"
       >
         <span className="font-medium">{currentTimeline.name}</span>
-        <ChevronDown size={16} className={`transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+        <ChevronDown size={16} />
       </button>
 
       {isOpen && (
@@ -51,10 +69,10 @@ export function TimelineSelector() {
                 </div>
                 {isComparisonMode ? (
                   comparedTimelines.includes(timeline.id as keyof typeof timelines) && (
-                    <Check size={16} className="text-indigo-400" />
+                    <span className="text-indigo-400">✓</span>
                   )
                 ) : (
-                  currentTimelineId === timeline.id && <Check size={16} className="text-indigo-400" />
+                  currentTimelineId === timeline.id && <span className="text-indigo-400">✓</span>
                 )}
               </button>
             ))}

@@ -5,6 +5,7 @@
   "title": "ChatGPT - L'explosion grand public de l'IA générative",
   "content": "OpenAI lance ChatGPT, une interface conversationnelle basée sur GPT-3.5 fine-tunée avec RLHF (Reinforcement Learning from Human Feedback). Le service atteint 1 million d'utilisateurs en 5 jours et 100 millions en 2 mois, devenant l'application grand public à la croissance la plus rapide de l'histoire. Cet événement marque le début du \"AI Boom\" et déclenche une course aux investissements dans l'IA générative.\n\n**Points clés :**\n- 100 millions d'utilisateurs en 2 mois (record historique)\n- Freemium : gratuit avec ChatGPT Plus à $20/mois (février 2023)\n- Fine-tuning RLHF pour la sécurité et l'alignement\n- Utilise des travailleurs kényans ($1,32-$2/heure) pour l'étiquetage de contenu toxique",
   "categories": ["Technologie", "Société", "Économie"],
+  "tags": ["category:technology", "category:society", "category:finance", "source:official", "coverage:mainstream"],
   "source": {
     "name": "OpenAI - ChatGPT Announcement",
     "url": "https://openai.com/blog/chatgpt/",

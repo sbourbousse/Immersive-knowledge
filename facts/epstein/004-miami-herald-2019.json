@@ -1,0 +1,20 @@
+{
+  "id": "epstein-004",
+  "timestamp": 1561939200,
+  "dateLabel": "1er juillet 2019",
+  "title": "Julie Brown (Miami Herald) publie 'Perversion of Justice'",
+  "content": "Après 10 ans de silence médiatique quasi-total, la journaliste Julie Brown du Miami Herald publie une enquête en 3 parties révélant l'ampleur du réseau Epstein et les dysfonctionnements judiciaires.\n\n**Impact :**\n- Réouverture de l'enquête fédérale\n- Indignation publique massive\n- Démission d'Alexander Acosta (Secrétaire au Travail)\n- Arrestation d'Epstein un mois plus tard",
+  "categories": ["Médias", "Justice"],
+  "tags": ["source:media", "coverage:mainstream", "category:justice"],
+  "source": {
+    "name": "Miami Herald - Perversion of Justice",
+    "url": "https://www.miamiherald.com/news/local/article221404845.html",
+    "reliabilityScore": 0.95,
+    "accessedAt": "2026-02-18T11:00:00Z"
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "epstein-main",
+    "verificationStatus": "confirmed"
+  }
+}

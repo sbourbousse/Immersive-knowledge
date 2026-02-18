@@ -1,0 +1,24 @@
+{
+  "id": "ep003-2019-arrest",
+  "timestamp": 1561593600,
+  "dateLabel": "Juillet 2019",
+  "title": "Arrestation de Jeffrey Epstein",
+  "content": "Jeffrey Epstein est arrêté à son retour de Paris par le FBI et inculpé pour trafic sexuel de mineures. L'enquête révèle un vaste réseau impliquant des personnalités politiques et des élites.\n\n**Points clés :**
+- Arrestation à l'aéroport Teterboro
+- Inculpation fédérale pour trafic sexuel
+- Saisie de documents et disques durs
+- Liste de contacts haut-placés",
+  "tags": ["category:justice", "source:official", "category:elite", "coverage:mainstream"],
+  "source": {
+    "name": "FBI New York Field Office",
+    "url": "https://www.fbi.gov/",
+    "reliabilityScore": 0.98,
+    "accessedAt": "2026-02-18T10:00:00Z"
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "main",
+    "verificationStatus": "confirmed",
+    "crossReferences": ["ep004-suicide", "ep006-flight-logs"]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "ep005-maxwell-arrest",
+  "timestamp": 1592179200,
+  "dateLabel": "Juin 2020",
+  "title": "Arrestation de Ghislaine Maxwell",
+  "content": "Ghislaine Maxwell, ex-compagne et complice présumée d'Epstein, est arrêtée dans le New Hampshire. Elle est inculpée pour son rôle dans le recrutement et l'abus de mineures.\n\n**Points clés :**
+- Arrestation par le FBI
+- Inculpation pour trafic sexuel de mineures
+- Détention sans caution
+- Procès prévu en 2021",
+  "tags": ["category:justice", "source:official", "coverage:mainstream"],
+  "source": {
+    "name": "Department of Justice",
+    "url": "https://www.justice.gov/",
+    "reliabilityScore": 0.98,
+    "accessedAt": "2026-02-18T10:00:00Z"
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "main",
+    "verificationStatus": "confirmed"
+  }
+}

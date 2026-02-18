@@ -1,0 +1,25 @@
+{
+  "id": "ep001-2005-accusation",
+  "timestamp": 1104537600,
+  "dateLabel": "Janvier 2005",
+  "title": "Premières accusations contre Jeffrey Epstein",
+  "content": "Une jeune femme de 14 ans et ses parents portent plainte contre Jeffrey Epstein pour agressions sexuelles. L'accusation déclenche une enquête du FBI qui révélerait des dizaines de victimes mineures.\n\n**Points clés :**
+- Victime initiale: 14 ans
+- Enquête FBI lancée
+- Dizaines de victimes identifiées
+- Réseau de recruteuses impliqué",
+  "tags": ["category:justice", "source:official", "coverage:delayed"],
+  "source": {
+    "name": "Palm Beach Police Department",
+    "url": "https://www.palmbeachpost.com/",
+    "reliabilityScore": 0.95,
+    "accessedAt": "2026-02-18T10:00:00Z"
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "main",
+    "verificationStatus": "confirmed",
+    "crossReferences": ["ep002-2008-non-prosecution"],
+    "mediaCoverageDate": 1564617600
+  }
+}

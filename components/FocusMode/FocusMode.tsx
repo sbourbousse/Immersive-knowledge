@@ -123,7 +123,7 @@ export function FocusMode({ fact, onClose }: FocusModeProps) {
         <div className="p-6">
           {/* Categories */}
           <div className="flex flex-wrap gap-2 mb-6">
-            {fact.categories.map((cat) => (
+            {(fact.categories || []).map((cat) => (
               <span
                 key={cat}
                 className="flex items-center gap-1.5 px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-300"

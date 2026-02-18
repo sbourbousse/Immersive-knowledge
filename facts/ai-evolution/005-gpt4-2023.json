@@ -5,6 +5,7 @@
   "title": "GPT-4 - Multimodalité et raisonnement avancé",
   "content": "OpenAI annonce GPT-4, un modèle multimodal capable de traiter texte ET images. Bien que le nombre exact de paramètres reste secret (estimations : 1,76 trillion), le modèle montre des capacités de raisonnement significativement supérieures à GPT-3.5. Il obtient des scores supérieurs à 99% des humains sur les tests de créativité de Torrance et passe avec succès le barreau et l'examen médical US (USMLE). Microsoft intègre GPT-4 dans Bing Chat.\n\n**Points clés :**\n- Multimodal : accepte texte + images en entrée\n- Contexte : 8192 ou 32768 tokens (GPT-4 Turbo : 128K en nov 2023)\n- Coût d'entraînement : >$100M (d'après Sam Altman)\n- 82% moins de réponses à contenu restreint vs GPT-3.5\n- 60% moins d'hallucinations",
   "categories": ["Technologie"],
+  "tags": ["category:technology", "source:official", "coverage:mainstream"],
   "source": {
     "name": "OpenAI - GPT-4 Research",
     "url": "https://openai.com/research/gpt-4",

@@ -5,6 +5,7 @@
   "title": "GPT-3 - API commerciale et adoption industrielle",
   "content": "OpenAI publie GPT-3, un modèle de 175 milliards de paramètres (100x GPT-2), le plus grand modèle de langage non-sparse de l'époque. Pour la première fois, OpenAI propose un accès via API commerciale plutôt que la publication open source. Le modèle démontre des capacités de \"few-shot learning\" remarquables. Microsoft obtient une licence exclusive sur le code sous-jacent en septembre 2020.\n\n**Points clés :**\n- 175 milliards de paramètres (16-bit precision = 350GB stockage)\n- 2048 tokens de contexte\n- Coût d'entraînement estimé : ~$4,6M (Lambda Labs)\n- Dataset : Common Crawl (60%), WebText2 (22%), Books1/2 (16%), Wikipedia (3%)\n- Microsoft investit $1 milliard dans OpenAI (2019)",
   "categories": ["Technologie", "Économie"],
+  "tags": ["category:technology", "category:finance", "source:official", "coverage:mainstream"],
   "source": {
     "name": "OpenAI - GPT-3 Paper (arXiv)",
     "url": "https://arxiv.org/abs/2005.14165",

@@ -17,6 +17,14 @@
   --color-accent: #3b82f6;
   --color-accent-glow: rgba(59, 130, 246, 0.3);
   
+  /* UI Theme variables (Tailwind) */
+  --ui-background: #0a0a0f;
+  --ui-surface: #14141a;
+  --ui-surface-elevated: #1e1e28;
+  --ui-primary: #f0f0f5;
+  --ui-secondary: #8a8a9a;
+  --ui-accent: #6366f1;
+  
   /* Timeline */
   --timeline-line: #2a2a3a;
   --timeline-dot: #3b82f6;

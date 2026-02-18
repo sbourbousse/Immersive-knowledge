@@ -5,6 +5,7 @@
   "title": "GPT-2 et le débat sur la sécurité - Publication partielle",
   "content": "OpenAI annonce GPT-2, un modèle de 1,5 milliard de paramètres (10x plus grand que GPT-1) et entraîné sur 8 millions de pages web (WebText). Cependant, l'entreprise rompt avec sa politique open source habituelle et ne publie initialement pas le modèle complet, invoquant des risques de \"fake news\" et d'utilisation malveillante (spam, discours de haine). Cette décision déclenche un débat intense dans la communauté AI sur la responsabilité de publication.\n\n**Points clés :**\n- 1,5 milliard de paramètres\n- Publication progressive : modèle réduit (124M) → 774M → complet (1,5B) en novembre 2019\n- Dataset WebText : pages Reddit avec ≥3 upvotes\n- Coût d'entraînement estimé : $256/heure (durée inconnue)",
   "categories": ["Technologie", "Régulation"],
+  "tags": ["category:technology", "category:regulation", "source:official", "coverage:mainstream"],
   "source": {
     "name": "OpenAI - Better Language Models",
     "url": "https://openai.com/blog/better-language-models/",

@@ -17,8 +17,11 @@ import ai013 from '@/facts/ai-evolution/013-llama2-2023.json';
 import ai014 from '@/facts/ai-evolution/014-agents-autonomes.json';
 import ai015 from '@/facts/ai-evolution/015-couts-computationnels.json';
 
-// Epstein facts will be imported dynamically
-// import ep001 from '@/facts/epstein/001-...json';
+// Import Epstein facts
+import ep001 from '@/facts/epstein/001-first-complaint-2005.json';
+import ep002 from '@/facts/epstein/002-first-arrest-2006.json';
+import ep003 from '@/facts/epstein/003-npa-2008.json';
+import ep004 from '@/facts/epstein/004-miami-herald-2019.json';
 
 /**
  * Configuration des timelines disponibles
@@ -43,7 +46,9 @@ export const timelines = {
     id: 'epstein',
     name: 'Affaire Epstein',
     description: 'La timeline de l\'affaire Epstein: réalité vs couverture médiatique',
-    facts: [] as Fact[], // Will be populated by Research Digger
+    facts: [
+      ep001, ep002, ep003, ep004,
+    ] as Fact[],
     categories: [
       { id: 'justice', name: 'Justice', color: 'bg-blue-500' },
       { id: 'coverup', name: 'Camouflage', color: 'bg-red-500' },

@@ -83,7 +83,7 @@ export function TimelineVertical({ facts, categories }: TimelineVerticalProps) {
 
               {/* Categories */}
               <div className={`flex gap-2 mb-3 ${index % 2 === 0 ? 'justify-end' : 'justify-start'}`}>
-                {fact.categories.map((cat) => (
+                {(fact.categories || []).map((cat) => (
                   <span
                     key={cat}
                     className={`w-2 h-2 rounded-full ${getCategoryColor(cat)}`}

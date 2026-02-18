@@ -29,9 +29,15 @@ export const FactSchema = z.object({
     .min(1, 'Le contenu ne peut pas être vide')
     .describe('Description détaillée enrichie en Markdown'),
   
+  // Legacy categories (optionnel pour retro-compatibilité)
   categories: z.array(z.string())
-    .min(1, 'Au moins une catégorie est requise')
-    .describe('Tags pour le filtrage et le code couleur'),
+    .optional()
+    .describe('Tags legacy pour le filtrage (déprécié)'),
+  
+  // Nouveau système de tags
+  tags: z.array(z.string())
+    .min(1, 'Au moins un tag est requis')
+    .describe('Tags pour le filtrage et le code couleur (source:official, category:elite, etc.)'),
   
   source: z.object({
     name: z.string().min(1, 'Le nom de la source est requis'),
@@ -55,8 +61,13 @@ export const FactSchema = z.object({
     crossReferences: z.array(z.string().uuid())
       .optional()
       .describe('IDs de faits liés/corrélés'),
+    mediaCoverageDate: z.number()
+      .int()
+      .positive()
+      .optional()
+      .describe('Date de couverture médiatique (timestamp Unix)'),
   }).describe('Métadonnées additionnelles'),
-});
+}).describe('Atome de fait - unité de base du système');
 
 /**
  * Type inféré du schéma Fact
@@ -71,6 +82,7 @@ export const TimelineLaneSchema = z.object({
   title: z.string().min(1),
   color: z.string().regex(/^#[0-9A-Fa-f]{6}$/, 'Doit être une couleur hex valide'),
   facts: z.array(FactSchema),
+  position: z.number().int().min(0).max(3),
 });
 
 /**
@@ -89,13 +101,17 @@ export const FactQuerySchema = z.object({
   endDate: z.number().int().optional()
     .describe('Timestamp de fin'),
   categories: z.array(z.string()).optional()
-    .describe('Filtrer par catégories'),
+    .describe('Filtrer par catégories (legacy)'),
+  tags: z.array(z.string()).optional()
+    .describe('Filtrer par tags'),
   importance: z.enum(['low', 'medium', 'high']).optional()
     .describe('Filtrer par importance'),
   verificationStatus: z.enum(['pending', 'confirmed', 'disputed']).optional()
     .describe('Filtrer par statut de vérification'),
   threadId: z.string().optional()
     .describe('Filtrer par thread'),
+  hasMediaCoverage: z.boolean().optional()
+    .describe('Filtrer par présence de couverture médiatique'),
 });
 
 /**
@@ -151,4 +167,18 @@ export const ValidationReportSchema = z.object({
     component: z.string().optional(),
   })),
   approved: z.boolean(),
+});
+
+/**
+ * Schéma pour une Timeline complète
+ */
+export const TimelineSchema = z.object({
+  id: z.string().min(1),
+  name: z.string().min(1),
+  description: z.string(),
+  color: z.string().regex(/^#[0-9A-Fa-f]{6}$/),
+  facts: z.array(FactSchema),
+  availableTags: z.array(z.string()),
+  createdAt: z.string().datetime(),
+  updatedAt: z.string().datetime(),
 });
