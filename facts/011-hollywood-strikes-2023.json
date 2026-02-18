@@ -1,0 +1,20 @@
+{
+  "id": "f1b8e2f3-a4b5-4c6d-7e8f-9a0b1c2d3e4f",
+  "timestamp": 1688083200,
+  "dateLabel": "Juillet 2023",
+  "title": "Grèves Hollywood - L'IA au cœur du conflit social",
+  "content": "Les grèves historiques de la Writers Guild of America (WGA) et SAG-AFTRA (acteurs) plongent Hollywood dans une paralyse sans précédent. L'IA générative est un point central des négociations : les scénaristes craignent le remplacement par des LLM, les acteurs s'inquiètent de la synthèse vocale et de la génération de leurs likeness numériques. Les négociations aboutissent à des protections historiques sur l'utilisation de l'IA dans les productions.\n\n**Revendications clés :**\n- Interdiction de l'écriture de scénarios par IA seule\n- Consentement obligatoire pour les likeness numériques\n- Compensation pour l'entraînement sur leurs œuvres\n- Résultat : protections encadrées dans les conventions collectives",
+  "categories": ["Société", "Régulation"],
+  "source": {
+    "name": "The Guardian - Hollywood AI Strikes",
+    "url": "https://www.theguardian.com/film/2023/jul/14/hollywood-ai-strikes-writers-actors",
+    "reliabilityScore": 0.95,
+    "accessedAt": "2026-02-18T09:35:00Z"
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "main",
+    "verificationStatus": "confirmed",
+    "crossReferences": []
+  }
+}

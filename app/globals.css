@@ -1,0 +1,190 @@
+/**
+ * Styles globaux
+ * Variables CSS, reset et utilitaires de performance
+ */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  /* Couleurs principales */
+  --color-bg: #0a0a0f;
+  --color-surface: #14141a;
+  --color-surface-elevated: #1e1e28;
+  --color-text: #f0f0f5;
+  --color-text-muted: #8a8a9a;
+  --color-accent: #3b82f6;
+  --color-accent-glow: rgba(59, 130, 246, 0.3);
+  
+  /* Timeline */
+  --timeline-line: #2a2a3a;
+  --timeline-dot: #3b82f6;
+  --timeline-dot-active: #60a5fa;
+  
+  /* Catégories */
+  --category-tech: #3b82f6;
+  --category-economy: #22c55e;
+  --category-regulation: #ef4444;
+  --category-society: #a855f7;
+  
+  /* Z-index */
+  --z-base: 1;
+  --z-timeline: 10;
+  --z-progress: 50;
+  --z-modal: 100;
+  --z-overlay: 200;
+}
+
+/* Reset de base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto; /* Lenis gère le smooth scroll */
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optimisations de performance GPU */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Conteneur principal */
+.timeline-container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Masquer scrollbar mais garder fonctionnalité */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Animation réduite - accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .gpu-accelerated {
+    will-change: auto;
+  }
+}
+
+/* Sélection de texte */
+::selection {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+/* Focus visible pour accessibilité */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Timeline specific styles */
+.timeline-track {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--timeline-line) 10%,
+    var(--timeline-line) 90%,
+    transparent 100%
+  );
+}
+
+.timeline-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(
+    to bottom,
+    var(--color-accent),
+    var(--timeline-dot-active)
+  );
+  transform-origin: top;
+}
+
+/* SplitText animations support */
+.split-char {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+.split-word {
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* Focus mode overlay */
+.focus-overlay {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Card hover effects */
+.fact-card {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
+              0 0 0 1px var(--color-accent-glow);
+}
+
+/* Category badges */
+.category-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Progress bar */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent), var(--timeline-dot-active));
+  z-index: var(--z-progress);
+  transform-origin: left;
+}

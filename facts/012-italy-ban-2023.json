@@ -1,0 +1,20 @@
+{
+  "id": "f2c9f3a4-b5c6-4d7e-8f9a-0b1c2d3e4f5a",
+  "timestamp": 1679443200,
+  "dateLabel": "22 mars 2023",
+  "title": "Interdiction de ChatGPT en Italie - Première sanction réglementaire",
+  "content": "Le Garante della Privacy italien interdit temporairement ChatGPT, devenant le premier pays occidental à prendre une telle mesure. Les autorités soulèvent des préoccupations sur : (1) la collecte de données personnelles sans base légale, (2) l'absence de vérification d'âge, (3) l'exposition des mineurs à du contenu inapproprié, (4) les fuites de données de conversations. L'interdiction est levée fin avril 2023 après que OpenAI ait mis en place des mesures : déclaration de traitement, outil de vérification d'âge, opt-out pour les utilisateurs.\n\n**Autres restrictions :**\n- Chine : ChatGPT jamais disponible officiellement\n- Russie : blocage officiel en 2023\n- Iran, Corée du Nord : accès restreint\n- Entreprises : JPMorgan, Verizon, Amazon interdisent l'usage interne",
+  "categories": ["Régulation", "Société"],
+  "source": {
+    "name": "BBC - Italy ChatGPT Ban",
+    "url": "https://www.bbc.com/news/technology-65139406",
+    "reliabilityScore": 0.96,
+    "accessedAt": "2026-02-18T09:35:00Z"
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "main",
+    "verificationStatus": "confirmed",
+    "crossReferences": ["f4d1e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e7f"]
+  }
+}

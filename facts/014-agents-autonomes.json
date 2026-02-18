@@ -1,0 +1,20 @@
+{
+  "id": "f4e1b5c6-d7e8-4f9a-0b1c-2d3e4f5a6b7c",
+  "timestamp": 1735689600,
+  "dateLabel": "2024-2025",
+  "title": "Agents autonomes - L'IA passe à l'action",
+  "content": "2024-2025 marque l'émergence des agents IA autonomes capables d'exécuter des tâches complexes sans supervision humaine constante. **AutoGPT** (2023) ouvre la voie, suivi par les intégrations natives. OpenAI lance **Operator** (janvier 2025) pour naviguer le web, **Codex** (mai 2025) pour le développement logiciel, et **ChatGPT Agent** (juillet 2025) pour des tâches multi-étapes. Anthropic propose **Claude Code** (février 2025) avec interface CLI pour le codage autonome. Ces agents marquent la transition de la génération de texte à l'action dans le monde réel.\n\n**Capacités :**\n- Navigation web autonome\n- Exécution de code et debugging\n- Interactions avec APIs et bases de données\n- Planification et décomposition de tâches",
+  "categories": ["Technologie"],
+  "source": {
+    "name": "OpenAI - Operator Announcement",
+    "url": "https://openai.com/index/operator/",
+    "reliabilityScore": 0.96,
+    "accessedAt": "2026-02-18T09:35:00Z"
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "main",
+    "verificationStatus": "confirmed",
+    "crossReferences": []
+  }
+}

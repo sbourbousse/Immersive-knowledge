@@ -1,0 +1,20 @@
+{
+  "id": "f8b5c9d0-e1f2-4a3b-4c5d-6e7f8a9b0c1d",
+  "timestamp": 1722470400,
+  "dateLabel": "1er août 2024",
+  "title": "EU AI Act - Premier cadre réglementaire majeur mondial",
+  "content": "L'Union Européenne adopte l'AI Act, premier réglement complet sur l'intelligence artificielle. Le texte entre en vigueur le 1er août 2024 avec une approche basée sur les risques : interdiction des IA à risque inacceptable, obligations strictes pour les hauts risques (santé, justice, éducation), transparence pour les risques limités. Les modèles de grande capacité (≥10^25 FLOPS) ont des obligations spécifiques. Amendes jusqu'à 35M€ ou 7% du CA mondial.\n\n**Calendrier d'application :**\n- Août 2024 : entrée en vigueur\n- Février 2025 : interdictions des pratiques à haut risque\n- Août 2025 : obligations GPAI\n- Août 2026 : obligations hauts risques\n- Août 2027 : obligations complètes",
+  "categories": ["Régulation"],
+  "source": {
+    "name": "Eur-Lex - AI Act Regulation 2024/1689",
+    "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+    "reliabilityScore": 0.99,
+    "accessedAt": "2026-02-18T09:35:00Z"
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "main",
+    "verificationStatus": "confirmed",
+    "crossReferences": []
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "f5f2c6d7-e8f9-4a0b-1c2d-3e4f5a6b7c8d",
+  "timestamp": 1704067200,
+  "dateLabel": "2024 - Présent",
+  "title": "Coûts computationnels explosion et tension sur les puces",
+  "content": "Les coûts d'entraînement et d'inférence des LLM atteignent des niveaux sans précédent, créant une tension mondiale sur les puces GPU. GPT-4 coûte **>$100M** à entraîner. Llama 3.1 405B requiert **440 000 petaFLOP-day**. Microsoft déploie **30 000 GPU NVIDIA** pour ChatGPT (2023). La consommation énergétique devient critique : 5-50 prompts ChatGPT consomment ~0,5L d'eau pour le refroidissement. Les projections estiment que l'IA représentera **3,5% de la consommation électrique mondiale d'ici 2030**.\n\n**Projections :**\n- GPT-5 estimerait coûter >$1 milliard à entraîner\n- NVIDIA atteint une valorisation de $3 trillions (2024)\n- Course aux alternatives : puces Google TPU, Amazon Trainium, Microsoft Maia",
+  "categories": ["Économie", "Technologie"],
+  "source": {
+    "name": "OpenAI GPT-4 Technical Report",
+    "url": "https://arxiv.org/abs/2303.08774",
+    "reliabilityScore": 0.95,
+    "accessedAt": "2026-02-18T09:35:00Z"
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "main",
+    "verificationStatus": "confirmed",
+    "crossReferences": ["f5e2f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a"]
+  }
+}

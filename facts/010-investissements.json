@@ -1,0 +1,20 @@
+{
+  "id": "f0a7d1e2-f3a4-4b5c-6d7e-8f9a0b1c2d3e",
+  "timestamp": 1577836800,
+  "dateLabel": "2019 - Présent",
+  "title": "Investissements massifs : Microsoft, Google, Anthropic",
+  "content": "L'IA générative déclenche une vague d'investissements historiques. Microsoft investit **$10 milliards** dans OpenAI en janvier 2023 (total >$13B cumulé), obtenant une licence exclusive sur GPT-3/4. Google investit **$300M** dans Anthropic (février 2023) puis **$2 milliards** supplémentaires. Amazon investit **$4 milliards** dans Anthropic (sept-oct 2023). Ces investissements alimentent la course aux puces (NVIDIA) et la construction de datacenters massifs.\n\n**Valuations :**\n- OpenAI : $157 milliards (oct 2024)\n- Anthropic : $18 milliards (déc 2023)\n- Cohere, Inflection, Adept : levées de $100M+\n\n**Impact :** Transformation stratégique de Microsoft (Copilot), Google (Gemini), Amazon (Bedrock)",
+  "categories": ["Économie"],
+  "source": {
+    "name": "MIT Technology Review - OpenAI Microsoft Deal",
+    "url": "https://www.technologyreview.com/2020/09/23/1008729/openai-is-giving-microsoft-exclusive-access-to-its-gpt-3-language-model/",
+    "reliabilityScore": 0.96,
+    "accessedAt": "2026-02-18T09:35:00Z"
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "main",
+    "verificationStatus": "confirmed",
+    "crossReferences": []
+  }
+}

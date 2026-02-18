@@ -1,0 +1,20 @@
+{
+  "id": "f9c6d0e1-f2a3-4b4c-5d6e-7f8a9b0c1d2e",
+  "timestamp": 1733702400,
+  "dateLabel": "9 décembre 2024",
+  "title": "Sora - OpenAI révolutionne la génération vidéo",
+  "content": "OpenAI lance Sora, son modèle de text-to-video capable de générer des clips réalistes d'une minute. Présenté en février 2024, il devient accessible au public en décembre 2024 pour les utilisateurs ChatGPT Plus/Pro en US/Canada. Sora 2 suit en septembre 2025 avec une app iOS/Android style TikTok. Le modèle suscite des inquiétudes sur les deepfakes et l'impact sur l'industrie cinématographique. Tyler Perry met en pause un projet d'expansion de studio de $800M à cause de Sora.\n\n**Caractéristiques :**\n- Architecture : Diffusion Transformer\n- Longueur : jusqu'à 60 secondes (Sora 1)\n- Watermark C2PA pour authenticité\n- Controverse sur le copyright (opt-out par défaut)",
+  "categories": ["Technologie", "Société"],
+  "source": {
+    "name": "OpenAI - Sora",
+    "url": "https://openai.com/sora",
+    "reliabilityScore": 0.97,
+    "accessedAt": "2026-02-18T09:35:00Z"
+  },
+  "metadata": {
+    "importance": "high",
+    "threadId": "main",
+    "verificationStatus": "confirmed",
+    "crossReferences": []
+  }
+}
